@@ -1,0 +1,43 @@
+% folha de rosto 
+
+\makeatletter
+
+\renewcommand{\folhaderostocontent}{
+\begin{center}
+    
+{\ABNTEXchapterfont\large\imprimirautor}
+
+\vspace*{\fill}\vspace*{\fill}
+
+\begin{center}
+\ABNTEXchapterfont\bfseries\Large\imprimirtitulo
+\end{center}
+
+\vspace*{\fill}
+
+\abntex@ifnotempty{\imprimirpreambulo}{
+  	\hspace{.45\textwidth}
+  	\begin{minipage}{.5\textwidth}
+ 	\SingleSpacing
+ 	\imprimirpreambulo
+ 	\end{minipage}
+ 	\vspace*{\fill}
+
+	\hspace{.45\textwidth}
+	Orientadora: \imprimirorientador
+}
+
+\vspace*{\fill}
+
+{\large\imprimirlocal}
+
+\par
+
+{\large\imprimirdata}
+\vspace*{1cm}
+\end{center}
+}
+\imprimirfolhaderosto 
+
+\makeatother
+

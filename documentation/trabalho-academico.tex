@@ -1,0 +1,196 @@
+% TCC
+
+\documentclass[
+	12pt,					% tamanho da fonte
+	%openright,				% capítulos começam em pág ímpar (insere página vazia caso preciso)
+	oneside,				% twoside para impressão em recto e verso. Oposto a oneside
+	a4paper,				% tamanho do papel. 
+	chapter=TITLE,			% títulos de capítulos convertidos em letras maiúsculas
+	%section=TITLE,			% títulos de seções convertidos em letras maiúsculas
+	%subsection=TITLE,		% títulos de subseções convertidos em letras maiúsculas
+	%subsubsection=TITLE,	% títulos de subsubseções convertidos em letras maiúsculas
+	english,				% idioma adicional para hifenização
+	brazil					% o último idioma é o principal do documento
+	]{abntex2}
+
+
+% Pacotes básicos 
+\usepackage{times}				% Usa a fonte times roman			
+\usepackage[T1]{fontenc}		% Selecao de codigos de fonte.
+\usepackage[utf8]{inputenc}		% Codificacao do documento (conversão automática dos acentos)
+\usepackage{indentfirst}		% Indenta o primeiro parágrafo de cada seção.
+\usepackage{color}				% Controle das cores
+\usepackage{graphicx}			% Inclusão de gráficos
+\usepackage{microtype} 			% para melhorias de justificação
+\usepackage{multirow}			% Para mesclar linhas
+\usepackage{amsmath}			%¨Módulo matemático
+\usepackage{csquotes}			% Aspas
+
+% Pacotes de citações
+\usepackage[brazilian,hyperpageref]{backref}	% Paginas com as citações na bibl
+\usepackage[alf]{abntex2cite}					% Citações padrão ABNT
+
+
+
+% Configurações do pacote backref
+% Usado sem a opção hyperpageref de backref
+\renewcommand{\backrefpagesname}{Citado na(s) página(s):~}
+% Texto padrão antes do número das páginas
+\renewcommand{\backref}{}
+% Define os textos da citação
+\renewcommand*{\backrefalt}[4]{
+	\ifcase #1 %
+		Nenhuma citação no texto.%
+	\or
+		Citado na página #2.%
+	\else
+		Citado #1 vezes nas páginas #2.%
+	\fi}%
+
+
+% Informações de dados para CAPA e FOLHA DE ROSTO
+\titulo{Biblioteca de Tomada de Decisão com lógica paraconsistente para jogos de cartas na unity}
+\autor{
+	Bruno de Paula Silva - C992534 \\
+	Daniel Sousa David De Oliveira - D137GC0 \\
+	Gustavo Felipe De Santana Marques - C993AH8 \\
+	Marcelo Bueno Silva - N805CA0 \\
+	Wesley Luiz Carvalho Silva - C993077}
+\local{São Paulo}
+\data{2019}
+\orientador{Profª. Dr.a Amanda Luiza S. Pereira}
+\instituicao{Universidade Paulista - UNIP}
+\tipotrabalho{TCC}
+\preambulo{Trabalho apresentado para aproveitamento da disciplina Trabalho de Curoso II , do curoso de Ciência da Computação, Da Universidade Paulista - UNIP Campus Cidade Universitária.}
+
+
+
+
+% Configurações de aparência do PDF final
+\definecolor{blue}{RGB}{0,0,0} % alterando o aspecto da cor azul
+
+% informações do PDF
+\makeatletter
+\hypersetup{
+     	%pagebackref=true,
+		pdftitle={\@title}, 
+		pdfauthor={\@author},
+    	pdfsubject={\imprimirpreambulo},
+	    pdfcreator={LaTeX with abnTeX2},
+		pdfkeywords={abnt}{latex}{abntex}{abntex2}{trabalho acadêmico}, 
+		colorlinks=true,       		% false: boxed links; true: colored links
+    	linkcolor=blue,          	% color of internal links
+    	citecolor=blue,        		% color of links to bibliography
+    	filecolor=magenta,      	% color of file links
+		urlcolor=blue,
+		bookmarksdepth=4
+}
+\makeatother
+
+
+% Posiciona figuras e tabelas no topo da página quando adicionadas sozinhas
+% em um página em branco. Ver https://github.com/abntex/abntex2/issues/170
+\makeatletter
+\setlength{\@fptop}{5pt} % Set distance from top of page to first float
+\makeatother
+
+
+
+% Possibilita criação de Quadros e Lista de quadros.
+% Ver https://github.com/abntex/abntex2/issues/176
+
+\newcommand{\quadroname}{Quadro}
+\newcommand{\listofquadrosname}{Lista de quadros}
+
+\newfloat[chapter]{quadro}{loq}{\quadroname}
+\newlistof{listofquadros}{loq}{\listofquadrosname}
+\newlistentry{quadro}{loq}{0}
+
+% configurações para atender às regras da ABNT
+\setfloatadjustment{quadro}{\centering}
+\counterwithout{quadro}{chapter}
+\renewcommand{\cftquadroname}{\quadroname\space} 
+\renewcommand*{\cftquadroaftersnum}{\hfill--\hfill}
+
+\setfloatlocations{quadro}{hbtp} % Ver https://github.com/abntex/abntex2/issues/176
+
+% Espaçamentos entre linhas e parágrafos 
+\setlength{\parindent}{1.25cm} 	% O tamanho do parágrafo é dado por
+\setlength{\parskip}{0.2cm} 	% Controle do espaçamento entre um parágrafo e outro
+
+
+\makeindex 	% compila o indice
+
+
+\begin{document} 		% Início do documento
+
+\selectlanguage{brazil} % Seleciona o idioma do documento (conforme pacotes do babel)
+
+\frenchspacing  		% Retira espaço extra obsoleto entre as frases.
+
+% ----------------------------------------------------------
+% ELEMENTOS PRÉ-TEXTUAIS
+% ----------------------------------------------------------
+
+\include{pre-textual/capa}						% Inserir Capa
+
+\include{pre-textual/folhaderosto} 				% Inserir Folha de rosto
+
+% \include{pre-textual/fichacatalografica}		% Inserir a ficha bibliografica
+
+% \include{pre-textual/errata} 					% Inserir errata
+
+% \include{pre-textual/folhadeaprovacao} 		% Inserir folha de aprovação
+
+% \include{pre-textual/dedicatoria} 			% Dedicatória
+
+% \include{pre-textual/agradecimentos} 			% Agradecimentos
+
+% \include{pre-textual/epigrafe} 				% Epígrafe
+
+% \include{pre-textual/resumo} 					% Resumo em português e inglês
+
+\include{pre-textual/listas} 					% Inseir listas
+
+\include{sumario}								% inseir sumário
+
+
+% ----------------------------------------------------------
+% ELEMENTOS TEXTUAIS
+% ----------------------------------------------------------
+\textual
+
+\include{textual/introducao}
+
+\include{textual/referencial}
+
+\include{textual/materiais}
+
+\phantompart
+
+% ----------------------------------------------------------
+% ELEMENTOS PÓS-TEXTUAIS
+% ----------------------------------------------------------
+\postextual
+
+
+
+\bibliography{references} % Referências bibliográficas
+
+% Inicia os apêndices
+% \begin{apendicesenv}
+
+% \partapendices % Imprime uma página indicando o início dos apêndices
+
+% \chapter{rup}
+
+% \chapter{documentação Biblioteca}
+
+% \end{apendicesenv}
+
+
+% INDICE REMISSIVO
+\phantompart
+\printindex
+
+\end{document}
