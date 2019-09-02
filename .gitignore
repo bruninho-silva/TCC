@@ -9,3 +9,7 @@
 *.lot
 *.gz
 *.toc
+*.fdb_latexmk
+*.fls
+*.ilg
+*.ind
