@@ -4,12 +4,12 @@ using System.Collections.Generic;
 public class LogicaParaconsistente
 {
 
-    public int obtemPorcentagemDeDano(Cartas[] cartas){
+    public int ObtemPorcentagemDeDano(Cartas[] cartas){
         if (validaGameObject(cartas))
         {
             Baricentro baricentro = obtemBaricentro(cartas);
-            double gC = calculaGrauDeCerteza(baricentro);
-            double gI = calculaGrauDeIncerteza(baricentro);
+            double gC = CalculaGrauDeCerteza(baricentro);
+            double gI = CalculaGrauDeIncerteza(baricentro);
             string estadoLogico = DescobreEstadoLogico(gC, gI);
             return TransformaEstadoLogicoEmPorcentagem(estadoLogico);
         }
@@ -19,11 +19,11 @@ public class LogicaParaconsistente
         }
     }
 
-    public void descobreEstadoLogico(Double gc, Double gi){
+    public string DescobreEstadoLogico(double gc, double gi){
 
         if (gc > Constants.VCVE)
         {
-            // Verdade 
+            return Constants.VERDADE;
         }
         else if (gc < Constants.VCFA)
         {
@@ -69,6 +69,7 @@ public class LogicaParaconsistente
         {
             return Constants.INCONSISTENTE_T_FALSO;
         }
+        return null;
     }
 
 
@@ -102,6 +103,7 @@ public class LogicaParaconsistente
                 return 85;
 
         }
+        return 0;
     }
 
     public Baricentro obtemBaricentro(Cartas[] objetos){
@@ -119,7 +121,7 @@ public class LogicaParaconsistente
         int[] arrayMi1 = EscolheQualAtributoUsarParaMi(objetos,numeroDoAttr);
         int[] arrayLamb1 = EscolheQualAtributoUsarParaLamb(objetos,numeroDoAttr);
 
-        Baricentro[] quatroCartas = maximilizaOitoCartas(arrayMi1, arrayLamb1);
+        Baricentro[] quatroCartas = MaximilizaOitoCartas(arrayMi1, arrayLamb1);
        
         Baricentro[] duasCartas = maximilizaQuatroCartas(quatroCartas);
     
@@ -203,7 +205,7 @@ public class LogicaParaconsistente
     }
 
   
-    private Baricentro[] maximilizaOitoCartas(int[] arrayMi1, int[] arrayLamb1)
+    private Baricentro[] MaximilizaOitoCartas(int[] arrayMi1, int[] arrayLamb1)
     {
         throw new NotImplementedException();
     }
