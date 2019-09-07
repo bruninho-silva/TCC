@@ -3,10 +3,6 @@ using System.Collections.Generic;
 
 public class LogicaParaconsistente
 {
-    readonly double vcve = 0.5; //Var de controle de Veracidade
-    readonly double vcfa = 0.5; //Var de controle de Falsidade
-    readonly double vcic = 0.5; //var de conttole de Inconsistencia
-    readonly double vcpa = 0.5; //var de controle de Paracompleto
 
     public int obtemPorcentagemDeDano(Cartas[] cartas){
         if (validaGameObject(cartas))
@@ -23,56 +19,56 @@ public class LogicaParaconsistente
         }
     }
 
-    public void descobreEstadoLogico(Double gc, Double gi){
+    public string descobreEstadoLogico(Double gc, Double gi){
 
 
-        if (gc > vcve)
+        if (gc > Constants.VCVE)
         {
-            // Verdade 
+            return "VERDADE"; 
         }
-        else if (gc < vcfa)
+        else if (gc < Constants.VCFA)
         {
-            // Falso 
+            return "FALSO";
         }
-        else if (gi > vcic)
+        else if (gi > Constants.VCIC)
         {
-            // Inconsistencia
+            return "INCONSISTENTE";
         }
-        else if (gi > vcpa)
+        else if (gi > Constants.VCPA)
         {
-            // Paracompleto
+            return "PARACOMPLETO";
         }
-        else if (gc >= 0 && gc < vcve && gi >= 0 && gi < vcic && gc >= gi)
+        else if (gc >= 0 && gc < Constants.VCVE && gi >= 0 && gi < Constants.VCIC && gc >= gi)
         {
-            // Quase Verdade tedendo a inconsistente
+            return "QUASE_VERDADE_TENDENDO_A_INCONSISTENTE";
         }
-        else if (gc >= 0 && gc < vcve && gi >= 0 && gi < vcic && gc < gi)
+        else if (gc >= 0 && gc < Constants.VCVE && gi >= 0 && gi < Constants.VCIC && gc < gi)
         {
-            // Incosistente tedendo a verdade
+            return "INCONSISTENTE_TENDENDO_A_VERDADE";
+        }/
+        else if (gc >= 0 && gc < Constants.VCVE && gi > Constants.VCPA && gi <= 0 && gc >= Math.Abs(gi))
+        {
+            return "QUASE_VERDADE_TENDENDO_A_PARACOMPLETO";
         }
-        else if (gc >= 0 && gc < vcve && gi > vcpa && gi <= 0 && gc >= Math.Abs(gi))
+        else if (gc >= 0 && gc < Constants.VCVE && gi > Constants.VCPA && gi <= 0 && gc >= Math.Abs(gi))
         {
-            // Quase Verdadeiro tendendo a Paracompleto
+            return "PARACOMPLETO_TENDENTO_A_VERADADE";
         }
-        else if (gc >= 0 && gc < vcve && gi > vcpa && gi <= 0 && gc >= Math.Abs(gi))
+        else if (gc > Constants.VCFA && gc <= 0 && gi > Constants.VCPA && gi <= 0 && Math.Abs(gc) > Math.Abs(gi))
         {
-            // Paracompleto tendendo a Verdadeiro
+            return "FALSO_TENDENDO_PARACOMPLETO";
         }
-        else if (gc > vcfa && gc <= 0 && gi > vcpa && gi <= 0 && Math.Abs(gc) > Math.Abs(gi))
+        else if (gc > Constants.VCFA && gc <= 0 && gi > Constants.VCPA && gc < gi && gi <= 0)
         {
-            // Falso tendendo paracompleto
+            return "PARACOMPLETO_TENDENDO_A_FALSO";
         }
-        else if (gc > vcfa && gc <= 0 && gi > vcpa && gc < gi && gi <= 0)
+        else if (gc > Constants.VCFA && gc <= 0 && gi >= 0 && gi < Constants.VCIC && gc >= gi)
         {
-            // Paracompleto tendendo a falso
+            return "FALSO_TEDENDO_A_INCONSISTENTE";
         }
-        else if (gc > vcfa && gc <= 0 && gi >= 0 && gi < vcic && gc >= gi)
+        else if (gc <= 0 &&  gc > Constants.VCFA && gi >= 0 && gi < Constants.VCIC && gc < gi)
         {
-            // Falso tedendo a inconsistente
-        }
-        else if (gc <= 0 &&  gc > vcfa && gi >= 0 && gi < vcic && gc < gi)
-        {
-            // Inconsistente tendendo a falso
+            return "INCONSISTENTE_TENDENDO_A_FALSO";
         }
     }
 
