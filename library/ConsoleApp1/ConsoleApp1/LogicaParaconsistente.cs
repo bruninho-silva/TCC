@@ -8,10 +8,10 @@ public class LogicaParaconsistente
         if (validaGameObject(cartas))
         {
             Baricentro baricentro = obtemBaricentro(cartas);
-            Double gC = calculaGrauDeCerteza(baricentro);
-            Double gI = calculaGrauDeIncerteza(baricentro);
-            String estadoLogico = descobreEstadoLogico(gC, gI);
-            return transformaEstadoLogicoEmPorcentagem(estadoLogico);
+            double gC = calculaGrauDeCerteza(baricentro);
+            double gI = calculaGrauDeIncerteza(baricentro);
+            string estadoLogico = DescobreEstadoLogico(gC, gI);
+            return TransformaEstadoLogicoEmPorcentagem(estadoLogico);
         }
         else
         {
@@ -19,61 +19,90 @@ public class LogicaParaconsistente
         }
     }
 
-    public string descobreEstadoLogico(Double gc, Double gi){
-
+    public string DescobreEstadoLogico(double gc, double gi){
 
         if (gc > Constants.VCVE)
         {
-            return "VERDADE"; 
+            return Constants.VERDADE;
         }
         else if (gc < Constants.VCFA)
         {
-            return "FALSO";
+            return Constants.FALSO;
         }
         else if (gi > Constants.VCIC)
         {
-            return "INCONSISTENTE";
+            return Constants.INCONSISTENTE;
         }
         else if (gi > Constants.VCPA)
         {
-            return "PARACOMPLETO";
+            return Constants.PARACOMPLETO;
         }
         else if (gc >= 0 && gc < Constants.VCVE && gi >= 0 && gi < Constants.VCIC && gc >= gi)
         {
-            return "QUASE_VERDADE_TENDENDO_A_INCONSISTENTE";
+            return Constants.QUASE_V_I;
         }
         else if (gc >= 0 && gc < Constants.VCVE && gi >= 0 && gi < Constants.VCIC && gc < gi)
         {
-            return "INCONSISTENTE_TENDENDO_A_VERDADE";
+            return Constants.INCONSISTENTE_T_VERDADE;
         }/
         else if (gc >= 0 && gc < Constants.VCVE && gi > Constants.VCPA && gi <= 0 && gc >= Math.Abs(gi))
         {
-            return "QUASE_VERDADE_TENDENDO_A_PARACOMPLETO";
+            return Constants.QUASE_V_P;
         }
         else if (gc >= 0 && gc < Constants.VCVE && gi > Constants.VCPA && gi <= 0 && gc >= Math.Abs(gi))
         {
-            return "PARACOMPLETO_TENDENTO_A_VERADADE";
+            return Constants.PARACOMPLETO_T_VERDADE;
         }
         else if (gc > Constants.VCFA && gc <= 0 && gi > Constants.VCPA && gi <= 0 && Math.Abs(gc) > Math.Abs(gi))
         {
-            return "FALSO_TENDENDO_PARACOMPLETO";
+            return Constants.QUASE_F_P;
         }
         else if (gc > Constants.VCFA && gc <= 0 && gi > Constants.VCPA && gc < gi && gi <= 0)
         {
-            return "PARACOMPLETO_TENDENDO_A_FALSO";
+            return Constants.PARACOMPLETO_T_FALSO;
         }
         else if (gc > Constants.VCFA && gc <= 0 && gi >= 0 && gi < Constants.VCIC && gc >= gi)
         {
-            return "FALSO_TEDENDO_A_INCONSISTENTE";
+            return Constants.QUASE_F_I;
         }
         else if (gc <= 0 &&  gc > Constants.VCFA && gi >= 0 && gi < Constants.VCIC && gc < gi)
         {
-            return "INCONSISTENTE_TENDENDO_A_FALSO";
+            return Constants.INCONSISTENTE_T_FALSO;
         }
     }
 
 
-    public void transformaEstadoLogicoEmPorcentagem(String estadoLogico){}
+    public int TransformaEstadoLogicoEmPorcentagem(string estadoLogico)
+    {
+        switch(estadoLogico)
+        {
+            case Constants.VERDADE:
+                return 100;
+            case Constants.FALSO:
+                return 0;
+            case Constants.INCONSISTENTE:
+                return 10;
+            case Constants.PARACOMPLETO:
+                return 10;
+            case Constants.QUASE_V_I:
+                return 35;
+            case Constants.INCONSISTENTE_T_VERDADE:
+                return 25;
+            case Constants.QUASE_V_P:
+                return 60;
+            case Constants.PARACOMPLETO_T_VERDADE:
+                return 49;
+            case Constants.QUASE_F_P:
+                return 89;
+            case Constants.PARACOMPLETO_T_FALSO:
+                return 45;
+            case Constants.QUASE_F_I:
+                return 8;
+            case Constants.INCONSISTENTE_T_FALSO:
+                return 85;
+
+        }
+    }
 
     public Baricentro obtemBaricentro(Cartas[] objetos){
         int posicao = 0;
