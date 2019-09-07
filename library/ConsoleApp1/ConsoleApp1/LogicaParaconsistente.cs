@@ -113,7 +113,9 @@ public class LogicaParaconsistente
             Baricentro baricentro = ExtraiContradicaoPorAtributo(objetos, i);
             list[i] = baricentro;
         }
-        return null;        
+        Baricentro[] duasCartas = maximilizaQuatroCartas(list);
+        Baricentro carta = miniminizaDuasCartas(duasCartas);
+        return carta;        
     }
 
     private Baricentro ExtraiContradicaoPorAtributo(Cartas[] objetos, int numeroDoAttr)
@@ -207,7 +209,21 @@ public class LogicaParaconsistente
   
     private Baricentro[] MaximilizaOitoCartas(int[] arrayMi1, int[] arrayLamb1)
     {
-        throw new NotImplementedException();
+        Baricentro[] quatroCartas = new Baricentro[1];
+
+        quatroCartas[0].mi = quatroCartas[0].mi > quatroCartas[1].mi ? quatroCartas[0].mi : quatroCartas[1].mi;
+        quatroCartas[0].lambida = quatroCartas[0].lambida < quatroCartas[1].lambida ? quatroCartas[0].lambida : quatroCartas[1].lambida;
+
+        quatroCartas[1].mi = quatroCartas[2].mi > quatroCartas[3].mi ? quatroCartas[2].mi : quatroCartas[3].mi;
+        quatroCartas[1].lambida = quatroCartas[2].lambida < quatroCartas[3].lambida ? quatroCartas[2].lambida : quatroCartas[3].lambida;
+
+        quatroCartas[2].mi = quatroCartas[4].mi > quatroCartas[5].mi ? quatroCartas[4].mi : quatroCartas[5].mi;
+        quatroCartas[2].lambida = quatroCartas[4].lambida < quatroCartas[5].lambida ? quatroCartas[4].lambida : quatroCartas[5].lambida;
+
+        quatroCartas[3].mi = quatroCartas[6].mi > quatroCartas[7].mi ? quatroCartas[6].mi : quatroCartas[7].mi;
+        quatroCartas[3].lambida = quatroCartas[6].lambida < quatroCartas[7].lambida ? quatroCartas[6].lambida : quatroCartas[7].lambida;
+
+        return quatroCartas;
     }
 
     public Boolean validaGameObject(Cartas[] objetos) {
