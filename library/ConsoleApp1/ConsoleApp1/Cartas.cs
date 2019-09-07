@@ -1,13 +1,16 @@
 public class Cartas{
+    public Cartas(int mi1, int lamb1, int mi2, int lamb2, int mi3, int lamb3, int mi4, int lamb4)
+    {
+        miAtributo1 = mi1;
+        miAtributo2 = mi2;
+        miAtributo3 = mi3;
+        miAtributo4 = mi4;
 
-    private int miAtributo1;
-    private int lambAtributo1;
-    private int miAtributo2;
-    private int lambAtributo2;
-    private int miAtributo3;
-    private int lambAtributo3;
-    private int miAtributo4;
-    private int lambAtributo4;
+        lambAtributo1 = lamb1;
+        lambAtributo2 = lamb2;
+        lambAtributo3 = lamb3;
+        lambAtributo4 = lamb4;
+    }
 
     public int miAtributo1 { get; set; }
     public int miAtributo2 { get; set; }
