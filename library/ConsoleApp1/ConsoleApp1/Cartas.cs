@@ -18,4 +18,4 @@ public class Cartas{
     public int lambAtributo3 { get; set; }
     public int lambAtributo4 { get; set; }
 
-}
+  }

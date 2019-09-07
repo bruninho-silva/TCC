@@ -12,8 +12,8 @@ public class LogicaParaconsistente
         if (validaGameObject(cartas))
         {
             Baricentro baricentro = obtemBaricentro(cartas);
-            Double gC = calculaGrauDeCerteza(baricentro);
-            Double gI = calculaGrauDeIncerteza(baricentro);
+            Double gC = CalculaGrauDeCerteza(baricentro);
+            Double gI = CalculaGrauDeIncerteza(baricentro);
             String estadoLogico = descobreEstadoLogico(gC, gI);
             return transformaEstadoLogicoEmPorcentagem(estadoLogico);
         }
@@ -23,12 +23,12 @@ public class LogicaParaconsistente
         }
     }
 
-    public void descobreEstadoLogico(Double gc, Double gi){
+    public string descobreEstadoLogico(Double gc, Double gi){
 
 
         if (gc > vcve)
         {
-            // Verdade 
+           return Constants.VERDADE;
         }
         else if (gc < vcfa)
         {
@@ -80,15 +80,107 @@ public class LogicaParaconsistente
     public void transformaEstadoLogicoEmPorcentagem(String estadoLogico){}
 
     public Baricentro obtemBaricentro(Cartas[] objetos){
-        int posicao = 0;
-        int[] arrayMi1 = new int[] { objetos[0].miAtributo1, objetos[1].miAtributo1, objetos[2].miAtributo1,
-                                  objetos[3].miAtributo1, objetos[4].miAtributo1, objetos[5].miAtributo1,
-                                  objetos[6].miAtributo1, objetos[7].miAtributo1 ,objetos[8].miAtributo1 };
-        int[] listaLamb1 = new int[] { objetos[0].lambAtributo1, objetos[1].lambAtributo1, objetos[2].lambAtributo1,
+        Baricentro[] list = new Baricentro[3];
+        for(int i = 0; i < 4; i++)
+        {
+            Baricentro baricentro = ExtraiContradicaoPorAtributo(objetos, i);
+            list[i] = baricentro;
+        }
+        return null;        
+    }
+
+    private Baricentro ExtraiContradicaoPorAtributo(Cartas[] objetos, int numeroDoAttr)
+    {
+        int[] arrayMi1 = EscolheQualAtributoUsarParaMi(objetos,numeroDoAttr);
+        int[] arrayLamb1 = EscolheQualAtributoUsarParaLamb(objetos,numeroDoAttr);
+
+        Baricentro[] quatroCartas = maximilizaOitoCartas(arrayMi1, arrayLamb1);
+       
+        Baricentro[] duasCartas = maximilizaQuatroCartas(quatroCartas);
+    
+        Baricentro carta = miniminizaDuasCartas(duasCartas);
+
+        return carta;    
+    }
+
+    private Baricentro miniminizaDuasCartas(Baricentro[] duasCartas)
+    {
+        Baricentro carta = new Baricentro();
+        carta.lambida = duasCartas[0].lambida > duasCartas[1].lambida ? duasCartas[0].lambida : duasCartas[1].lambida;
+        carta.mi = duasCartas[0].mi < duasCartas[1].mi ? duasCartas[0].mi : duasCartas[1].mi;
+
+        return carta;
+    }
+
+    private Baricentro[] maximilizaQuatroCartas(Baricentro[] quatroCartas)
+    {
+       Baricentro[] duasCartas = new Baricentro[1];
+
+       duasCartas[0].mi = quatroCartas[0].mi > quatroCartas[1].mi ? quatroCartas[0].mi : quatroCartas[1].mi;
+       duasCartas[0].lambida = quatroCartas[0].lambida < quatroCartas[1].lambida ? quatroCartas[0].lambida : quatroCartas[1].lambida;
+
+       duasCartas[1].mi = quatroCartas[2].mi > quatroCartas[3].mi ? quatroCartas[2].mi : quatroCartas[3].mi;
+       duasCartas[1].lambida = quatroCartas[2].lambida < quatroCartas[3].lambida ? quatroCartas[2].lambida : quatroCartas[3].lambida;
+
+       return duasCartas;
+    }
+
+    private int[] EscolheQualAtributoUsarParaLamb(Cartas[] objetos, int numeroDoAtributo)
+    {
+        switch (numeroDoAtributo)
+        {
+            case 1:
+                return new int[] {
+                    objetos[0].lambAtributo1, objetos[1].lambAtributo1, objetos[2].lambAtributo1,
                                   objetos[3].lambAtributo1, objetos[4].lambAtributo1, objetos[5].lambAtributo1,
-                                  objetos[6].lambAtributo1, objetos[7].lambAtributo1 ,objetos[8].lambAtributo1 };
-            
-        return new Baricentro();
+                                  objetos[6].lambAtributo1, objetos[7].lambAtributo1 };
+            case 2:
+                return new int[] {
+                    objetos[0].lambAtributo2, objetos[1].lambAtributo2, objetos[2].lambAtributo2,
+                                  objetos[3].lambAtributo2, objetos[4].lambAtributo2, objetos[5].lambAtributo2,
+                                  objetos[6].lambAtributo2, objetos[7].lambAtributo2 };
+            case 3:
+                return new int[] {
+                    objetos[0].lambAtributo3, objetos[1].lambAtributo3, objetos[2].lambAtributo3,
+                                  objetos[3].lambAtributo3, objetos[4].lambAtributo3, objetos[5].lambAtributo3,
+                                  objetos[6].lambAtributo3, objetos[7].lambAtributo3 };
+            case 4:
+                return new int[] {
+                    objetos[0].lambAtributo4, objetos[1].lambAtributo4, objetos[2].lambAtributo4,
+                                  objetos[3].lambAtributo4, objetos[4].lambAtributo4, objetos[5].lambAtributo4,
+                                  objetos[6].lambAtributo4, objetos[7].lambAtributo4  };
+
+        }
+        return new int[0];
+    }
+
+    private int[] EscolheQualAtributoUsarParaMi(Cartas[] objetos, int numeroDoAtributo)
+    {
+        switch (numeroDoAtributo)
+        {
+            case 1: return new int[] { objetos[0].miAtributo1, objetos[1].miAtributo1, objetos[2].miAtributo1,
+                                  objetos[3].miAtributo1, objetos[4].miAtributo1, objetos[5].miAtributo1,
+                                  objetos[6].miAtributo1, objetos[7].miAtributo1  };
+            case 2:
+                return new int[] { objetos[0].miAtributo2, objetos[1].miAtributo2, objetos[2].miAtributo2,
+                                  objetos[3].miAtributo2, objetos[4].miAtributo2, objetos[5].miAtributo2,
+                                  objetos[6].miAtributo2, objetos[7].miAtributo2  };
+            case 3:
+                return new int[] { objetos[0].miAtributo3, objetos[1].miAtributo3, objetos[2].miAtributo3,
+                                  objetos[3].miAtributo3, objetos[4].miAtributo3, objetos[5].miAtributo3,
+                                  objetos[6].miAtributo3, objetos[7].miAtributo3  };
+            case 4:
+                return new int[] { objetos[0].miAtributo4, objetos[1].miAtributo4, objetos[2].miAtributo4,
+                                  objetos[3].miAtributo4, objetos[4].miAtributo4, objetos[5].miAtributo4,
+                                  objetos[6].miAtributo4, objetos[7].miAtributo4  };
+        }
+        return new int[0];
+    }
+
+  
+    private Baricentro[] maximilizaOitoCartas(int[] arrayMi1, int[] arrayLamb1)
+    {
+        throw new NotImplementedException();
     }
 
     public Boolean validaGameObject(Cartas[] objetos) {
@@ -100,11 +192,6 @@ public class LogicaParaconsistente
         {
             return false;
         }
-    }
-
-    public Double ConverteNumeros(int numeroInteiro)
-    {
-        return Convert.ToDouble(numeroInteiro)
     }
 
     public Double CalculaGrauDeCerteza(Baricentro baricentro)

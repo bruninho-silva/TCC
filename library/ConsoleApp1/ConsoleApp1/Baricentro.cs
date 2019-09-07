@@ -1,11 +1,12 @@
 using System;
 
 public class Baricentro{
-    private Double mi;
-    private Double lambida;
-    
-    public Double mi { get; set; }
+    private int mi;
+    private int lambida;
 
-    public Double lambida { get; set; }
+    public int mi { get; set; }
+
+    public int lambida { get; set; }
+
 
 }
