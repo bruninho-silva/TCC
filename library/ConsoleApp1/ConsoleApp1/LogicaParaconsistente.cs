@@ -3,19 +3,15 @@ using System.Collections.Generic;
 
 public class LogicaParaconsistente
 {
-    readonly double vcve = 0.5; //Var de controle de Veracidade
-    readonly double vcfa = 0.5; //Var de controle de Falsidade
-    readonly double vcic = 0.5; //var de conttole de Inconsistencia
-    readonly double vcpa = 0.5; //var de controle de Paracompleto
 
     public int obtemPorcentagemDeDano(Cartas[] cartas){
         if (validaGameObject(cartas))
         {
             Baricentro baricentro = obtemBaricentro(cartas);
-            Double gC = CalculaGrauDeCerteza(baricentro);
-            Double gI = CalculaGrauDeIncerteza(baricentro);
-            String estadoLogico = descobreEstadoLogico(gC, gI);
-            return transformaEstadoLogicoEmPorcentagem(estadoLogico);
+            double gC = calculaGrauDeCerteza(baricentro);
+            double gI = calculaGrauDeIncerteza(baricentro);
+            string estadoLogico = DescobreEstadoLogico(gC, gI);
+            return TransformaEstadoLogicoEmPorcentagem(estadoLogico);
         }
         else
         {
@@ -23,61 +19,90 @@ public class LogicaParaconsistente
         }
     }
 
-    public string descobreEstadoLogico(Double gc, Double gi){
+    public void descobreEstadoLogico(Double gc, Double gi){
 
-
-        if (gc > vcve)
+        if (gc > Constants.VCVE)
         {
-           return Constants.VERDADE;
+            // Verdade 
         }
-        else if (gc < vcfa)
+        else if (gc < Constants.VCFA)
         {
-            // Falso 
+            return Constants.FALSO;
         }
-        else if (gi > vcic)
+        else if (gi > Constants.VCIC)
         {
-            // Inconsistencia
+            return Constants.INCONSISTENTE;
         }
-        else if (gi > vcpa)
+        else if (gi > Constants.VCPA)
         {
-            // Paracompleto
+            return Constants.PARACOMPLETO;
         }
-        else if (gc >= 0 && gc < vcve && gi >= 0 && gi < vcic && gc >= gi)
+        else if (gc >= 0 && gc < Constants.VCVE && gi >= 0 && gi < Constants.VCIC && gc >= gi)
         {
-            // Quase Verdade tedendo a inconsistente
+            return Constants.QUASE_V_I;
         }
-        else if (gc >= 0 && gc < vcve && gi >= 0 && gi < vcic && gc < gi)
+        else if (gc >= 0 && gc < Constants.VCVE && gi >= 0 && gi < Constants.VCIC && gc < gi)
         {
-            // Incosistente tedendo a verdade
+            return Constants.INCONSISTENTE_T_VERDADE;
+        }/
+        else if (gc >= 0 && gc < Constants.VCVE && gi > Constants.VCPA && gi <= 0 && gc >= Math.Abs(gi))
+        {
+            return Constants.QUASE_V_P;
         }
-        else if (gc >= 0 && gc < vcve && gi > vcpa && gi <= 0 && gc >= Math.Abs(gi))
+        else if (gc >= 0 && gc < Constants.VCVE && gi > Constants.VCPA && gi <= 0 && gc >= Math.Abs(gi))
         {
-            // Quase Verdadeiro tendendo a Paracompleto
+            return Constants.PARACOMPLETO_T_VERDADE;
         }
-        else if (gc >= 0 && gc < vcve && gi > vcpa && gi <= 0 && gc >= Math.Abs(gi))
+        else if (gc > Constants.VCFA && gc <= 0 && gi > Constants.VCPA && gi <= 0 && Math.Abs(gc) > Math.Abs(gi))
         {
-            // Paracompleto tendendo a Verdadeiro
+            return Constants.QUASE_F_P;
         }
-        else if (gc > vcfa && gc <= 0 && gi > vcpa && gi <= 0 && Math.Abs(gc) > Math.Abs(gi))
+        else if (gc > Constants.VCFA && gc <= 0 && gi > Constants.VCPA && gc < gi && gi <= 0)
         {
-            // Falso tendendo paracompleto
+            return Constants.PARACOMPLETO_T_FALSO;
         }
-        else if (gc > vcfa && gc <= 0 && gi > vcpa && gc < gi && gi <= 0)
+        else if (gc > Constants.VCFA && gc <= 0 && gi >= 0 && gi < Constants.VCIC && gc >= gi)
         {
-            // Paracompleto tendendo a falso
+            return Constants.QUASE_F_I;
         }
-        else if (gc > vcfa && gc <= 0 && gi >= 0 && gi < vcic && gc >= gi)
+        else if (gc <= 0 &&  gc > Constants.VCFA && gi >= 0 && gi < Constants.VCIC && gc < gi)
         {
-            // Falso tedendo a inconsistente
-        }
-        else if (gc <= 0 &&  gc > vcfa && gi >= 0 && gi < vcic && gc < gi)
-        {
-            // Inconsistente tendendo a falso
+            return Constants.INCONSISTENTE_T_FALSO;
         }
     }
 
 
-    public void transformaEstadoLogicoEmPorcentagem(String estadoLogico){}
+    public int TransformaEstadoLogicoEmPorcentagem(string estadoLogico)
+    {
+        switch(estadoLogico)
+        {
+            case Constants.VERDADE:
+                return 100;
+            case Constants.FALSO:
+                return 0;
+            case Constants.INCONSISTENTE:
+                return 10;
+            case Constants.PARACOMPLETO:
+                return 10;
+            case Constants.QUASE_V_I:
+                return 35;
+            case Constants.INCONSISTENTE_T_VERDADE:
+                return 25;
+            case Constants.QUASE_V_P:
+                return 60;
+            case Constants.PARACOMPLETO_T_VERDADE:
+                return 49;
+            case Constants.QUASE_F_P:
+                return 89;
+            case Constants.PARACOMPLETO_T_FALSO:
+                return 45;
+            case Constants.QUASE_F_I:
+                return 8;
+            case Constants.INCONSISTENTE_T_FALSO:
+                return 85;
+
+        }
+    }
 
     public Baricentro obtemBaricentro(Cartas[] objetos){
         Baricentro[] list = new Baricentro[3];
