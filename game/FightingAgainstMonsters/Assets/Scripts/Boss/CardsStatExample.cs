@@ -42,14 +42,14 @@ public class CardsStatExample : MonoBehaviour {
 			objhealth.GetComponent<Image> ().sprite = imgHealth [0];
 			GetComponent<Rigidbody> ().constraints = RigidbodyConstraints.FreezePositionZ;
 			if (mePositionForDeadLeft) {
-				GetComponent<Rigidbody> ().AddForce (Vector3.left * 3000f);
+				GetComponent<Rigidbody> ().AddForce (Vector3.left * 90000);
 			} else if (mePositionForDeadRight) {
-				GetComponent<Rigidbody> ().AddForce (Vector3.right * 3000f);
-				GetComponent<Rigidbody> ().AddTorque(transform.up * 0f * 300f);
+				GetComponent<Rigidbody> ().AddForce (Vector3.right * 90000f);
+				GetComponent<Rigidbody> ().AddTorque(transform.up * 0f * 90000f);
 			}
 			GetComponent<BoxCollider> ().enabled = false;
 			GetComponent<AudioSource> ().PlayOneShot (loss);
-			this.tag = "EnemyMort";
+			(this.tag) = "EnemyMort";
 		} else {
 			objhealth.GetComponent<Image> ().sprite = imgHealth [health];
 			GetComponent<AudioSource> ().PlayOneShot (monsterHit);
