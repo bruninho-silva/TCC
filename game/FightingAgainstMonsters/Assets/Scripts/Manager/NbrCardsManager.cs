@@ -254,7 +254,7 @@ public class NbrCardsManager : MonoBehaviour {
 
 	//APPLY CARD GAME MIDDLE AFTER DRAG
 	public void ClickChangeCard(int carteid){
-		if (!StartDraw) {
+        if (!StartDraw) {
 			foreach (Cartes cart in mescartes.ToArray()) {
 				if (cart.cardId == carteid) {
 					IDcardClicked = carteid;
