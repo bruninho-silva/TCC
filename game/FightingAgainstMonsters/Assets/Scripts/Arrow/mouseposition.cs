@@ -18,7 +18,7 @@ public class mouseposition : MonoBehaviour {
 		float AngleDeg = (180 / Mathf.PI) * AngleRad;
 		transform.rotation = Quaternion.Euler(0, 0, AngleDeg);
 		calculatedDistance = Vector2.Distance(transform.position , Input.mousePosition);
-		distance = calculatedDistance/50f; 
+		distance = calculatedDistance/25f; 
 		transform.localScale = new Vector3(distance/2,1,1);
 	}
 
