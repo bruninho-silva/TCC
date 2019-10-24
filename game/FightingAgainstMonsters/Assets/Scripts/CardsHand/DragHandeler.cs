@@ -46,7 +46,7 @@ public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 		if (!Deck.GetComponent<NbrCardsManager> ().StartDraw) {
 			Deck.GetComponent<NbrCardsManager> ().CheckSlot ();
 			transform.position = eventData.position;
-			transform.localScale = new Vector3 (1.2f, 1.2f, 1.2f);
+			transform.localScale = new Vector3 (1.7f, 1.7f, 1.7f);
 			transform.localEulerAngles = new Vector3 (0, 0, 0);
 			Deck.GetComponent<NbrCardsManager> ().StartDrag = true;
 		}

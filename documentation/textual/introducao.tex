@@ -2,30 +2,32 @@
 
 \chapter{Introdução}
 
-Este trabalho acadêmico demonstra a aplicação da Lógica Paraconsistente Anotada (LPA), em jogos do gênero \textit{Tranding Card Games} (Jogos de Cartas Colecionáveis – TCG), através da criação de uma biblioteca de \dfrac{Tomada}{den} de Decisão que implementa a Lógica Paraconsistente Anotada Evidencial (LPA E$\tau$), além disso será criado um jogo de cartas que utiliza a biblioteca para demonstrar as suas funcionalidades.
+Este trabalho acadêmico demonstra a aplicação da Lógica Paraconsistente Anotada (LPA), em jogos do gênero \textit{Tranding Card Games} (Jogos de Cartas Colecionáveis – TCG), através da criação de uma biblioteca de Tomada de Decisão que implementa a Lógica Paraconsistente Anotada Evidencial (LPA E$\tau$), além disso será criado um jogo de cartas que utiliza a biblioteca para demonstrar as suas funcionalidades.
 
 Com parte do senso comum, as pessoas acreditam que os jogos têm como única finalidade entreter ignorando as diversas opções que um jogo eletrônico pode trazer para auxiliar o desenvolvimento humano, de modo que a utilização dos jogos de forma educacional ou para resolver problemas usando raciocínio lógico pode trazer benefícios à saúde \cite{fabio-luis-lpa}.
 
 A LPA é uma lógica não clássica que admite contradições e incertezas, é uma boa solução para fazer tratamento de situações reais, no qual a Lógica Clássica, por ser binária, se mostra ineficaz ou impossibilitada de ser aplicada \cite{metodos-lpa-2006}. Assim possibilita as mais variadas aplicações em áreas tais como computação, robótica, tráfego aéreo e de trens, distribuição de energia em grandes usinas, programação, redes neurais, pesquisa operacional entre outras \cite{tomda-decisao-lpa-2011}.
 
 Uma biblioteca é uma coleção de subprogramas ou um programa que facilita o desenvolvimento de sistemas, no núcleo da biblioteca desenvolvida será utilizado a
-LPA. Dessa forma a biblioteca implementada no jogo será responsável por tomar as decisões dos resultados de batalha, sendo o intuito de criar um software que pode ser reutilizável por outros, iniciando um estudo da aplicação da LPA em jogos TGC.
+LPA. Dessa forma, a biblioteca implementada no jogo será responsável por tomar as decisões dos resultados de batalha, sendo o intuito de criar um software que pode ser reutilizável por outros, iniciando um estudo da aplicação da LPA em jogos TGC.
 
 Será explicado como a biblioteca foi desenvolvida e implementada no jogo, juntamente com a sua documentação para utilização. Também será relatado como o
 jogo foi desenvolvido, quais ferramentas e metodologias foram utilizadas e quais resultados que foram obtidos em vantagem com a utilização da LPA.
 
-Este documento está estruturado nos seguintes tópicos, \textit{1 - Introdução} apresenta o projeto, os objetivos e as justificativas. No capítulo \textit{2 - RWeferência Teórica} é
+Este documento está estruturado nos seguintes tópicos, \textit{1 - Introdução} apresenta o projeto, os objetivos e as justificativas. No capítulo \textit{2 - Referência Teórica} é
 exposta a base conceitual do projeto. Na seção seguinte \textit{3 - Materiais e Métodos} é retratada a metodologia utilizada para desenvolvimento da prototipagem além das ferramentas utilizadas no processo.
 
-Finalizada a apresentação da estrutura do trabalho, prossegue para \textit{capítulo 2 - Referência Teórica}.
+\pagebreak
 
 \section{Justificativa}
 
-No desenvolvimento de jogos de cartas, é encontrado diversas bibliotecas disponibilizado na \textit{Unity Asset Store}, com uso de lógica clássica, que uma proposição é classificada como verdadeira ou falsa. Não há qualquer outra possível alternativa, ou algo é Verdadeiro ou exclusivamente Falso \cite{aspectos-lpa-2013}.
+No desenvolvimento de jogos de cartas, são encontrado diversas bibliotecas disponibilizado na \textit{Unity Asset Store}, com uso de LC, que uma proposição é classificada como verdadeira ou falsa. Não há qualquer outra possível alternativa, ou algo é Verdadeiro ou exclusivamente Falso \cite{aspectos-lpa-2013}.
 
-A lógica paraconsistente introduz duas novas categorias além do Verdadeiro e do Falso. Podemos ter proposições classificadas como Verdadeiras, Falsas, Inconsistentes ou Paracompletas. Para uma proposição ser classificada com Inconsistente tem haver uma evidência sugere que ela seja Verdadeira e outra evidência sugere que ela é Falsa, Agora quando não tem evidência Verdadeira nem tampouco que ela seja Falsa a proposição é classificada como Paracompleta \cite{aspectos-lpa-2013}.
+A lógica paraconsistente introduz duas novas categorias além do Verdadeiro e do Falso. Podemos ter proposições classificadas como Verdadeiras, Falsas, Inconsistentes ou Paracompletas. Para uma proposição ser classificada com Inconsistente tem haver uma evidência sugere que ela seja Verdadeira e outra evidência aponte que ela é Falsa, Agora quando não tem evidência Verdadeira nem tampouco que ela seja Falsa a proposição é classificada como Paracompleta \cite{aspectos-lpa-2013}.
 
-Sendo que a Logica Paraconsistente é utilizado em outras áreas e não é utilizado especificamente em jogos e cartas. Portanto a proposta do projeto é desenvolver uma biblioteca aplicando Tomada de Decisão com Lógica Paraconsistente ao invés do Logica clássica, para auxiliar no processo decisório de uma forma ágil e eficiente.
+A proposta do projeto é desenvolver uma biblioteca aplicando TD com a LPA ao invés
+do LC, para auxiliar no processo decisório aceitando valores contraditórios, possibilitando a criação de novas dinâmicas nos jogos.
+
 
 
 \section{Validação Empírica}
@@ -137,4 +139,5 @@ O objetivo geral é desenvolver uma biblioteca de Tomada de Decisão que utilize
 		\item Criar a presente documentação descrevendo os materiais, métodos e referências utilizadas para a construção do projeto.
 	\end{itemize}
 
-
+	
+Finalizada a apresentação da estrutura do trabalho, prossegue para \textit{capítulo 2 - Referência Teórica}.
