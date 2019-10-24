@@ -1,4 +1,5 @@
-public class Constants{
+public class Constante
+{
 
     public const double VCFA = 0.5; //Var de controle de Falsidade
     public const double VCVE = 0.5; //Var de controle de Veracidade

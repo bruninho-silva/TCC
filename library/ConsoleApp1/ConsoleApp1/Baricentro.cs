@@ -6,7 +6,7 @@ public class Baricentro{
 
     public int Mi { get; set; }
 
-    public int Lambida { get; set; }
+    public int Lambda { get; set; }
 
 
 }

@@ -4,10 +4,10 @@ using System.Collections.Generic;
 public class LogicaParaconsistente
 {
 
-    public int ObtemPorcentagemDeDano(Cartas[] cartas){
+    public int ObtemPorcentagemDeDano(Carta[] cartas){
         if (validaGameObject(cartas))
         {
-            Baricentro baricentro = obtemBaricentro(cartas);
+            Baricentro baricentro = ObtemBaricentro(cartas);
             double gC = CalculaGrauDeCerteza(baricentro);
             double gI = CalculaGrauDeIncerteza(baricentro);
             string estadoLogico = DescobreEstadoLogico(gC, gI);
@@ -21,53 +21,53 @@ public class LogicaParaconsistente
 
     public string DescobreEstadoLogico(double gc, double gi){
 
-        if (gc > Constants.VCVE)
+        if (gc > Constante.VCVE)
         {
-            return Constants.VERDADE;
+            return Constante.VERDADE;
         }
-        else if (gc < Constants.VCFA)
+        else if (gc < Constante.VCFA)
         {
-            return Constants.FALSO;
+            return Constante.FALSO;
         }
-        else if (gi > Constants.VCIC)
+        else if (gi > Constante.VCIC)
         {
-            return Constants.INCONSISTENTE;
+            return Constante.INCONSISTENTE;
         }
-        else if (gi > Constants.VCPA)
+        else if (gi > Constante.VCPA)
         {
-            return Constants.PARACOMPLETO;
+            return Constante.PARACOMPLETO;
         }
-        else if (gc >= 0 && gc < Constants.VCVE && gi >= 0 && gi < Constants.VCIC && gc >= gi)
+        else if (gc >= 0 && gc < Constante.VCVE && gi >= 0 && gi < Constante.VCIC && gc >= gi)
         {
-            return Constants.QUASE_V_I;
+            return Constante.QUASE_V_I;
         }
-        else if (gc >= 0 && gc < Constants.VCVE && gi >= 0 && gi < Constants.VCIC && gc < gi)
+        else if (gc >= 0 && gc < Constante.VCVE && gi >= 0 && gi < Constante.VCIC && gc < gi)
         {
-            return Constants.INCONSISTENTE_T_VERDADE;
+            return Constante.INCONSISTENTE_T_VERDADE;
         }
-        else if (gc >= 0 && gc < Constants.VCVE && gi > Constants.VCPA && gi <= 0 && gc >= Math.Abs(gi))
+        else if (gc >= 0 && gc < Constante.VCVE && gi > Constante.VCPA && gi <= 0 && gc >= Math.Abs(gi))
         {
-            return Constants.QUASE_V_P;
+            return Constante.QUASE_V_P;
         }
-        else if (gc >= 0 && gc < Constants.VCVE && gi > Constants.VCPA && gi <= 0 && gc >= Math.Abs(gi))
+        else if (gc >= 0 && gc < Constante.VCVE && gi > Constante.VCPA && gi <= 0 && gc >= Math.Abs(gi))
         {
-            return Constants.PARACOMPLETO_T_VERDADE;
+            return Constante.PARACOMPLETO_T_VERDADE;
         }
-        else if (gc > Constants.VCFA && gc <= 0 && gi > Constants.VCPA && gi <= 0 && Math.Abs(gc) > Math.Abs(gi))
+        else if (gc > Constante.VCFA && gc <= 0 && gi > Constante.VCPA && gi <= 0 && Math.Abs(gc) > Math.Abs(gi))
         {
-            return Constants.QUASE_F_P;
+            return Constante.QUASE_F_P;
         }
-        else if (gc > Constants.VCFA && gc <= 0 && gi > Constants.VCPA && gc < gi && gi <= 0)
+        else if (gc > Constante.VCFA && gc <= 0 && gi > Constante.VCPA && gc < gi && gi <= 0)
         {
-            return Constants.PARACOMPLETO_T_FALSO;
+            return Constante.PARACOMPLETO_T_FALSO;
         }
-        else if (gc > Constants.VCFA && gc <= 0 && gi >= 0 && gi < Constants.VCIC && gc >= gi)
+        else if (gc > Constante.VCFA && gc <= 0 && gi >= 0 && gi < Constante.VCIC && gc >= gi)
         {
-            return Constants.QUASE_F_I;
+            return Constante.QUASE_F_I;
         }
-        else if (gc <= 0 &&  gc > Constants.VCFA && gi >= 0 && gi < Constants.VCIC && gc < gi)
+        else if (gc <= 0 &&  gc > Constante.VCFA && gi >= 0 && gi < Constante.VCIC && gc < gi)
         {
-            return Constants.INCONSISTENTE_T_FALSO;
+            return Constante.INCONSISTENTE_T_FALSO;
         }
         return null;
     }
@@ -77,131 +77,131 @@ public class LogicaParaconsistente
     {
         switch(estadoLogico)
         {
-            case Constants.VERDADE:
+            case Constante.VERDADE:
                 return 100;
-            case Constants.FALSO:
+            case Constante.FALSO:
                 return 0;
-            case Constants.INCONSISTENTE:
+            case Constante.INCONSISTENTE:
                 return 10;
-            case Constants.PARACOMPLETO:
+            case Constante.PARACOMPLETO:
                 return 10;
-            case Constants.QUASE_V_I:
+            case Constante.QUASE_V_I:
                 return 35;
-            case Constants.INCONSISTENTE_T_VERDADE:
+            case Constante.INCONSISTENTE_T_VERDADE:
                 return 25;
-            case Constants.QUASE_V_P:
+            case Constante.QUASE_V_P:
                 return 60;
-            case Constants.PARACOMPLETO_T_VERDADE:
+            case Constante.PARACOMPLETO_T_VERDADE:
                 return 49;
-            case Constants.QUASE_F_P:
+            case Constante.QUASE_F_P:
                 return 89;
-            case Constants.PARACOMPLETO_T_FALSO:
+            case Constante.PARACOMPLETO_T_FALSO:
                 return 45;
-            case Constants.QUASE_F_I:
+            case Constante.QUASE_F_I:
                 return 8;
-            case Constants.INCONSISTENTE_T_FALSO:
+            case Constante.INCONSISTENTE_T_FALSO:
                 return 85;
 
         }
         return 0;
     }
 
-    public Baricentro obtemBaricentro(Cartas[] objetos){
+    public Baricentro ObtemBaricentro(Carta[] objetos){
         Baricentro[] list = new Baricentro[] { new Baricentro(), new Baricentro(), new Baricentro(), new Baricentro() };
         for(int i = 0; i < 4; i++)
         {
             Baricentro baricentro = ExtraiContradicaoPorAtributo(objetos, i);
             list[i] = baricentro;
         }
-        Baricentro[] duasCartas = maximilizaQuatroCartas(list);
-        Baricentro carta = miniminizaDuasCartas(duasCartas);
+        Baricentro[] duasCartas = MaximilizaQuatroCartas(list);
+        Baricentro carta = MiniminizaDuasCartas(duasCartas);
         return carta;        
     }
 
-    private Baricentro ExtraiContradicaoPorAtributo(Cartas[] objetos, int numeroDoAttr)
+    private Baricentro ExtraiContradicaoPorAtributo(Carta[] objetos, int numeroDoAttr)
     {
         int[] arrayMi1 = EscolheQualAtributoUsarParaMi(objetos,numeroDoAttr);
         int[] arrayLamb1 = EscolheQualAtributoUsarParaLamb(objetos,numeroDoAttr);
 
         Baricentro[] quatroCartas = MaximilizaOitoCartas(arrayMi1, arrayLamb1);
        
-        Baricentro[] duasCartas = maximilizaQuatroCartas(quatroCartas);
+        Baricentro[] duasCartas = MaximilizaQuatroCartas(quatroCartas);
     
-        Baricentro carta = miniminizaDuasCartas(duasCartas);
+        Baricentro carta = MiniminizaDuasCartas(duasCartas);
 
         return carta;    
     }
 
-    private Baricentro miniminizaDuasCartas(Baricentro[] duasCartas)
+    private Baricentro MiniminizaDuasCartas(Baricentro[] duasCartas)
     {
         Baricentro carta = new Baricentro();
-        carta.Lambida = duasCartas[0].Lambida > duasCartas[1].Lambida ? duasCartas[0].Lambida : duasCartas[1].Lambida;
+        carta.Lambda = duasCartas[0].Lambda > duasCartas[1].Lambda ? duasCartas[0].Lambda : duasCartas[1].Lambda;
         carta.Mi = duasCartas[0].Mi < duasCartas[1].Mi ? duasCartas[0].Mi : duasCartas[1].Mi;
 
         return carta;
     }
 
-    private Baricentro[] maximilizaQuatroCartas(Baricentro[] quatroCartas)
+    private Baricentro[] MaximilizaQuatroCartas(Baricentro[] quatroCartas)
     {
        Baricentro[] duasCartas = new Baricentro[] { new Baricentro(), new Baricentro() };
 
        duasCartas[0].Mi = quatroCartas[0].Mi > quatroCartas[1].Mi ? quatroCartas[0].Mi : quatroCartas[1].Mi;
-       duasCartas[0].Lambida = quatroCartas[0].Lambida < quatroCartas[1].Lambida ? quatroCartas[0].Lambida : quatroCartas[1].Lambida;
+       duasCartas[0].Lambda = quatroCartas[0].Lambda < quatroCartas[1].Lambda ? quatroCartas[0].Lambda : quatroCartas[1].Lambda;
 
        duasCartas[1].Mi = quatroCartas[2].Mi > quatroCartas[3].Mi ? quatroCartas[2].Mi : quatroCartas[3].Mi;
-       duasCartas[1].Lambida = quatroCartas[2].Lambida < quatroCartas[3].Lambida ? quatroCartas[2].Lambida : quatroCartas[3].Lambida;
+       duasCartas[1].Lambda = quatroCartas[2].Lambda < quatroCartas[3].Lambda ? quatroCartas[2].Lambda : quatroCartas[3].Lambda;
 
        return duasCartas;
     }
 
-    private int[] EscolheQualAtributoUsarParaLamb(Cartas[] objetos, int numeroDoAtributo)
+    private int[] EscolheQualAtributoUsarParaLamb(Carta[] objetos, int numeroDoAtributo)
     {
         switch (numeroDoAtributo)
         {
             case 0:
                 return new int[] {
-                    objetos[0].lambAtributo1, objetos[1].lambAtributo1, objetos[2].lambAtributo1,
-                                  objetos[3].lambAtributo1, objetos[4].lambAtributo1, objetos[5].lambAtributo1,
-                                  objetos[6].lambAtributo1, objetos[7].lambAtributo1 };
+                    objetos[0].LambAtributo1, objetos[1].LambAtributo1, objetos[2].LambAtributo1,
+                                  objetos[3].LambAtributo1, objetos[4].LambAtributo1, objetos[5].LambAtributo1,
+                                  objetos[6].LambAtributo1, objetos[7].LambAtributo1 };
             case 1:
                 return new int[] {
-                    objetos[0].lambAtributo2, objetos[1].lambAtributo2, objetos[2].lambAtributo2,
-                                  objetos[3].lambAtributo2, objetos[4].lambAtributo2, objetos[5].lambAtributo2,
-                                  objetos[6].lambAtributo2, objetos[7].lambAtributo2 };
+                    objetos[0].LambAtributo2, objetos[1].LambAtributo2, objetos[2].LambAtributo2,
+                                  objetos[3].LambAtributo2, objetos[4].LambAtributo2, objetos[5].LambAtributo2,
+                                  objetos[6].LambAtributo2, objetos[7].LambAtributo2 };
             case 2:
                 return new int[] {
-                    objetos[0].lambAtributo3, objetos[1].lambAtributo3, objetos[2].lambAtributo3,
-                                  objetos[3].lambAtributo3, objetos[4].lambAtributo3, objetos[5].lambAtributo3,
-                                  objetos[6].lambAtributo3, objetos[7].lambAtributo3 };
+                    objetos[0].LambAtributo3, objetos[1].LambAtributo3, objetos[2].LambAtributo3,
+                                  objetos[3].LambAtributo3, objetos[4].LambAtributo3, objetos[5].LambAtributo3,
+                                  objetos[6].LambAtributo3, objetos[7].LambAtributo3 };
             case 3:
                 return new int[] {
-                    objetos[0].lambAtributo4, objetos[1].lambAtributo4, objetos[2].lambAtributo4,
-                                  objetos[3].lambAtributo4, objetos[4].lambAtributo4, objetos[5].lambAtributo4,
-                                  objetos[6].lambAtributo4, objetos[7].lambAtributo4  };
+                    objetos[0].LambAtributo4, objetos[1].LambAtributo4, objetos[2].LambAtributo4,
+                                  objetos[3].LambAtributo4, objetos[4].LambAtributo4, objetos[5].LambAtributo4,
+                                  objetos[6].LambAtributo4, objetos[7].LambAtributo4  };
 
         }
         return new int[0];
     }
 
-    private int[] EscolheQualAtributoUsarParaMi(Cartas[] objetos, int numeroDoAtributo)
+    private int[] EscolheQualAtributoUsarParaMi(Carta[] objetos, int numeroDoAtributo)
     {
         switch (numeroDoAtributo)
         {
-            case 0: return new int[] { objetos[0].miAtributo1, objetos[1].miAtributo1, objetos[2].miAtributo1,
-                                  objetos[3].miAtributo1, objetos[4].miAtributo1, objetos[5].miAtributo1,
-                                  objetos[6].miAtributo1, objetos[7].miAtributo1  };
+            case 0: return new int[] { objetos[0].MiAtributo1, objetos[1].MiAtributo1, objetos[2].MiAtributo1,
+                                  objetos[3].MiAtributo1, objetos[4].MiAtributo1, objetos[5].MiAtributo1,
+                                  objetos[6].MiAtributo1, objetos[7].MiAtributo1  };
             case 1:
-                return new int[] { objetos[0].miAtributo2, objetos[1].miAtributo2, objetos[2].miAtributo2,
-                                  objetos[3].miAtributo2, objetos[4].miAtributo2, objetos[5].miAtributo2,
-                                  objetos[6].miAtributo2, objetos[7].miAtributo2  };
+                return new int[] { objetos[0].MiAtributo2, objetos[1].MiAtributo2, objetos[2].MiAtributo2,
+                                  objetos[3].MiAtributo2, objetos[4].MiAtributo2, objetos[5].MiAtributo2,
+                                  objetos[6].MiAtributo2, objetos[7].MiAtributo2  };
             case 2:
-                return new int[] { objetos[0].miAtributo3, objetos[1].miAtributo3, objetos[2].miAtributo3,
-                                  objetos[3].miAtributo3, objetos[4].miAtributo3, objetos[5].miAtributo3,
-                                  objetos[6].miAtributo3, objetos[7].miAtributo3  };
+                return new int[] { objetos[0].MiAtributo3, objetos[1].MiAtributo3, objetos[2].MiAtributo3,
+                                  objetos[3].MiAtributo3, objetos[4].MiAtributo3, objetos[5].MiAtributo3,
+                                  objetos[6].MiAtributo3, objetos[7].MiAtributo3  };
             case 3:
-                return new int[] { objetos[0].miAtributo4, objetos[1].miAtributo4, objetos[2].miAtributo4,
-                                  objetos[3].miAtributo4, objetos[4].miAtributo4, objetos[5].miAtributo4,
-                                  objetos[6].miAtributo4, objetos[7].miAtributo4  };
+                return new int[] { objetos[0].MiAtributo4, objetos[1].MiAtributo4, objetos[2].MiAtributo4,
+                                  objetos[3].MiAtributo4, objetos[4].MiAtributo4, objetos[5].MiAtributo4,
+                                  objetos[6].MiAtributo4, objetos[7].MiAtributo4  };
         }
         return new int[0];
     }
@@ -212,21 +212,21 @@ public class LogicaParaconsistente
         Baricentro[] quatroCartas = new Baricentro[] { new Baricentro(), new Baricentro(), new Baricentro(), new Baricentro(), };
 
         quatroCartas[0].Mi = arrayMi1[0] > arrayMi1[1] ? arrayMi1[0] : arrayMi1[1];
-        quatroCartas[0].Lambida = arrayLamb1[0] < arrayLamb1[1] ? arrayLamb1[0] : arrayLamb1[1];
+        quatroCartas[0].Lambda = arrayLamb1[0] < arrayLamb1[1] ? arrayLamb1[0] : arrayLamb1[1];
 
         quatroCartas[1].Mi = arrayMi1[2] > arrayMi1[3] ? arrayMi1[2] : arrayMi1[3];
-        quatroCartas[1].Lambida = arrayLamb1[2] < arrayLamb1[3] ? arrayLamb1[2] : arrayLamb1[3];
+        quatroCartas[1].Lambda = arrayLamb1[2] < arrayLamb1[3] ? arrayLamb1[2] : arrayLamb1[3];
 
         quatroCartas[2].Mi = arrayMi1[4] > arrayMi1[5] ? arrayMi1[4] : arrayMi1[5];
-        quatroCartas[2].Lambida = arrayLamb1[4] < arrayLamb1[5] ? arrayLamb1[4] : arrayLamb1[5];
+        quatroCartas[2].Lambda = arrayLamb1[4] < arrayLamb1[5] ? arrayLamb1[4] : arrayLamb1[5];
 
         quatroCartas[3].Mi = arrayMi1[6] > arrayMi1[7] ? arrayMi1[6] : arrayMi1[7];
-        quatroCartas[3].Lambida = arrayLamb1[6] < arrayLamb1[7] ? arrayLamb1[6] : arrayLamb1[7];
+        quatroCartas[3].Lambda = arrayLamb1[6] < arrayLamb1[7] ? arrayLamb1[6] : arrayLamb1[7];
 
         return quatroCartas;
     }
 
-    public Boolean validaGameObject(Cartas[] objetos) {
+    public Boolean validaGameObject(Carta[] objetos) {
         if (objetos.Length == 8)
         {
             return true;
@@ -240,15 +240,15 @@ public class LogicaParaconsistente
     public Double CalculaGrauDeCerteza(Baricentro baricentro)
     {
         Double mi = baricentro.Mi;
-        Double lambida = baricentro.Lambida;
-        return mi + lambida - 1;
+        Double Lambda = baricentro.Lambda;
+        return mi + Lambda - 1;
     }
 
     public Double CalculaGrauDeIncerteza(Baricentro baricentro)
     {
         Double mi = baricentro.Mi;
-        Double lambida = baricentro.Lambida;
-        return lambida - mi;
+        Double Lambda = baricentro.Lambda;
+        return Lambda - mi;
     }
     
    
