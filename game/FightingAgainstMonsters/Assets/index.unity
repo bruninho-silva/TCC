@@ -1128,8 +1128,8 @@ Rigidbody:
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 12
+  m_Interpolate: 2
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!114 &137912130
 MonoBehaviour:
@@ -1145,7 +1145,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floating: {fileID: 824218268}
   dmg: 0
-  speedfloating: 10
+  speedfloating: 4
   dmgText: 
 --- !u!1 &145699723
 GameObject:
@@ -1651,8 +1651,8 @@ Rigidbody:
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 12
+  m_Interpolate: 2
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!1 &172125838
 GameObject:
@@ -4736,7 +4736,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floating: {fileID: 1834107193}
   dmg: 0
-  speedfloating: 10
+  speedfloating: 4
   dmgText: 
 --- !u!54 &528113016
 Rigidbody:
@@ -4752,7 +4752,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 12
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!1 &549822690
 GameObject:
@@ -5261,7 +5261,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 12
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!114 &645263034
 MonoBehaviour:
@@ -5295,7 +5295,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   price: 0
   Attack: 129
-  health: 80
+  health: 11000
   cards: {fileID: 0}
   objprice: {fileID: 0}
   objattack: {fileID: 1452204649}
@@ -6381,7 +6381,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floating: {fileID: 1649326018}
   dmg: 0
-  speedfloating: 10
+  speedfloating: 4
   dmgText: 
 --- !u!54 &762083700
 Rigidbody:
@@ -6397,7 +6397,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 12
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!1 &765292101
 GameObject:
@@ -7741,7 +7741,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 12
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!114 &956465861
 MonoBehaviour:
@@ -7755,9 +7755,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56e709d70f356ce4f87299c77304d266, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  floating: {fileID: 0}
+  floating: {fileID: 717383122}
   dmg: 0
-  speedfloating: 10
+  speedfloating: 4
   dmgText: 
 --- !u!1 &965007330
 GameObject:
@@ -8218,7 +8218,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 12
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!114 &974989720
 MonoBehaviour:
@@ -8234,7 +8234,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floating: {fileID: 549822690}
   dmg: 0
-  speedfloating: 10
+  speedfloating: 4
   dmgText: 
 --- !u!1 &983719310
 GameObject:
@@ -13828,7 +13828,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floating: {fileID: 2007463528}
   dmg: 0
-  speedfloating: 10
+  speedfloating: 4
   dmgText: 
 --- !u!54 &1822354271
 Rigidbody:
@@ -13844,7 +13844,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 12
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!1 &1834107193
 GameObject:
@@ -14219,7 +14219,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 12
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!114 &1885670437
 MonoBehaviour:
@@ -14252,7 +14252,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   price: 0
-  Attack: 20
+  Attack: 220
   health: 50
   cards: {fileID: 0}
   objprice: {fileID: 0}
@@ -15225,7 +15225,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 12
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!114 &2023398361
 MonoBehaviour:
@@ -15241,7 +15241,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floating: {fileID: 1372518578}
   dmg: 0
-  speedfloating: 10
+  speedfloating: 4
   dmgText: 
 --- !u!1 &2030079373
 GameObject:
