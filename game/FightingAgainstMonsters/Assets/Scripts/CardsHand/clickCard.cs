@@ -7,10 +7,13 @@ public class clickCard : MonoBehaviour , IPointerEnterHandler, IPointerExitHandl
 
 	public GameObject deck;
 	public int NombreCarte;
-	public int idCarte;
+    public int idCarte;
 	public int price;
 	public int attack;
 	public int health;
+
+
+   
 
     public GameObject objprice;
 	public GameObject objattack;
@@ -22,14 +25,18 @@ public class clickCard : MonoBehaviour , IPointerEnterHandler, IPointerExitHandl
 
 	// Use this for initialization
 	void Start () {
+
 		objprice.GetComponent<Text> ().text = price.ToString();
 		objattack.GetComponent<Text> ().text = attack.ToString();
 		objhealth.GetComponent<Text> ().text = health.ToString();
+
     }
 	
 	// Update is called once per frame
 	void Update () {
+
 		NombreCarte = deck.GetComponent<NbrCardsManager> ().NbrCard;
+
 	}
 
 	public void OnPointerEnter(PointerEventData eventData)
@@ -43,13 +50,20 @@ public class clickCard : MonoBehaviour , IPointerEnterHandler, IPointerExitHandl
 
 	public void OnPointerExit(PointerEventData eventData)
 	{
+
 		GetComponent<Outline> ().enabled = false;
 		deck.GetComponent<NbrCardsManager> ().viewCardOff ();
 		deck.GetComponent<NbrCardsManager> ().IDcardView = idCarte;
         //GetComponent<DragHandeler> ().enabled = false;
+
     }
 
 	public void ApplyCard(){
+
 		deck.GetComponent<NbrCardsManager> ().ClickChangeCard (idCarte);
+
     }
+
+    
+
 }

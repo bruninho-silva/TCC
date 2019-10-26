@@ -6,19 +6,23 @@ using UnityEngine.EventSystems;
 
 public class clickCardsMiddle : MonoBehaviour , IPointerClickHandler {
 
+    public CardsStatExample monster;
 	public bool sleep = false;
 	public bool chooseForAttack = false;
 	public bool Attack = false;
 	public bool Returnstartposition = false;
 	public GameObject Arrow;
-
 	public float speedAttack;
 	public AudioClip Sweep;
 	public GameObject deck;
 	public GameObject enemy;
 	public GameObject sleepObj;
+    public bool mePositionForDeadLeft = false;
+    public bool mePositionForDeadRight = false;
 
-	public Vector2 startposition;
+    public AudioClip loss;
+
+    public Vector2 startposition;
 
 	// Use this for initialization
 	void Start () {
@@ -47,17 +51,19 @@ public class clickCardsMiddle : MonoBehaviour , IPointerClickHandler {
 		//IF ATTACK
 		}else if (Attack) {
 			
-			if (!enemy.GetComponent<overMouse> ().impact) {
+			if (!enemy.GetComponent<overMouse> ().impact) { 
 				this.transform.localPosition = Vector3.Lerp (this.transform.localPosition, enemy.transform.localPosition, Time.deltaTime * speedAttack);
 			} else {
 				Attack = false;
 				sleepObj.GetComponent<Image> ().enabled = true;
 				enemy.GetComponent<overMouse> ().isAtacked = false;
-				enemy.GetComponent<CardsStatExample> ().damage (GetComponent<ApplyCardMiddle> ().attack);
-				sleep = true;
+                enemy.GetComponent<CardsStatExample>().damage (GetComponent<ApplyCardMiddle>().attack);
+				this.GetComponent<ApplyCardMiddle> ().damage (enemy.GetComponent<CardsStatExample> ().Attack);
+                sleep = true;
 				chooseForAttack = false;
 				Returnstartposition = true;
 				enemy.GetComponent<overMouse> ().impact = false;
+                
 			}
 		}
 		//RETRUN TO START POSITION
@@ -75,6 +81,7 @@ public class clickCardsMiddle : MonoBehaviour , IPointerClickHandler {
 		enemy = null;
 	}
 
+
 	public void OnPointerClick(PointerEventData eventData){
 		if (!sleep && !Attack) {
 			Arrow.transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y-50f, transform.localPosition.z);
@@ -82,5 +89,5 @@ public class clickCardsMiddle : MonoBehaviour , IPointerClickHandler {
 			chooseForAttack = true;
 		}
 	}
-		
+
 }

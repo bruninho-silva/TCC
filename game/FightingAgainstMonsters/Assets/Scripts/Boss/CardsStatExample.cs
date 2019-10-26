@@ -5,9 +5,10 @@ using System.Collections;
 public class CardsStatExample : MonoBehaviour {
 	
 	public int price;
-	public int attack;
+	public int Attack;
 	public int health;
 
+    public GameObject cards;
     public GameObject objprice;
 	public GameObject objattack;
 	public GameObject objhealth;
@@ -20,10 +21,8 @@ public class CardsStatExample : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		if (!boss) {
-			objattack.GetComponent<Text> ().text = attack.ToString();
-           
-        }
+
+			objattack.GetComponent<Text> ().text = Attack.ToString();
 	        objhealth.GetComponent<Text> ().text = health.ToString();
      
     }
