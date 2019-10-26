@@ -1,10 +1,10 @@
 public class Constante
 {
 
-    public const double VCFA = 0.5; //Var de controle de Falsidade
+    public const double VCFA = -0.5; //Var de controle de Falsidade
     public const double VCVE = 0.5; //Var de controle de Veracidade
     public const double VCIC = 0.5; //var de conttole de Inconsistencia
-    public const double VCPA = 0.5; //var de controle de Paracompleto
+    public const double VCPA = -0.5; //var de controle de Paracompleto
 
     public const string VERDADE = "VERDADE";
     public const string FALSO = "FALSO";
