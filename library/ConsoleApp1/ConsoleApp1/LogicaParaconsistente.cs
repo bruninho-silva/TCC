@@ -11,6 +11,8 @@ public class LogicaParaconsistente
             double gC = CalculaGrauDeCerteza(baricentro);
             double gI = CalculaGrauDeIncerteza(baricentro);
             string estadoLogico = DescobreEstadoLogico(gC, gI);
+            Console.WriteLine(gC);
+            Console.WriteLine(gI);
             return TransformaEstadoLogicoEmPorcentagem(estadoLogico);
         }
         else
@@ -21,23 +23,24 @@ public class LogicaParaconsistente
 
     public string DescobreEstadoLogico(double gc, double gi){
 
-        if (gc > Constante.VCVE)
+        if (gc >= Constante.VCVE)
         {
             return Constante.VERDADE;
         }
-        else if (gc < Constante.VCFA)
+        else if (gc <= Constante.VCFA)
         {
             return Constante.FALSO;
         }
-        else if (gi > Constante.VCIC)
+        else if (gi >= Constante.VCIC)
         {
             return Constante.INCONSISTENTE;
         }
-        else if (gi > Constante.VCPA)
+        else if (gi <= Constante.VCPA)
         {
             return Constante.PARACOMPLETO;
         }
-        else if (gc >= 0 && gc < Constante.VCVE && gi >= 0 && gi < Constante.VCIC && gc >= gi)
+
+        else if ( (gc >= 0 && gc < Constante.VCVE)  && (gi >= 0 && gi < Constante.VCIC) )
         {
             if (gc >= gi)
             {
@@ -48,7 +51,7 @@ public class LogicaParaconsistente
                 return Constante.INCONSISTENTE_T_VERDADE;
             }
         }
-        else if (gc >= 0 && gc < Constante.VCVE && gi > Constante.VCPA && gi <= 0)
+        else if ( (gc >= 0 && gc < Constante.VCVE) && (gi > Constante.VCPA && gi <= 0) )
         {
             if (gc >= Math.Abs(gi))
             {
@@ -59,21 +62,27 @@ public class LogicaParaconsistente
                 return Constante.PARACOMPLETO_T_VERDADE;
             }
         }
-        else if (gc > Constante.VCFA && gc <= 0 && gi > Constante.VCPA && gi <= 0 && Math.Abs(gc) > Math.Abs(gi))
+        else if ( (gc > Constante.VCFA && gc <= 0) && (gi > Constante.VCPA && gi <= 0) )
         {
-            return Constante.QUASE_F_P;
+            if (Math.Abs(gc) > Math.Abs(gi))
+            {
+                return Constante.QUASE_F_P;
+            }
+            else
+            {
+                return Constante.PARACOMPLETO_T_FALSO;
+            }
         }
-        else if (gc > Constante.VCFA && gc <= 0 && gi > Constante.VCPA && gc < gi && gi <= 0)
+        else if ( (gc > Constante.VCFA && gc <= 0) && (gi >= 0 && gi < Constante.VCIC ) )
         {
-            return Constante.PARACOMPLETO_T_FALSO;
-        }
-        else if (gc > Constante.VCFA && gc <= 0 && gi >= 0 && gi < Constante.VCIC && gc >= gi)
-        {
-            return Constante.QUASE_F_I;
-        }
-        else if (gc <= 0 &&  gc > Constante.VCFA && gi >= 0 && gi < Constante.VCIC && gc < gi)
-        {
-            return Constante.INCONSISTENTE_T_FALSO;
+            if (Math.Abs(gc) >= gi)
+            {
+                return Constante.QUASE_F_I;
+            }
+            else
+            {
+                return Constante.INCONSISTENTE_T_FALSO;
+            }
         }
         return null;
     }
