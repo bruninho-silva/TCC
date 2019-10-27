@@ -39,19 +39,25 @@ public class LogicaParaconsistente
         }
         else if (gc >= 0 && gc < Constante.VCVE && gi >= 0 && gi < Constante.VCIC && gc >= gi)
         {
-            return Constante.QUASE_V_I;
+            if (gc >= gi)
+            {
+                return Constante.QUASE_V_I;
+            }
+            else
+            {
+                return Constante.INCONSISTENTE_T_VERDADE;
+            }
         }
-        else if (gc >= 0 && gc < Constante.VCVE && gi >= 0 && gi < Constante.VCIC && gc < gi)
+        else if (gc >= 0 && gc < Constante.VCVE && gi > Constante.VCPA && gi <= 0)
         {
-            return Constante.INCONSISTENTE_T_VERDADE;
-        }
-        else if (gc >= 0 && gc < Constante.VCVE && gi > Constante.VCPA && gi <= 0 && gc >= Math.Abs(gi))
-        {
-            return Constante.QUASE_V_P;
-        }
-        else if (gc >= 0 && gc < Constante.VCVE && gi > Constante.VCPA && gi <= 0 && gc >= Math.Abs(gi))
-        {
-            return Constante.PARACOMPLETO_T_VERDADE;
+            if (gc >= Math.Abs(gi))
+            {
+                return Constante.QUASE_V_P;
+            }
+            else
+            {
+                return Constante.PARACOMPLETO_T_VERDADE;
+            }
         }
         else if (gc > Constante.VCFA && gc <= 0 && gi > Constante.VCPA && gi <= 0 && Math.Abs(gc) > Math.Abs(gi))
         {
@@ -82,7 +88,7 @@ public class LogicaParaconsistente
             case Constante.FALSO:
                 return 0;
             case Constante.INCONSISTENTE:
-                return 10;
+                return 12;
             case Constante.PARACOMPLETO:
                 return 10;
             case Constante.QUASE_V_I:
@@ -239,17 +245,17 @@ public class LogicaParaconsistente
 
     public Double CalculaGrauDeCerteza(Baricentro baricentro)
     {
-        Double mi = baricentro.Mi;
-        Double Lambda = baricentro.Lambda;
+        double mi = baricentro.MiNormalizado();
+        double Lambda = baricentro.LambdaNormalizado();
         return mi + Lambda - 1;
     }
 
     public Double CalculaGrauDeIncerteza(Baricentro baricentro)
     {
-        Double mi = baricentro.Mi;
-        Double Lambda = baricentro.Lambda;
+        double mi = baricentro.MiNormalizado();
+        double Lambda = baricentro.LambdaNormalizado();
         return Lambda - mi;
     }
-    
-   
+
+
 }
