@@ -1,18 +1,15 @@
 using System;
-using System.Collections.Generic;
 
 public class LogicaParaconsistente
 {
 
     public int ObtemPorcentagemDeDano(Carta[] cartas){
-        if (validaGameObject(cartas))
+        if (ValidaGameObject(cartas))
         {
             Baricentro baricentro = ObtemBaricentro(cartas);
             double gC = CalculaGrauDeCerteza(baricentro);
             double gI = CalculaGrauDeIncerteza(baricentro);
             string estadoLogico = DescobreEstadoLogico(gC, gI);
-            Console.WriteLine(gC);
-            Console.WriteLine(gI);
             return TransformaEstadoLogicoEmPorcentagem(estadoLogico);
         }
         else
@@ -149,9 +146,11 @@ public class LogicaParaconsistente
 
     private Baricentro MiniminizaDuasCartas(Baricentro[] duasCartas)
     {
-        Baricentro carta = new Baricentro();
-        carta.Lambda = duasCartas[0].Lambda > duasCartas[1].Lambda ? duasCartas[0].Lambda : duasCartas[1].Lambda;
-        carta.Mi = duasCartas[0].Mi < duasCartas[1].Mi ? duasCartas[0].Mi : duasCartas[1].Mi;
+        Baricentro carta = new Baricentro
+        {
+            Lambda = duasCartas[0].Lambda > duasCartas[1].Lambda ? duasCartas[0].Lambda : duasCartas[1].Lambda,
+            Mi = duasCartas[0].Mi < duasCartas[1].Mi ? duasCartas[0].Mi : duasCartas[1].Mi
+        };
 
         return carta;
     }
@@ -241,7 +240,7 @@ public class LogicaParaconsistente
         return quatroCartas;
     }
 
-    public Boolean validaGameObject(Carta[] objetos) {
+    public Boolean ValidaGameObject(Carta[] objetos) {
         if (objetos.Length == 8)
         {
             return true;
@@ -252,18 +251,18 @@ public class LogicaParaconsistente
         }
     }
 
-    public Double CalculaGrauDeCerteza(Baricentro baricentro)
+    public double CalculaGrauDeCerteza(Baricentro baricentro)
     {
         double mi = baricentro.MiNormalizado();
         double Lambda = baricentro.LambdaNormalizado();
-        return mi + Lambda - 1;
+        return Math.Round(mi + Lambda - 1, 2);
     }
 
-    public Double CalculaGrauDeIncerteza(Baricentro baricentro)
+    public double CalculaGrauDeIncerteza(Baricentro baricentro)
     {
         double mi = baricentro.MiNormalizado();
         double Lambda = baricentro.LambdaNormalizado();
-        return Lambda - mi;
+        return Math.Round(Lambda - mi, 2);
     }
 
 

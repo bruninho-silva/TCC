@@ -19,4 +19,5 @@ public class Constante
     public const string PARACOMPLETO_T_FALSO = "PARACOMPLETO_TENDENDO_A_FALSO";
     public const string QUASE_F_I = "QUASE_FALSO_TEDENDO_A_INCONSISTENTE";
     public const string INCONSISTENTE_T_FALSO = "INCONSISTENTE_TENDENDO_A_FALSO";
+
 }

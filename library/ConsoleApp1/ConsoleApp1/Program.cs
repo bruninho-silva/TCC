@@ -6,7 +6,6 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            // TODO Nomarlizar os valores de mi lambda para intervalo de [0-1]
             // TODO Tratar a situação de INDEFINIDO  Gc = 0.5 / Gi = 0.5
             LogicaParaconsistente lpa = new LogicaParaconsistente();
             Carta[] cartas = new Carta[]{
