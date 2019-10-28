@@ -755,242 +755,172 @@ public class CheckSlotMiddle : MonoBehaviour
 
                 slotmiddle[7].SetActive(true);
 
-                if (PoseCard.x < -365)
+                if (PoseCard.x < -3) /* ok */
                 {
                     slotmiddle[7].transform.localPosition = new Vector3(-455, 0, 0);
                     if (slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj != null)
                     {
                         slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj.transform.localPosition = new Vector3(-325, 0, 0);
                         slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.transform.localPosition = new Vector3(-195, 0, 0);
-                        slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.transform.localPosition = new Vector3(0, 0, 0);
-                        slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.transform.localPosition = new Vector3(195, 0, 0);
-                        slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.transform.localPosition = new Vector3(325, 0, 0);
-                        slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.transform.localPosition = new Vector3(455, 0, 0);
+                        slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.transform.localPosition = new Vector3(-65, 0, 0);
+                        slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.transform.localPosition = new Vector3(65, 0, 0);
+                        slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.transform.localPosition = new Vector3(195, 0, 0);
+                        slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.transform.localPosition = new Vector3(325, 0, 0);
+                        slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.transform.localPosition = new Vector3(455, 0, 0);
                         if (slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.transform.localPosition.x == 455)
                         {
                             ApplyMiddleCards = true;
                         }
                     }
-                    else if (PoseCard.x >= -390f && PoseCard.x < -325f)
-                    {
+                }
+                else if (PoseCard.x >= -390 && PoseCard.x < -260f) /* ok */
+                {
 
-                        slotmiddle[7].transform.localPosition = new Vector3(-325, 0, 0);
-                        if (slotmiddle[7].GetComponent<BoxRaycasting>().Leftobj != null)
-                        {
-                            slotmiddle[7].GetComponent<BoxRaycasting>().Leftobj.transform.localPosition = new Vector3(-455, 0, 0);
-                        }
-                        if (slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj != null)
-                        {
-                            slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj.transform.localPosition = new Vector3(-190, 0, 0);
-                            slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.transform.localPosition = new Vector3(190, 0, 0);
-                            slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.transform.localPosition = new Vector3(-260, 0, 0);
-                            slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.transform.localPosition = new Vector3(260, 0, 0);
-                            slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.transform.localPosition = new Vector3(390, 0, 0);
-                            if (slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.transform.localPosition.x == 390)
-                            {
-                                ApplyMiddleCards = true;
-                            }
-                        }
-                    }
-                    else if (PoseCard.x >= -260 && PoseCard.x < -195f)
+                    slotmiddle[7].transform.localPosition = new Vector3(-325, 0, 0);
+                    if (slotmiddle[7].GetComponent<BoxRaycasting>().Leftobj != null)
                     {
-
-                        slotmiddle[7].transform.localPosition = new Vector3(-260, 0, 0);
-                        if (slotmiddle[7].GetComponent<BoxRaycasting>().Leftobj != null)
-                        {
-                            slotmiddle[7].GetComponent<BoxRaycasting>().Leftobj.transform.localPosition = new Vector3(-390, 0, 0);
-                        }
-                        if (slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj != null)
-                        {
-                            slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj.transform.localPosition = new Vector3(-130, 0, 0);
-                            slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.transform.localPosition = new Vector3(0, 0, 0);
-                            slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.transform.localPosition = new Vector3(130, 0, 0);
-                            slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.transform.localPosition = new Vector3(260, 0, 0);
-                            slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.transform.localPosition = new Vector3(390, 0, 0);
-                            if (slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.transform.localPosition.x == 390)
-                            {
-                                ApplyMiddleCards = true;
-                            }
-                        }
+                        slotmiddle[7].GetComponent<BoxRaycasting>().Leftobj.transform.localPosition = new Vector3(-455, 0, 0);
                     }
-                    else if (PoseCard.x >= -195f && PoseCard.x < -130f)
+                    if (slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj != null)
                     {
-                        slotmiddle[7].transform.localPosition = new Vector3(-130, 0, 0);
-                        if (slotmiddle[7].GetComponent<BoxRaycasting>().Leftobj != null)
+                        slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj.transform.localPosition = new Vector3(-195, 0, 0);
+                        slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.transform.localPosition = new Vector3(-65, 0, 0);
+                        slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.transform.localPosition = new Vector3(65, 0, 0);
+                        slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.transform.localPosition = new Vector3(195, 0, 0);
+                        slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.transform.localPosition = new Vector3(325, 0, 0);
+                        slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.transform.localPosition = new Vector3(455, 0, 0);
+                        if (slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.transform.localPosition.x == 390)
                         {
-                            slotmiddle[7].GetComponent<BoxRaycasting>().Leftobj.transform.localPosition = new Vector3(-260, 0, 0);
-                            slotmiddle[7].GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.transform.localPosition = new Vector3(-390, 0, 0);
-                        }
-                        if (slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj != null)
-                        {
-                            slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj.transform.localPosition = new Vector3(0, 0, 0);
-                            slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.transform.localPosition = new Vector3(130, 0, 0);
-                            slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.transform.localPosition = new Vector3(260, 0, 0);
-                            slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.transform.localPosition = new Vector3(390, 0, 0);
-                            if (slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.transform.localPosition.x == 390)
-                            {
-                                ApplyMiddleCards = true;
-                            }
-                        }
-                    }
-                    else if (PoseCard.x >= -130f && PoseCard.x < -65f)
-                    {
-                        slotmiddle[7].transform.localPosition = new Vector3(-130, 0, 0);
-                        if (slotmiddle[7].GetComponent<BoxRaycasting>().Leftobj != null)
-                        {
-                            slotmiddle[7].GetComponent<BoxRaycasting>().Leftobj.transform.localPosition = new Vector3(-260, 0, 0);
-                            slotmiddle[7].GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.transform.localPosition = new Vector3(-390, 0, 0);
-                        }
-                        if (slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj != null)
-                        {
-                            slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj.transform.localPosition = new Vector3(0, 0, 0);
-                            slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.transform.localPosition = new Vector3(130, 0, 0);
-                            slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.transform.localPosition = new Vector3(260, 0, 0);
-                            slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.transform.localPosition = new Vector3(390, 0, 0);
-                            if (slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.transform.localPosition.x == 390)
-                            {
-                                ApplyMiddleCards = true;
-                            }
-                        }
-                    }
-                    else if (PoseCard.x >= -65f && PoseCard.x < 0f)
-                    {
-                        slotmiddle[7].transform.localPosition = new Vector3(0, 0, 0);
-                        if (slotmiddle[7].GetComponent<BoxRaycasting>().Leftobj != null)
-                        {
-                            slotmiddle[7].GetComponent<BoxRaycasting>().Leftobj.transform.localPosition = new Vector3(-130, 0, 0);
-                            slotmiddle[7].GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.transform.localPosition = new Vector3(-260, 0, 0);
-                            slotmiddle[7].GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.transform.localPosition = new Vector3(-390, 0, 0);
-                        }
-                        if (slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj != null)
-                        {
-                            slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj.transform.localPosition = new Vector3(130, 0, 0);
-                            slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.transform.localPosition = new Vector3(260, 0, 0);
-                            slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.transform.localPosition = new Vector3(390, 0, 0);
-                            if (slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.transform.localPosition.x == 390)
-                            {
-                                ApplyMiddleCards = true;
-                            }
-                        }
-                    }
-                    else if (PoseCard.x >= 0f && PoseCard.x < 65f)
-                    {
-                        slotmiddle[7].transform.localPosition = new Vector3(0, 0, 0);
-                        if (slotmiddle[7].GetComponent<BoxRaycasting>().Leftobj != null)
-                        {
-                            slotmiddle[7].GetComponent<BoxRaycasting>().Leftobj.transform.localPosition = new Vector3(-130, 0, 0);
-                            slotmiddle[7].GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.transform.localPosition = new Vector3(-260, 0, 0);
-                            slotmiddle[7].GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.transform.localPosition = new Vector3(-390, 0, 0);
-                        }
-                        if (slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj != null)
-                        {
-                            slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj.transform.localPosition = new Vector3(130, 0, 0);
-                            slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.transform.localPosition = new Vector3(260, 0, 0);
-                            slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.transform.localPosition = new Vector3(390, 0, 0);
-                            if (slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.transform.localPosition.x == 390)
-                            {
-                                ApplyMiddleCards = true;
-                            }
-                        }
-                    }
-                    else if (PoseCard.x >= 65f && PoseCard.x < 130f)
-                    {
-                        slotmiddle[7].transform.localPosition = new Vector3(130, 0, 0);
-                        if (slotmiddle[7].GetComponent<BoxRaycasting>().Leftobj != null)
-                        {
-                            slotmiddle[7].GetComponent<BoxRaycasting>().Leftobj.transform.localPosition = new Vector3(0, 0, 0);
-                            slotmiddle[7].GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.transform.localPosition = new Vector3(-130, 0, 0);
-                            slotmiddle[7].GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.transform.localPosition = new Vector3(-260, 0, 0);
-                            slotmiddle[7].GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.transform.localPosition = new Vector3(-390, 0, 0);
-                            if (slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj != null)
-                            {
-                                slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj.transform.localPosition = new Vector3(260, 0, 0);
-                                slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.transform.localPosition = new Vector3(390, 0, 0);
-                                if (slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.transform.localPosition.x == 390)
-                                {
-                                    ApplyMiddleCards = true;
-                                }
-                            }
-                        }
-                        else if (PoseCard.x >= 130f && PoseCard.x < 195f)
-                        {
-                            slotmiddle[7].transform.localPosition = new Vector3(130, 0, 0);
-                            if (slotmiddle[7].GetComponent<BoxRaycasting>().Leftobj != null)
-                            {
-                                slotmiddle[7].GetComponent<BoxRaycasting>().Leftobj.transform.localPosition = new Vector3(0, 0, 0);
-                                slotmiddle[7].GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.transform.localPosition = new Vector3(-130, 0, 0);
-                                slotmiddle[7].GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.transform.localPosition = new Vector3(-260, 0, 0);
-                                slotmiddle[7].GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.transform.localPosition = new Vector3(-390, 0, 0);
-                            }
-                            if (slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj != null)
-                            {
-                                slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj.transform.localPosition = new Vector3(260, 0, 0);
-                                slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.transform.localPosition = new Vector3(390, 0, 0);
-                                if (slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.transform.localPosition.x == 390)
-                                {
-                                    ApplyMiddleCards = true;
-                                }
-                            }
-                        }
-                        else if (PoseCard.x >= 195f && PoseCard.x < 260f)
-                        {
-                            slotmiddle[7].transform.localPosition = new Vector3(260, 0, 0);
-                            if (slotmiddle[7].GetComponent<BoxRaycasting>().Leftobj != null)
-                            {
-                                slotmiddle[7].GetComponent<BoxRaycasting>().Leftobj.transform.localPosition = new Vector3(130, 0, 0);
-                                slotmiddle[7].GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.transform.localPosition = new Vector3(0, 0, 0);
-                                slotmiddle[7].GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.transform.localPosition = new Vector3(-130, 0, 0);
-                                slotmiddle[7].GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.transform.localPosition = new Vector3(-260, 0, 0);
-                                slotmiddle[7].GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.transform.localPosition = new Vector3(-390, 0, 0);
-                            }
-                            if (slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj != null)
-                            {
-                                slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj.transform.localPosition = new Vector3(390, 0, 0);
-                                if (slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj.transform.localPosition.x == 390)
-                                {
-                                    ApplyMiddleCards = true;
-                                }
-                            }
-                        }
-                        else if (PoseCard.x > 260f && PoseCard.x < 325f)
-                        {
-                            slotmiddle[7].transform.localPosition = new Vector3(260, 0, 0);
-                            if (slotmiddle[7].GetComponent<BoxRaycasting>().Leftobj != null)
-                            {
-                                slotmiddle[7].GetComponent<BoxRaycasting>().Leftobj.transform.localPosition = new Vector3(130, 0, 0);
-                                slotmiddle[7].GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.transform.localPosition = new Vector3(0, 0, 0);
-                                slotmiddle[7].GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.transform.localPosition = new Vector3(-130, 0, 0);
-                                slotmiddle[7].GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.transform.localPosition = new Vector3(-260, 0, 0);
-                                slotmiddle[7].GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.transform.localPosition = new Vector3(-390, 0, 0);
-                            }
-                            if (slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj != null)
-                            {
-                                slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj.transform.localPosition = new Vector3(390, 0, 0);
-                                if (slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj.transform.localPosition.x == 390)
-                                {
-                                    ApplyMiddleCards = true;
-                                }
-                            }
-                        }
-                        else if (PoseCard.x > 325f)
-                        {
-                            slotmiddle[7].transform.localPosition = new Vector3(390, 0, 0);
-                            if (slotmiddle[7].GetComponent<BoxRaycasting>().Leftobj != null)
-                            {
-                                slotmiddle[7].GetComponent<BoxRaycasting>().Leftobj.transform.localPosition = new Vector3(260, 0, 0);
-                                slotmiddle[7].GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.transform.localPosition = new Vector3(130, 0, 0);
-                                slotmiddle[7].GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.transform.localPosition = new Vector3(0, 0, 0);
-                                slotmiddle[7].GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.transform.localPosition = new Vector3(-130, 0, 0);
-                                slotmiddle[7].GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.transform.localPosition = new Vector3(-260, 0, 0);
-                                slotmiddle[7].GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.transform.localPosition = new Vector3(-390, 0, 0);
-                                if (slotmiddle[7].GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.transform.localPosition.x == -390)
-                                {
-                                    ApplyMiddleCards = true;
-                                }
-                            }
+                            ApplyMiddleCards = true;
                         }
                     }
                 }
+                else if (PoseCard.x >= -260 && PoseCard.x < -130f) /* ok */
+                {
+
+                    slotmiddle[7].transform.localPosition = new Vector3(-195, 0, 0);
+                    if (slotmiddle[7].GetComponent<BoxRaycasting>().Leftobj != null)
+                    {
+                        slotmiddle[7].GetComponent<BoxRaycasting>().Leftobj.transform.localPosition = new Vector3(-455, 0, 0);
+                        slotmiddle[7].GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.transform.localPosition = new Vector3(-325, 0, 0);
+                    }
+                    if (slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj != null)
+                    {
+                        slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj.transform.localPosition = new Vector3(-65, 0, 0);
+                        slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.transform.localPosition = new Vector3(65, 0, 0);
+                        slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.transform.localPosition = new Vector3(195, 0, 0);
+                        slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.transform.localPosition = new Vector3(325, 0, 0);
+                        slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.transform.localPosition = new Vector3(455, 0, 0);
+                        if (slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.transform.localPosition.x == 455)
+                        {
+                            ApplyMiddleCards = true;
+                        }
+                    }
+                }
+                else if (PoseCard.x >= -130f && PoseCard.x < 0f) /* ok */
+                {
+                    slotmiddle[7].transform.localPosition = new Vector3(-65, 0, 0);
+                    if (slotmiddle[7].GetComponent<BoxRaycasting>().Leftobj != null)
+                    {
+                        slotmiddle[7].GetComponent<BoxRaycasting>().Leftobj.transform.localPosition = new Vector3(-455, 0, 0);
+                        slotmiddle[7].GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.transform.localPosition = new Vector3(-325, 0, 0);
+                        slotmiddle[7].GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.transform.localPosition = new Vector3(-195, 0, 0);
+                    }
+                    if (slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj != null)
+                    {
+                        slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj.transform.localPosition = new Vector3(65, 0, 0);
+                        slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.transform.localPosition = new Vector3(195, 0, 0);
+                        slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.transform.localPosition = new Vector3(325, 0, 0);
+                        slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.transform.localPosition = new Vector3(455, 0, 0);
+                        if (slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.transform.localPosition.x == 455)
+                        {
+                            ApplyMiddleCards = true;
+                        }
+                    }
+                }
+                else if (PoseCard.x >= 0f && PoseCard.x < 130f) /* ok */
+                {
+                    slotmiddle[7].transform.localPosition = new Vector3(65, 0, 0);
+                    if (slotmiddle[7].GetComponent<BoxRaycasting>().Leftobj != null)
+                    {
+                        slotmiddle[7].GetComponent<BoxRaycasting>().Leftobj.transform.localPosition = new Vector3(-455, 0, 0);
+                        slotmiddle[7].GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.transform.localPosition = new Vector3(-325, 0, 0);
+                        slotmiddle[7].GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.transform.localPosition = new Vector3(-195, 0, 0);
+                        slotmiddle[7].GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.transform.localPosition = new Vector3(-65, 0, 0);
+                    }
+                    if (slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj != null)
+                    {
+                        slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj.transform.localPosition = new Vector3(195, 0, 0);
+                        slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.transform.localPosition = new Vector3(325, 0, 0);
+                        slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.transform.localPosition = new Vector3(455, 0, 0);
+                        if (slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.transform.localPosition.x == 455)
+                        {
+                            ApplyMiddleCards = true;
+                        }
+                    }
+                }
+                else if (PoseCard.x >= 130f && PoseCard.x < 260f)
+                {
+                    slotmiddle[7].transform.localPosition = new Vector3(195, 0, 0);
+                    if (slotmiddle[7].GetComponent<BoxRaycasting>().Leftobj != null)
+                    {
+                        slotmiddle[7].GetComponent<BoxRaycasting>().Leftobj.transform.localPosition = new Vector3(-455, 0, 0);
+                        slotmiddle[7].GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.transform.localPosition = new Vector3(-325, 0, 0);
+                        slotmiddle[7].GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.transform.localPosition = new Vector3(-195, 0, 0);
+                        slotmiddle[7].GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.transform.localPosition = new Vector3(-65, 0, 0);
+                        slotmiddle[7].GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.transform.localPosition = new Vector3(65, 0, 0);
+                    }
+                    if (slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj != null)
+                    {
+                        slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj.transform.localPosition = new Vector3(325, 0, 0);
+                        slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.transform.localPosition = new Vector3(455, 0, 0);
+                        if (slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.transform.localPosition.x == 455)
+                        {
+                            ApplyMiddleCards = true;
+                        }
+                    }
+                }
+                else if (PoseCard.x >= 260f && PoseCard.x < 390f)
+                {
+                    slotmiddle[7].transform.localPosition = new Vector3(325, 0, 0);
+                    if (slotmiddle[7].GetComponent<BoxRaycasting>().Leftobj != null)
+                    {
+                        slotmiddle[7].GetComponent<BoxRaycasting>().Leftobj.transform.localPosition = new Vector3(-455, 0, 0);
+                        slotmiddle[7].GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.transform.localPosition = new Vector3(-325, 0, 0);
+                        slotmiddle[7].GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.transform.localPosition = new Vector3(-195, 0, 0);
+                        slotmiddle[7].GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.transform.localPosition = new Vector3(-65, 0, 0);
+                        slotmiddle[7].GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.transform.localPosition = new Vector3(65, 0, 0);
+                        slotmiddle[7].GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.transform.localPosition = new Vector3(195, 0, 0);
+
+                    }
+                    if (slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj != null)
+                    {
+                        slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj.transform.localPosition = new Vector3(455, 0, 0);
+                        if (slotmiddle[7].GetComponent<BoxRaycasting>().Rightobj.transform.localPosition.x == 455)
+                        {
+                            ApplyMiddleCards = true;
+                        }
+                    }
+                }
+                else if (PoseCard.x >= 390f)
+                {
+                    slotmiddle[7].transform.localPosition = new Vector3(455, 0, 0);
+                    if (slotmiddle[7].GetComponent<BoxRaycasting>().Leftobj != null)
+                    {
+                        slotmiddle[7].GetComponent<BoxRaycasting>().Leftobj.transform.localPosition = new Vector3(-455, 0, 0);
+                        slotmiddle[7].GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.transform.localPosition = new Vector3(-325, 0, 0);
+                        slotmiddle[7].GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.transform.localPosition = new Vector3(-195, 0, 0);
+                        slotmiddle[7].GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.transform.localPosition = new Vector3(-65, 0, 0);
+                        slotmiddle[7].GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.transform.localPosition = new Vector3(65, 0, 0);
+                        slotmiddle[7].GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.transform.localPosition = new Vector3(195, 0, 0);
+                        slotmiddle[7].GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.transform.localPosition = new Vector3(325, 0, 0);
+                        if (slotmiddle[7].GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.transform.localPosition.x == 325)
+                        {
+                            ApplyMiddleCards = true;
+                        }
+                    }
+                }
+                
             }
         }
     }

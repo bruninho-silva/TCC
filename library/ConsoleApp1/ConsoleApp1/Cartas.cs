@@ -1,24 +1,25 @@
-public class Cartas{
-    public Cartas(int mi1, int lamb1, int mi2, int lamb2, int mi3, int lamb3, int mi4, int lamb4)
+public class Carta
+{
+    public Carta(int mi1, int lamb1, int mi2, int lamb2, int mi3, int lamb3, int mi4, int lamb4)
     {
-        miAtributo1 = mi1;
-        miAtributo2 = mi2;
-        miAtributo3 = mi3;
-        miAtributo4 = mi4;
+        MiAtributo1 = mi1;
+        MiAtributo2 = mi2;
+        MiAtributo3 = mi3;
+        MiAtributo4 = mi4;
 
-        lambAtributo1 = lamb1;
-        lambAtributo2 = lamb2;
-        lambAtributo3 = lamb3;
-        lambAtributo4 = lamb4;
+        LambAtributo1 = lamb1;
+        LambAtributo2 = lamb2;
+        LambAtributo3 = lamb3;
+        LambAtributo4 = lamb4;
     }
 
-    public int miAtributo1 { get; set; }
-    public int miAtributo2 { get; set; }
-    public int miAtributo3 { get; set; }
-    public int miAtributo4 { get; set; }
-    public int lambAtributo1 { get; set; }
-    public int lambAtributo2 { get; set; }
-    public int lambAtributo3 { get; set; }
-    public int lambAtributo4 { get; set; }
+    public int MiAtributo1 { get; set; }
+    public int MiAtributo2 { get; set; }
+    public int MiAtributo3 { get; set; }
+    public int MiAtributo4 { get; set; }
+    public int LambAtributo1 { get; set; }
+    public int LambAtributo2 { get; set; }
+    public int LambAtributo3 { get; set; }
+    public int LambAtributo4 { get; set; }
 
   }
