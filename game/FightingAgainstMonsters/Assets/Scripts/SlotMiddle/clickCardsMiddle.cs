@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.EventSystems;
+using UnityEditor;
 
 public class clickCardsMiddle : MonoBehaviour , IPointerClickHandler {
 
@@ -17,6 +18,7 @@ public class clickCardsMiddle : MonoBehaviour , IPointerClickHandler {
 	public GameObject deck;
 	public GameObject enemy;
 	public GameObject sleepObj;
+    public GameObject atkButton;
     public bool mePositionForDeadLeft = false;
     public bool mePositionForDeadRight = false;
 
@@ -38,12 +40,15 @@ public class clickCardsMiddle : MonoBehaviour , IPointerClickHandler {
 				if (chooseForAttack) {
 					if (deck.GetComponent<CheckSlotMiddle> ().enemyObj) {
 						if (Input.GetMouseButtonDown(0)) {
-							enemy = deck.GetComponent<CheckSlotMiddle> ().enemyObj;
+                            GameObject[] gos = GameObject.FindGameObjectsWithTag("posed");
+                            Selection.objects = gos;
+                            enemy = deck.GetComponent<CheckSlotMiddle> ().enemyObj;
 							enemy.GetComponent<overMouse> ().isAtacked = true;
 							startposition = this.transform.localPosition;
 							Attack = true;
 							Arrow.GetComponent<Image> ().enabled = false;
 							GetComponent<AudioSource> ().PlayOneShot (Sweep);
+                            
 						}
 					}
 				}
@@ -85,7 +90,7 @@ public class clickCardsMiddle : MonoBehaviour , IPointerClickHandler {
 	public void OnPointerClick(PointerEventData eventData){
 		if (!sleep && !Attack) {
 			Arrow.transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y-50f, transform.localPosition.z);
-			Arrow.GetComponent<Image> ().enabled = true;
+			//Arrow.GetComponent<Image> ().enabled = true;
 			chooseForAttack = true;
 		}
 	}
