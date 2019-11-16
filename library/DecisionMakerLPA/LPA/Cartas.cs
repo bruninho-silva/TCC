@@ -1,5 +1,19 @@
+/// <summary>
+/// Classe Modelo Carta que contém oito valores.
+/// </summary>
 public class Carta
 {
+    /// <summary>
+    /// Método Construtor.
+    /// </summary>
+    /// <param name="mi1">Valor Favorável</param>
+    /// <param name="lamb1">Valor Desfavorável</param>
+    /// <param name="mi2">Valor Favorável</param>
+    /// <param name="lamb2">Valor Desfavorável</param>
+    /// <param name="mi3"><Valor Favorável/param>
+    /// <param name="lamb3">Valor Desfavorável</param>
+    /// <param name="mi4">Valor Favorável</param>
+    /// <param name="lamb4">Valor Desfavorável</param>
     public Carta(int mi1, int lamb1, int mi2, int lamb2, int mi3, int lamb3, int mi4, int lamb4)
     {
         MiAtributo1 = mi1;
@@ -13,7 +27,14 @@ public class Carta
         LambAtributo4 = lamb4;
     }
 
-    public int GetAtributoMi(int i) 
+    /// <summary>
+    /// Pega o atributo de acordo com índice passado por paramêtro.
+    /// </summary>
+    /// <param name="i">Índice</param>
+    /// <returns>
+    /// Retorna o atributo selecionado.
+    /// </returns>
+    public int GetAtributoMi(int i)
     {
         switch (i)
         {
@@ -23,9 +44,16 @@ public class Carta
             case 4: return MiAtributo4;
             default: return 0;
         }
-                
+
     }
 
+    /// <summary>
+    /// Pega o atributo de acordo com índice passado por paramêtro.
+    /// </summary>
+    /// <param name="i">Índice</param>
+    /// <returns>
+    /// Retorna o atributo selecionado.
+    /// </returns>
     public int GetAtributoLamb(int i)
     {
         switch (i)
@@ -48,4 +76,4 @@ public class Carta
     public int LambAtributo3 { get; set; }
     public int LambAtributo4 { get; set; }
 
-  }
+}

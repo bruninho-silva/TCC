@@ -1,7 +1,18 @@
 ﻿using System;
 
+/// <summary>
+/// Classe estática que realizar a verificação do estado Lógico no reticulado.
+/// </summary>
 public static class EstadoLogico
 {
+    /// <summary>
+    /// Confere o estado lógico pelo grau de certeza e incerteza.
+    /// </summary>
+    /// <param name="gc">Grau de Certeza</param>
+    /// <param name="gi">Grau de Incerteza</param>
+    /// <returns> 
+    /// Retorna o estado lógico.
+    /// </returns>
     public static string DescobreEstadoLogico(double gc, double gi)
     {
 
@@ -69,6 +80,13 @@ public static class EstadoLogico
         return null;
     }
 
+    /// <summary>
+    /// Transforma a estado lógico em porcentagem.
+    /// </summary>
+    /// <param name="estadoLogico">Um dos doze estados lógico da paraconsistente.</param>
+    /// <returns>
+    /// Porcentagem em Danos.                                                                                  
+    /// </returns>
     public static int TransformaEstadoLogicoEmPorcentagem(string estadoLogico)
     {
         switch (estadoLogico)

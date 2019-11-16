@@ -1,9 +1,13 @@
-public class Constante
+/// <summary>
+/// Classe estática que possui as constantes da biblioteca.
+/// </summary>
+public static class Constante
 {
+    // TODO Tratar a situação de INDEFINIDO  Gc = 0.5 / Gi = 0.5
 
     public const double VCVE = 0.9; //Var de controle de Veracidade
     public const double VCFA = -0.5; //Var de controle de Falsidade
-    
+
     public const double VCIC = 0.5; //var de conttole de Inconsistencia
     public const double VCPA = -0.5; //var de controle de Paracompleto
 
