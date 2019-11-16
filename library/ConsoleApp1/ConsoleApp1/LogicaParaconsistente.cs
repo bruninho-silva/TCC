@@ -3,122 +3,16 @@ using System;
 public class LogicaParaconsistente
 {
 
-    public int ObtemPorcentagemDeDano(Carta[] cartas){
-        if (ValidaGameObject(cartas))
-        {
-            Baricentro baricentro = ObtemBaricentro(cartas);
-            double gC = CalculaGrauDeCerteza(baricentro);
-            double gI = CalculaGrauDeIncerteza(baricentro);
-            string estadoLogico = DescobreEstadoLogico(gC, gI);
-            return TransformaEstadoLogicoEmPorcentagem(estadoLogico);
-        }
-        else
-        {
-            return 0;
-        }
-    }
-
-    public string DescobreEstadoLogico(double gc, double gi){
-
-        if (gc >= Constante.VCVE)
-        {
-            return Constante.VERDADE;
-        }
-        else if (gc <= Constante.VCFA)
-        {
-            return Constante.FALSO;
-        }
-        else if (gi >= Constante.VCIC)
-        {
-            return Constante.INCONSISTENTE;
-        }
-        else if (gi <= Constante.VCPA)
-        {
-            return Constante.PARACOMPLETO;
-        }
-
-        else if ( (gc >= 0 && gc < Constante.VCVE)  && (gi >= 0 && gi < Constante.VCIC) )
-        {
-            if (gc >= gi)
-            {
-                return Constante.QUASE_V_I;
-            }
-            else
-            {
-                return Constante.INCONSISTENTE_T_VERDADE;
-            }
-        }
-        else if ( (gc >= 0 && gc < Constante.VCVE) && (gi > Constante.VCPA && gi <= 0) )
-        {
-            if (gc >= Math.Abs(gi))
-            {
-                return Constante.QUASE_V_P;
-            }
-            else
-            {
-                return Constante.PARACOMPLETO_T_VERDADE;
-            }
-        }
-        else if ( (gc > Constante.VCFA && gc <= 0) && (gi > Constante.VCPA && gi <= 0) )
-        {
-            if (Math.Abs(gc) > Math.Abs(gi))
-            {
-                return Constante.QUASE_F_P;
-            }
-            else
-            {
-                return Constante.PARACOMPLETO_T_FALSO;
-            }
-        }
-        else if ( (gc > Constante.VCFA && gc <= 0) && (gi >= 0 && gi < Constante.VCIC ) )
-        {
-            if (Math.Abs(gc) >= gi)
-            {
-                return Constante.QUASE_F_I;
-            }
-            else
-            {
-                return Constante.INCONSISTENTE_T_FALSO;
-            }
-        }
-        return null;
-    }
-
-
-    public int TransformaEstadoLogicoEmPorcentagem(string estadoLogico)
+    public int ObtemPorcentagemDeDano(Carta[] cartas)
     {
-        switch(estadoLogico)
-        {
-            case Constante.VERDADE:
-                return 100;
-            case Constante.FALSO:
-                return 0;
-            case Constante.INCONSISTENTE:
-                return 12;
-            case Constante.PARACOMPLETO:
-                return 10;
-            case Constante.QUASE_V_I:
-                return 35;
-            case Constante.INCONSISTENTE_T_VERDADE:
-                return 25;
-            case Constante.QUASE_V_P:
-                return 60;
-            case Constante.PARACOMPLETO_T_VERDADE:
-                return 49;
-            case Constante.QUASE_F_P:
-                return 89;
-            case Constante.PARACOMPLETO_T_FALSO:
-                return 45;
-            case Constante.QUASE_F_I:
-                return 8;
-            case Constante.INCONSISTENTE_T_FALSO:
-                return 85;
-
-        }
-        return 0;
+        Baricentro baricentro = ObtemBaricentro(cartas);
+        double gC = baricentro.CalculaGrauDeCerteza();
+        double gI = baricentro.CalculaGrauDeIncerteza();
+        string estadoLogico = EstadoLogico.DescobreEstadoLogico(gC, gI);
+        return EstadoLogico.TransformaEstadoLogicoEmPorcentagem(estadoLogico);
     }
-
-    public Baricentro ObtemBaricentro(Carta[] objetos){
+    public Baricentro ObtemBaricentro(Carta[] objetos)
+    {
         Baricentro[] list = new Baricentro[] { new Baricentro(), new Baricentro(), new Baricentro(), new Baricentro() };
         for(int i = 0; i < 4; i++)
         {
@@ -220,7 +114,6 @@ public class LogicaParaconsistente
         return new int[0];
     }
 
-  
     private Baricentro[] MaximilizaOitoCartas(int[] arrayMi1, int[] arrayLamb1)
     {
         Baricentro[] quatroCartas = new Baricentro[] { new Baricentro(), new Baricentro(), new Baricentro(), new Baricentro(), };
@@ -239,31 +132,4 @@ public class LogicaParaconsistente
 
         return quatroCartas;
     }
-
-    public Boolean ValidaGameObject(Carta[] objetos) {
-        if (objetos.Length == 8)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
-    }
-
-    public double CalculaGrauDeCerteza(Baricentro baricentro)
-    {
-        double mi = baricentro.MiNormalizado();
-        double Lambda = baricentro.LambdaNormalizado();
-        return Math.Round(mi + Lambda - 1, 2);
-    }
-
-    public double CalculaGrauDeIncerteza(Baricentro baricentro)
-    {
-        double mi = baricentro.MiNormalizado();
-        double Lambda = baricentro.LambdaNormalizado();
-        return Math.Round(Lambda - mi, 2);
-    }
-
-
 }

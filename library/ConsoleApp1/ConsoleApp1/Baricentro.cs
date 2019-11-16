@@ -16,4 +16,14 @@ public class Baricentro{
         double value = Convert.ToDouble(Lambda) / 100;
         return value;
     }
+
+    public double CalculaGrauDeCerteza()
+    {
+        return Math.Round(MiNormalizado() + LambdaNormalizado() - 1, 2);
+    }
+
+    public double CalculaGrauDeIncerteza()
+    {
+        return Math.Round(LambdaNormalizado() - MiNormalizado(), 2);
+    }
 }
