@@ -18,7 +18,10 @@ public class clickCardsMiddle : MonoBehaviour , IPointerClickHandler {
 	public GameObject deck;
 	public GameObject enemy;
 	public GameObject sleepObj;
-    
+    public GameObject card1;
+    public GameObject card2;
+
+
     public bool mePositionForDeadLeft = false;
     public bool mePositionForDeadRight = false;
 
@@ -32,39 +35,62 @@ public class clickCardsMiddle : MonoBehaviour , IPointerClickHandler {
 	}
 
 	void Update(){
+
+
+
 		//IF NO ATTACK
 		if(!Attack){
-			//IF NO SLEEPING
-			if (!sleep) {
-				//IF THE CARD CHOOSE FOR ATTACK
-				if (chooseForAttack) {
+            Debug.Log("TESTE07");
+            //IF NO SLEEPING
+            if (!sleep) {
+                Debug.Log("TESTE06");
+                //IF THE CARD CHOOSE FOR ATTACK
+                if (chooseForAttack) {
+                    Debug.Log("TESTE05");
                     Arrow.GetComponent<Image>().enabled = true;
                     if (deck.GetComponent<CheckSlotMiddle> ().enemyObj) {
-						if (Input.GetMouseButtonDown(0)) {
-                            GameObject[] gos = GameObject.FindGameObjectsWithTag("posed");
-                            Selection.objects = gos;
+                        Debug.Log("TESTE04");
+                        if (Input.GetMouseButtonDown(0)) {
+                            Debug.Log("TESTE03");
+
                             enemy = deck.GetComponent<CheckSlotMiddle> ().enemyObj;
 							enemy.GetComponent<overMouse> ().isAtacked = true;
 							startposition = this.transform.localPosition;
 							Attack = true;
 							
 							GetComponent<AudioSource> ().PlayOneShot (Sweep);
-                            
-						}
+
+                            enemy.GetComponent<CardsStatExample>().damage(1000);
+
+
+                        }
 					}
 				}
 			}
 		//IF ATTACK
 		}else if (Attack) {
 			
-			if (!enemy.GetComponent<overMouse> ().impact) { 
-				this.transform.localPosition = Vector3.Lerp (this.transform.localPosition, enemy.transform.localPosition, Time.deltaTime * speedAttack);
+			if (!enemy.GetComponent<overMouse> ().impact) {
+                Debug.Log("TESTE02");
+                this.transform.localPosition = Vector3.Lerp (this.transform.localPosition, enemy.transform.localPosition, Time.deltaTime * speedAttack);
 			} else {
-				Attack = false;
+                Debug.Log("TESTE01");
+				Attack = false; 
 				sleepObj.GetComponent<Image> ().enabled = true;
 				enemy.GetComponent<overMouse> ().isAtacked = false;
-                enemy.GetComponent<CardsStatExample>().damage (GetComponent<ApplyCardMiddle>().attack);
-				this.GetComponent<ApplyCardMiddle> ().damage (enemy.GetComponent<CardsStatExample> ().Attack);
+                //var vidaInimigo = enemy.GetComponent<CardsStatExample>().health;
+
+                //card1.SetActive(true);
+                //var valorDoAtributo1 = card1.GetComponent<clickCardsMiddle>().Attack;
+                //var valorDoAtributo2 = card1.GetComponent<clickCardsMiddle>().velocidade;
+
+                //var valorDoAtribut2 = card2.GetComponent<clickCardsMiddle>().Attack;
+
+                // var porcentagemDeVidaParaRemover = (paraconsistente.obtemValores() / 100);
+
+
+                // enemy.GetComponent<CardsStatExample>().damage (porcentagemDeVidaParaRemover);
+                //this.GetComponent<ApplyCardMiddle> ().damage (enemy.GetComponent<CardsStatExample> ().Attack);
                 sleep = true;
 				chooseForAttack = false;
 				Returnstartposition = true;
