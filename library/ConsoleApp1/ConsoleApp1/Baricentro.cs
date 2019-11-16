@@ -1,6 +1,17 @@
 using System;
 
-public class Baricentro{
+public class Baricentro
+{
+    public Baricentro(int mi, int lambda)
+    {
+        Mi = mi;
+        Lambda = lambda;
+    }
+
+    public Baricentro()
+    {
+
+    }
 
     public int Mi { get; set; }
 

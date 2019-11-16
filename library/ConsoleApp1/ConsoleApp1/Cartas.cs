@@ -13,6 +13,32 @@ public class Carta
         LambAtributo4 = lamb4;
     }
 
+    public int GetAtributoMi(int i) 
+    {
+        switch (i)
+        {
+            case 1: return MiAtributo1;
+            case 2: return MiAtributo2;
+            case 3: return MiAtributo3;
+            case 4: return MiAtributo4;
+            default: return 0;
+        }
+                
+    }
+
+    public int GetAtributoLamb(int i)
+    {
+        switch (i)
+        {
+            case 1: return LambAtributo1;
+            case 2: return LambAtributo2;
+            case 3: return LambAtributo3;
+            case 4: return LambAtributo4;
+            default: return 0;
+        }
+
+    }
+
     public int MiAtributo1 { get; set; }
     public int MiAtributo2 { get; set; }
     public int MiAtributo3 { get; set; }
