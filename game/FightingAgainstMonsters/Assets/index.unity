@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -555,7 +555,7 @@ RectTransform:
   - {fileID: 1520040799}
   - {fileID: 1454522087}
   - {fileID: 322006878}
-  - {fileID: 684820323}
+  - {fileID: 1478215492}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -766,7 +766,6 @@ GameObject:
   - component: {fileID: 137912122}
   - component: {fileID: 137912121}
   - component: {fileID: 137912120}
-  - component: {fileID: 137912119}
   - component: {fileID: 137912118}
   - component: {fileID: 137912129}
   - component: {fileID: 137912130}
@@ -905,34 +904,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &137912119
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 137912116}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c321c338ff08b3542b9631ba2b7c436f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  monster: {fileID: 0}
-  sleep: 0
-  chooseForAttack: 0
-  Attack: 0
-  Returnstartposition: 0
-  Arrow: {fileID: 1454522086}
-  speedAttack: 35
-  Sweep: {fileID: 8300000, guid: 7cc2e727322c80b4bb44d7d62160293f, type: 3}
-  deck: {fileID: 2108965249}
-  enemy: {fileID: 0}
-  sleepObj: {fileID: 1583333809}
-  atkButton: {fileID: 684820322}
-  mePositionForDeadLeft: 0
-  mePositionForDeadRight: 0
-  loss: {fileID: 0}
-  startposition: {x: 0, y: 0}
 --- !u!65 &137912120
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1274,7 +1245,6 @@ GameObject:
   - component: {fileID: 165508257}
   - component: {fileID: 165508260}
   - component: {fileID: 165508252}
-  - component: {fileID: 165508258}
   - component: {fileID: 165508259}
   - component: {fileID: 165508250}
   - component: {fileID: 165508261}
@@ -1488,34 +1458,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0c3e17c3bcc140469202679236b84b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &165508258
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 165508247}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c321c338ff08b3542b9631ba2b7c436f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  monster: {fileID: 0}
-  sleep: 0
-  chooseForAttack: 0
-  Attack: 0
-  Returnstartposition: 0
-  Arrow: {fileID: 1454522086}
-  speedAttack: 35
-  Sweep: {fileID: 8300000, guid: 7cc2e727322c80b4bb44d7d62160293f, type: 3}
-  deck: {fileID: 2108965249}
-  enemy: {fileID: 0}
-  sleepObj: {fileID: 1378124551}
-  atkButton: {fileID: 684820322}
-  mePositionForDeadLeft: 0
-  mePositionForDeadRight: 0
-  loss: {fileID: 0}
-  startposition: {x: 0, y: 0}
 --- !u!82 &165508259
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4375,7 +4317,6 @@ GameObject:
   - component: {fileID: 528113008}
   - component: {fileID: 528113007}
   - component: {fileID: 528113006}
-  - component: {fileID: 528113005}
   - component: {fileID: 528113004}
   - component: {fileID: 528113016}
   - component: {fileID: 528113015}
@@ -4514,34 +4455,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &528113005
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 528113002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c321c338ff08b3542b9631ba2b7c436f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  monster: {fileID: 0}
-  sleep: 0
-  chooseForAttack: 0
-  Attack: 0
-  Returnstartposition: 0
-  Arrow: {fileID: 1454522086}
-  speedAttack: 35
-  Sweep: {fileID: 8300000, guid: 7cc2e727322c80b4bb44d7d62160293f, type: 3}
-  deck: {fileID: 2108965249}
-  enemy: {fileID: 0}
-  sleepObj: {fileID: 1479285847}
-  atkButton: {fileID: 684820322}
-  mePositionForDeadLeft: 0
-  mePositionForDeadRight: 0
-  loss: {fileID: 0}
-  startposition: {x: 0, y: 0}
 --- !u!65 &528113006
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5445,124 +5358,6 @@ Transform:
   m_Father: {fileID: 137912117}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &684820322
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 684820323}
-  - component: {fileID: 684820326}
-  - component: {fileID: 684820325}
-  - component: {fileID: 684820324}
-  m_Layer: 5
-  m_Name: Button
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &684820323
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 684820322}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1739835118}
-  m_Father: {fileID: 93715623}
-  m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 1, y: 104}
-  m_SizeDelta: {x: 120, y: 120}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &684820324
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 684820322}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 684820325}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &684820325
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 684820322}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.6260307, b: 0.051886797, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &684820326
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 684820322}
-  m_CullTransparentMesh: 0
 --- !u!1 &704641610
 GameObject:
   m_ObjectHideFlags: 0
@@ -6139,7 +5934,6 @@ GameObject:
   - component: {fileID: 762083692}
   - component: {fileID: 762083691}
   - component: {fileID: 762083690}
-  - component: {fileID: 762083689}
   - component: {fileID: 762083688}
   - component: {fileID: 762083700}
   - component: {fileID: 762083699}
@@ -6278,34 +6072,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &762083689
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 762083686}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c321c338ff08b3542b9631ba2b7c436f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  monster: {fileID: 0}
-  sleep: 0
-  chooseForAttack: 0
-  Attack: 0
-  Returnstartposition: 0
-  Arrow: {fileID: 1454522086}
-  speedAttack: 35
-  Sweep: {fileID: 8300000, guid: 7cc2e727322c80b4bb44d7d62160293f, type: 3}
-  deck: {fileID: 2108965249}
-  enemy: {fileID: 0}
-  sleepObj: {fileID: 2030079373}
-  atkButton: {fileID: 684820322}
-  mePositionForDeadLeft: 0
-  mePositionForDeadRight: 0
-  loss: {fileID: 0}
-  startposition: {x: 0, y: 0}
 --- !u!65 &762083690
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7483,7 +7249,6 @@ GameObject:
   - component: {fileID: 956465852}
   - component: {fileID: 956465851}
   - component: {fileID: 956465850}
-  - component: {fileID: 956465849}
   - component: {fileID: 956465848}
   - component: {fileID: 956465861}
   - component: {fileID: 956465860}
@@ -7623,34 +7388,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &956465849
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 956465846}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c321c338ff08b3542b9631ba2b7c436f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  monster: {fileID: 0}
-  sleep: 0
-  chooseForAttack: 0
-  Attack: 0
-  Returnstartposition: 0
-  Arrow: {fileID: 1454522086}
-  speedAttack: 35
-  Sweep: {fileID: 8300000, guid: 7cc2e727322c80b4bb44d7d62160293f, type: 3}
-  deck: {fileID: 2108965249}
-  enemy: {fileID: 0}
-  sleepObj: {fileID: 1032450298}
-  atkButton: {fileID: 684820322}
-  mePositionForDeadLeft: 0
-  mePositionForDeadRight: 0
-  loss: {fileID: 0}
-  startposition: {x: 0, y: 0}
 --- !u!65 &956465850
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7978,7 +7715,6 @@ GameObject:
   - component: {fileID: 974989712}
   - component: {fileID: 974989711}
   - component: {fileID: 974989710}
-  - component: {fileID: 974989709}
   - component: {fileID: 974989708}
   - component: {fileID: 974989720}
   - component: {fileID: 974989719}
@@ -8117,34 +7853,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &974989709
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 974989706}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c321c338ff08b3542b9631ba2b7c436f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  monster: {fileID: 0}
-  sleep: 0
-  chooseForAttack: 0
-  Attack: 0
-  Returnstartposition: 0
-  Arrow: {fileID: 1454522086}
-  speedAttack: 35
-  Sweep: {fileID: 8300000, guid: 7cc2e727322c80b4bb44d7d62160293f, type: 3}
-  deck: {fileID: 2108965249}
-  enemy: {fileID: 0}
-  sleepObj: {fileID: 1076948397}
-  atkButton: {fileID: 684820322}
-  mePositionForDeadLeft: 0
-  mePositionForDeadRight: 0
-  loss: {fileID: 0}
-  startposition: {x: 0, y: 0}
 --- !u!65 &974989710
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8361,6 +8069,85 @@ MonoBehaviour:
   dmg: 0
   speedfloating: 4
   dmgText: 
+--- !u!1 &978412087
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 978412088}
+  - component: {fileID: 978412090}
+  - component: {fileID: 978412089}
+  m_Layer: 0
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &978412088
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 978412087}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1478215492}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &978412089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 978412087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.9150943, g: 0.7467515, b: 0.7467515, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 1
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 7
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Attack
+
+'
+--- !u!222 &978412090
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 978412087}
+  m_CullTransparentMesh: 0
 --- !u!1 &983719310
 GameObject:
   m_ObjectHideFlags: 0
@@ -11409,6 +11196,152 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1454522086}
   m_CullTransparentMesh: 0
+--- !u!1 &1478215491
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1478215492}
+  - component: {fileID: 1478215495}
+  - component: {fileID: 1478215494}
+  - component: {fileID: 1478215493}
+  - component: {fileID: 1478215496}
+  m_Layer: 0
+  m_Name: Attack
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1478215492
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1478215491}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 978412088}
+  m_Father: {fileID: 93715623}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: -333, y: -72.99999}
+  m_SizeDelta: {x: 160, y: 120}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1478215493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1478215491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1478215494}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1478215494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1478215491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.8773585, g: 0.1779548, b: 0.1779548, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1478215495
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1478215491}
+  m_CullTransparentMesh: 0
+--- !u!114 &1478215496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1478215491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c321c338ff08b3542b9631ba2b7c436f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  monster: {fileID: 0}
+  sleep: 0
+  chooseForAttack: 0
+  Attack: 0
+  Returnstartposition: 0
+  Arrow: {fileID: 1454522086}
+  speedAttack: 35
+  Sweep: {fileID: 8300000, guid: 7cc2e727322c80b4bb44d7d62160293f, type: 3}
+  deck: {fileID: 2108965249}
+  enemy: {fileID: 0}
+  sleepObj: {fileID: 2030079373}
+  mePositionForDeadLeft: 0
+  mePositionForDeadRight: 0
+  loss: {fileID: 0}
+  startposition: {x: 0, y: 0}
 --- !u!1 &1479285847
 GameObject:
   m_ObjectHideFlags: 0
@@ -13123,83 +13056,6 @@ Transform:
   m_Father: {fileID: 2023398348}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1739835117
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1739835118}
-  - component: {fileID: 1739835120}
-  - component: {fileID: 1739835119}
-  m_Layer: 5
-  m_Name: Text
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1739835118
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1739835117}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 684820323}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1739835119
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1739835117}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 2
-    m_MaxSize: 40
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: ATTACK
---- !u!222 &1739835120
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1739835117}
-  m_CullTransparentMesh: 0
 --- !u!1 &1743976140
 GameObject:
   m_ObjectHideFlags: 0
@@ -13666,7 +13522,6 @@ GameObject:
   - component: {fileID: 1822354263}
   - component: {fileID: 1822354262}
   - component: {fileID: 1822354261}
-  - component: {fileID: 1822354260}
   - component: {fileID: 1822354259}
   - component: {fileID: 1822354271}
   - component: {fileID: 1822354270}
@@ -13805,34 +13660,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1822354260
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1822354257}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c321c338ff08b3542b9631ba2b7c436f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  monster: {fileID: 0}
-  sleep: 0
-  chooseForAttack: 0
-  Attack: 0
-  Returnstartposition: 0
-  Arrow: {fileID: 1454522086}
-  speedAttack: 35
-  Sweep: {fileID: 8300000, guid: 7cc2e727322c80b4bb44d7d62160293f, type: 3}
-  deck: {fileID: 2108965249}
-  enemy: {fileID: 0}
-  sleepObj: {fileID: 320685918}
-  atkButton: {fileID: 684820322}
-  mePositionForDeadLeft: 0
-  mePositionForDeadRight: 0
-  loss: {fileID: 0}
-  startposition: {x: 0, y: 0}
 --- !u!65 &1822354261
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15064,7 +14891,6 @@ GameObject:
   - component: {fileID: 2023398353}
   - component: {fileID: 2023398352}
   - component: {fileID: 2023398351}
-  - component: {fileID: 2023398350}
   - component: {fileID: 2023398349}
   - component: {fileID: 2023398361}
   - component: {fileID: 2023398360}
@@ -15203,34 +15029,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &2023398350
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2023398347}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c321c338ff08b3542b9631ba2b7c436f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  monster: {fileID: 0}
-  sleep: 0
-  chooseForAttack: 0
-  Attack: 0
-  Returnstartposition: 0
-  Arrow: {fileID: 1454522086}
-  speedAttack: 35
-  Sweep: {fileID: 8300000, guid: 7cc2e727322c80b4bb44d7d62160293f, type: 3}
-  deck: {fileID: 2108965249}
-  enemy: {fileID: 0}
-  sleepObj: {fileID: 235027517}
-  atkButton: {fileID: 684820322}
-  mePositionForDeadLeft: 0
-  mePositionForDeadRight: 0
-  loss: {fileID: 0}
-  startposition: {x: 0, y: 0}
 --- !u!65 &2023398351
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15786,6 +15584,7 @@ MonoBehaviour:
   tagOverUI: 
   enemyObj: {fileID: 0}
   DeckManager: {fileID: 1743976140}
+  atkButton: {fileID: 1478215491}
   pose: {fileID: 8300000, guid: 5f434213a255ead41b5afb22bd2e43eb, type: 3}
 --- !u!82 &2108965253
 AudioSource:
