@@ -18,7 +18,7 @@ public class clickCardsMiddle : MonoBehaviour , IPointerClickHandler {
 	public GameObject deck;
 	public GameObject enemy;
 	public GameObject sleepObj;
-    public GameObject atkButton;
+    
     public bool mePositionForDeadLeft = false;
     public bool mePositionForDeadRight = false;
 
@@ -38,7 +38,8 @@ public class clickCardsMiddle : MonoBehaviour , IPointerClickHandler {
 			if (!sleep) {
 				//IF THE CARD CHOOSE FOR ATTACK
 				if (chooseForAttack) {
-					if (deck.GetComponent<CheckSlotMiddle> ().enemyObj) {
+                    Arrow.GetComponent<Image>().enabled = true;
+                    if (deck.GetComponent<CheckSlotMiddle> ().enemyObj) {
 						if (Input.GetMouseButtonDown(0)) {
                             GameObject[] gos = GameObject.FindGameObjectsWithTag("posed");
                             Selection.objects = gos;
@@ -46,7 +47,7 @@ public class clickCardsMiddle : MonoBehaviour , IPointerClickHandler {
 							enemy.GetComponent<overMouse> ().isAtacked = true;
 							startposition = this.transform.localPosition;
 							Attack = true;
-							Arrow.GetComponent<Image> ().enabled = false;
+							
 							GetComponent<AudioSource> ().PlayOneShot (Sweep);
                             
 						}

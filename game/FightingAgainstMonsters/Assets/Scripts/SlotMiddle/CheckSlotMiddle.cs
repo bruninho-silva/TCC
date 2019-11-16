@@ -13,6 +13,7 @@ public class CheckSlotMiddle : MonoBehaviour
     public string tagOverUI;
     public GameObject enemyObj;
     public GameObject DeckManager;
+    public GameObject atkButton;
     public AudioClip pose;
 
     // Use this for initialization
@@ -922,6 +923,8 @@ public class CheckSlotMiddle : MonoBehaviour
                 }
                 
             }
+            atkButton.SetActive(true);
         }
+        
     }
 }
