@@ -11208,6 +11208,7 @@ GameObject:
   - component: {fileID: 1478215495}
   - component: {fileID: 1478215494}
   - component: {fileID: 1478215493}
+  - component: {fileID: 1478215497}
   - component: {fileID: 1478215496}
   m_Layer: 0
   m_Name: Attack
@@ -11215,7 +11216,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1478215492
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11278,7 +11279,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1478215494}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1478215496}
+        m_MethodName: TaskOnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1478215494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11332,16 +11344,48 @@ MonoBehaviour:
   chooseForAttack: 0
   Attack: 0
   Returnstartposition: 0
-  Arrow: {fileID: 1454522086}
   speedAttack: 35
   Sweep: {fileID: 8300000, guid: 7cc2e727322c80b4bb44d7d62160293f, type: 3}
-  deck: {fileID: 2108965249}
-  enemy: {fileID: 0}
+  deck: {fileID: 645263029}
+  qtaslotsactive: {fileID: 2108965252}
+  qtaslotsactivee: []
   sleepObj: {fileID: 2030079373}
+  slots:
+  - {fileID: 165508247}
+  - {fileID: 137912116}
+  - {fileID: 2023398347}
+  - {fileID: 974989706}
+  - {fileID: 956465846}
+  - {fileID: 1822354257}
+  - {fileID: 528113002}
+  - {fileID: 762083686}
+  middle: 0
   mePositionForDeadLeft: 0
   mePositionForDeadRight: 0
   loss: {fileID: 0}
   startposition: {x: 0, y: 0}
+--- !u!114 &1478215497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1478215491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef3b97f5d2bba9a47849f4e6ddb1ac4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NbrCardMiddle: 0
+  slotmiddle: []
+  speedRangeCards: 5
+  PoseCard: {x: 0, y: 0, z: 0}
+  ApplyMiddleCards: 0
+  tagOverUI: 
+  enemyObj: {fileID: 0}
+  DeckManager: {fileID: 1743976140}
+  atkButton: {fileID: 1478215491}
+  pose: {fileID: 8300000, guid: 5f434213a255ead41b5afb22bd2e43eb, type: 3}
 --- !u!1 &1479285847
 GameObject:
   m_ObjectHideFlags: 0
