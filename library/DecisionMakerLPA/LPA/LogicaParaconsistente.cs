@@ -16,7 +16,7 @@ public class LogicaParaconsistente
     /// <returns>
     /// Retorna porcentagem de Dano.
     /// </returns>
-    public int ObtemPorcentagemDeDano(Carta[] cartas)
+    public int ObtemPorcentagemDeDano(List<Carta> cartas)
     {
         Baricentro baricentro = ObtemBaricentro(cartas);
         double gC = baricentro.CalculaGrauDeCerteza();
@@ -34,7 +34,7 @@ public class LogicaParaconsistente
     /// <returns>
     /// Retorna a classe Baricentro.
     /// </returns>
-    public Baricentro ObtemBaricentro(Carta[] cartas)
+    public Baricentro ObtemBaricentro(List<Carta> cartas)
     {
         List<Baricentro> baricentros = new List<Baricentro>();
         for (int i = 0; i < 4; i++)
@@ -59,7 +59,7 @@ public class LogicaParaconsistente
     /// <returns>
     /// Retorna class Baricentro com os valores de Mi e Lambda.
     /// </returns>
-    private Baricentro ExtraiContradicaoPorAtributo(Carta[] cartas, int numeroDoAttr)
+    private Baricentro ExtraiContradicaoPorAtributo(List<Carta> cartas, int numeroDoAttr)
     {
         listaBaricentros = ExtrairAtributosMiLambda(cartas, numeroDoAttr);
         while (listaBaricentros.Count > 2)
@@ -85,10 +85,10 @@ public class LogicaParaconsistente
     /// <returns>
     /// Retorna uma lista de Baricentro.
     /// </returns>
-    private List<Baricentro> ExtrairAtributosMiLambda(Carta[] cartas, int numeroDoAtributo)
+    private List<Baricentro> ExtrairAtributosMiLambda(List<Carta> cartas, int numeroDoAtributo)
     {
         List<Baricentro> baricentros = new List<Baricentro>();
-        for (int i = 0; i < cartas.Length; i++)
+        for (int i = 0; i < cartas.Count; i++)
         {
             Baricentro baricentro = new Baricentro(cartas[i].GetAtributoMi(numeroDoAtributo + 1), cartas[i].GetAtributoLamb(numeroDoAtributo + 1));
             baricentros.Add(baricentro);

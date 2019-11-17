@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace ConsoleApp1
 {
@@ -8,7 +9,7 @@ namespace ConsoleApp1
         {
 
             LogicaParaconsistente lpa = new LogicaParaconsistente();
-            Carta[] cartas = new Carta[]{
+            List<Carta> cartas = new List<Carta>{
                 new Carta(100,100,100,100,100,100,100,100),
                 new Carta(60,63,75,15,60,65,40,30),
                 new Carta(23,1,80,60,34,70,30,20),
