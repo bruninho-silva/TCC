@@ -4,37 +4,68 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.EventSystems;
 using UnityEditor;
+using DecisionMakerLib;
+using System;
 
-public class clickCardsMiddle : MonoBehaviour , IPointerClickHandler {
-
+public class clickCardsMiddle : MonoBehaviour
+{
     public CardsStatExample monster;
-	public bool sleep = false;
-	public bool chooseForAttack = false;
-	public bool Attack = false;
-	public bool Returnstartposition = false;
-	public GameObject Arrow;
-	public float speedAttack;
-	public AudioClip Sweep;
-	public GameObject deck;
-	public GameObject enemy;
-	public GameObject sleepObj;
-    public GameObject card1;
-    public GameObject card2;
-
-
+    public bool sleep = false;
+    public bool chooseForAttack = false;
+    public bool Attack = false;
+    public bool Returnstartposition = false;
+    //public GameObject Arrow;
+    public float speedAttack;
+    public AudioClip Sweep;
+    public GameObject deck;
+    public CheckSlotMiddle qtaslotsactive;
+    public CheckSlotMiddle[] qtaslotsactivee;
+    public GameObject sleepObj;
+    public GameObject[] slots;
+    public float middle;
     public bool mePositionForDeadLeft = false;
     public bool mePositionForDeadRight = false;
-
     public AudioClip loss;
-
     public Vector2 startposition;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
+    // Use this for initialization
+    void Start(){}
+    //, IPointerClickHandler
+    public void TaskOnClick()
+    {
+        Carta[] cartas = new Carta[8];
+        Debug.Log(middle % 2 == 0);
+        if (middle % 2 == 0 && middle != 6)
+        {
+            Debug.Log("DEU BOM = " + middle);
+            for(int i = 0; i <= slots.Length; i++)
+            {
+                if(slots[i].active)
+                {
+                    var ataque = slots[i].GetComponent<ApplyCardMiddle>().attack;
+                    var price = slots[i].GetComponent<ApplyCardMiddle>().price;
+                    var health = slots[i].GetComponent<ApplyCardMiddle>().health;
+                    Carta carta = new Carta(10, 30, 14, 53, 64, 43, 67, 89);
+                    Debug.Log(carta.MiAtributo1);
+                    Debug.Log(carta.LambAtributo1);
 
-	void Update(){
+                    //Debug.Log("Ataque=" + ataque + "Price=" + price + "Health=" + health);
+                    slots[i].GetComponent<ApplyCardMiddle>().health -= deck.GetComponent<CardsStatExample>().Attack;
+                }
+            }
+            deck.GetComponent<CardsStatExample>().damage(1000);
+        }
+        else
+        {
+            Debug.Log("Acrescenta mais 1");
+        }
+    }
+    void Update()
+    {
+        middle = qtaslotsactive.GetComponent<CheckSlotMiddle>().NbrCardMiddle;
+    }
+}
+  /*  void Update(){
 
 
 
@@ -120,6 +151,6 @@ public class clickCardsMiddle : MonoBehaviour , IPointerClickHandler {
 			//Arrow.GetComponent<Image> ().enabled = true;
 			chooseForAttack = true;
 		}
-	}
+	}*/
 
-}
+
