@@ -27,6 +27,7 @@ public class clickCardsMiddle : MonoBehaviour
     public bool mePositionForDeadRight = false;
     public AudioClip loss;
     public Vector2 startposition;
+    
 
     // Use this for initialization
     void Start(){}
@@ -40,7 +41,7 @@ public class clickCardsMiddle : MonoBehaviour
             Debug.Log("DEU BOM = " + middle);
             for(int i = 0; i <= slots.Length; i++)
             {
-                if(slots[i].active)
+                if(slots[i].activeSelf)
                 {
                     var ataque = slots[i].GetComponent<ApplyCardMiddle>().attack;
                     var price = slots[i].GetComponent<ApplyCardMiddle>().price;

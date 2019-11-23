@@ -87,165 +87,135 @@ public class NbrCardsManager : MonoBehaviour {
 			} else {
                 //IF 08 CARDS IN DECK
 
-                if (NbrCard == 9)
-                {
-                    mescartes[8].cards.transform.localPosition = Vector3.Lerp(mescartes[7].cards.transform.localPosition, new Vector3(270, -15, 0), Time.deltaTime * speedMoveCards);
-                    mescartes[8].cards.transform.localRotation = Quaternion.RotateTowards(mescartes[7].cards.transform.rotation, Quaternion.Euler(0, 0, -25), Time.deltaTime * speedRotateCards);
-
-                    mescartes[7].cards.transform.localPosition = Vector3.Lerp(mescartes[7].cards.transform.localPosition, new Vector3(210, -10, 0), Time.deltaTime * speedMoveCards);
-                    mescartes[7].cards.transform.localRotation = Quaternion.RotateTowards(mescartes[7].cards.transform.rotation, Quaternion.Euler(0, 0, -20), Time.deltaTime * speedRotateCards);
-
-                    mescartes[6].cards.transform.localPosition = Vector3.Lerp(mescartes[6].cards.transform.localPosition, new Vector3(150, 5, 0), Time.deltaTime * speedMoveCards);
-                    mescartes[6].cards.transform.localRotation = Quaternion.RotateTowards(mescartes[6].cards.transform.rotation, Quaternion.Euler(0, 0, -15), Time.deltaTime * speedRotateCards);
-
-                    mescartes[5].cards.transform.localPosition = Vector3.Lerp(mescartes[5].cards.transform.localPosition, new Vector3(90, 15, 0), Time.deltaTime * speedMoveCards);
-                    mescartes[5].cards.transform.localRotation = Quaternion.RotateTowards(mescartes[5].cards.transform.rotation, Quaternion.Euler(0, 0, -10), Time.deltaTime * speedRotateCards);
-
-                    mescartes[4].cards.transform.localPosition = Vector3.Lerp(mescartes[4].cards.transform.localPosition, new Vector3(30, 20, 0), Time.deltaTime * speedMoveCards);
-                    mescartes[4].cards.transform.localRotation = Quaternion.RotateTowards(mescartes[4].cards.transform.rotation, Quaternion.Euler(0, 0, -5), Time.deltaTime * speedRotateCards);
-
-                    mescartes[3].cards.transform.localPosition = Vector3.Lerp(mescartes[3].cards.transform.localPosition, new Vector3(-30, 20, 0), Time.deltaTime * speedMoveCards);
-                    mescartes[3].cards.transform.localRotation = Quaternion.RotateTowards(mescartes[3].cards.transform.rotation, Quaternion.Euler(0, 0, 0), Time.deltaTime * speedRotateCards);
-
-                    mescartes[2].cards.transform.localPosition = Vector3.Lerp(mescartes[2].cards.transform.localPosition, new Vector3(-90, 15, 0), Time.deltaTime * speedMoveCards);
-                    mescartes[2].cards.transform.localRotation = Quaternion.RotateTowards(mescartes[2].cards.transform.rotation, Quaternion.Euler(0, 0, 5), Time.deltaTime * speedRotateCards);
-
-                    mescartes[1].cards.transform.localPosition = Vector3.Lerp(mescartes[1].cards.transform.localPosition, new Vector3(-150, 5, 0), Time.deltaTime * speedMoveCards);
-                    mescartes[1].cards.transform.localRotation = Quaternion.RotateTowards(mescartes[1].cards.transform.rotation, Quaternion.Euler(0, 0, 10), Time.deltaTime * speedRotateCards);
-
-                    mescartes[0].cards.transform.localPosition = Vector3.Lerp(mescartes[0].cards.transform.localPosition, new Vector3(-210, -10, 0), Time.deltaTime * speedMoveCards);
-                    mescartes[0].cards.transform.localRotation = Quaternion.RotateTowards(mescartes[0].cards.transform.rotation, Quaternion.Euler(0, 0, 20), Time.deltaTime * speedRotateCards);
-
-                    //IF 07 CARDS IN DECK
-                } else if (NbrCard == 8) {
+               if (NbrCard == 8) {
 				
-					mescartes [7].cards.transform.localPosition = Vector3.Lerp (mescartes [7].cards.transform.localPosition, new Vector3 (210, -10, 0), Time.deltaTime * speedMoveCards);
-					mescartes [7].cards.transform.localRotation = Quaternion.RotateTowards (mescartes [7].cards.transform.rotation, Quaternion.Euler (0, 0, -20), Time.deltaTime * speedRotateCards);
+					mescartes [7].cards.transform.localPosition = Vector3.Lerp (mescartes [7].cards.transform.localPosition, new Vector3 (380, 0, 0), Time.deltaTime * speedMoveCards);
+					mescartes [7].cards.transform.localRotation = Quaternion.RotateTowards (mescartes [7].cards.transform.rotation, Quaternion.Euler (0, 0, 0), Time.deltaTime * speedRotateCards);
 
-					mescartes [6].cards.transform.localPosition = Vector3.Lerp (mescartes [6].cards.transform.localPosition, new Vector3 (150, 5, 0), Time.deltaTime * speedMoveCards);
-					mescartes [6].cards.transform.localRotation = Quaternion.RotateTowards (mescartes [6].cards.transform.rotation, Quaternion.Euler (0, 0, -15), Time.deltaTime * speedRotateCards);
+					mescartes [6].cards.transform.localPosition = Vector3.Lerp (mescartes [6].cards.transform.localPosition, new Vector3 (260, 0, 0), Time.deltaTime * speedMoveCards);
+					mescartes [6].cards.transform.localRotation = Quaternion.RotateTowards (mescartes [6].cards.transform.rotation, Quaternion.Euler (0, 0, 0), Time.deltaTime * speedRotateCards);
 
-					mescartes [5].cards.transform.localPosition = Vector3.Lerp (mescartes [5].cards.transform.localPosition, new Vector3 (90, 15, 0), Time.deltaTime * speedMoveCards);
-					mescartes [5].cards.transform.localRotation = Quaternion.RotateTowards (mescartes [5].cards.transform.rotation, Quaternion.Euler (0, 0, -10), Time.deltaTime * speedRotateCards);
+					mescartes [5].cards.transform.localPosition = Vector3.Lerp (mescartes [5].cards.transform.localPosition, new Vector3 (140, 0, 0), Time.deltaTime * speedMoveCards);
+					mescartes [5].cards.transform.localRotation = Quaternion.RotateTowards (mescartes [5].cards.transform.rotation, Quaternion.Euler (0, 0, 0), Time.deltaTime * speedRotateCards);
 
-					mescartes [4].cards.transform.localPosition = Vector3.Lerp (mescartes [4].cards.transform.localPosition, new Vector3 (30, 20, 0), Time.deltaTime * speedMoveCards);
-					mescartes [4].cards.transform.localRotation = Quaternion.RotateTowards (mescartes [4].cards.transform.rotation, Quaternion.Euler (0, 0, -5), Time.deltaTime * speedRotateCards);
+					mescartes [4].cards.transform.localPosition = Vector3.Lerp (mescartes [4].cards.transform.localPosition, new Vector3 (20, 0, 0), Time.deltaTime * speedMoveCards);
+					mescartes [4].cards.transform.localRotation = Quaternion.RotateTowards (mescartes [4].cards.transform.rotation, Quaternion.Euler (0, 0, 0), Time.deltaTime * speedRotateCards);
 
-					mescartes [3].cards.transform.localPosition = Vector3.Lerp (mescartes [3].cards.transform.localPosition, new Vector3 (-30, 20, 0), Time.deltaTime * speedMoveCards);
+					mescartes [3].cards.transform.localPosition = Vector3.Lerp (mescartes [3].cards.transform.localPosition, new Vector3 (-100, 0, 0), Time.deltaTime * speedMoveCards);
 					mescartes [3].cards.transform.localRotation = Quaternion.RotateTowards (mescartes [3].cards.transform.rotation, Quaternion.Euler (0, 0, 0), Time.deltaTime * speedRotateCards);
 
-					mescartes [2].cards.transform.localPosition = Vector3.Lerp (mescartes [2].cards.transform.localPosition, new Vector3 (-90, 15, 0), Time.deltaTime * speedMoveCards);
-					mescartes [2].cards.transform.localRotation = Quaternion.RotateTowards (mescartes [2].cards.transform.rotation, Quaternion.Euler (0, 0, 5), Time.deltaTime * speedRotateCards);
+					mescartes [2].cards.transform.localPosition = Vector3.Lerp (mescartes [2].cards.transform.localPosition, new Vector3 (-220, 0, 0), Time.deltaTime * speedMoveCards);
+					mescartes [2].cards.transform.localRotation = Quaternion.RotateTowards (mescartes [2].cards.transform.rotation, Quaternion.Euler (0, 0, 0), Time.deltaTime * speedRotateCards);
 
-					mescartes [1].cards.transform.localPosition = Vector3.Lerp (mescartes [1].cards.transform.localPosition, new Vector3 (-150, 5, 0), Time.deltaTime * speedMoveCards);
-					mescartes [1].cards.transform.localRotation = Quaternion.RotateTowards (mescartes [1].cards.transform.rotation, Quaternion.Euler (0, 0, 10), Time.deltaTime * speedRotateCards);
+					mescartes [1].cards.transform.localPosition = Vector3.Lerp (mescartes [1].cards.transform.localPosition, new Vector3 (-340, 0, 0), Time.deltaTime * speedMoveCards);
+					mescartes [1].cards.transform.localRotation = Quaternion.RotateTowards (mescartes [1].cards.transform.rotation, Quaternion.Euler (0, 0, 0), Time.deltaTime * speedRotateCards);
 
-					mescartes [0].cards.transform.localPosition = Vector3.Lerp (mescartes [0].cards.transform.localPosition, new Vector3 (-210, -10, 0), Time.deltaTime * speedMoveCards);
-					mescartes [0].cards.transform.localRotation = Quaternion.RotateTowards (mescartes [0].cards.transform.rotation, Quaternion.Euler (0, 0, 20), Time.deltaTime * speedRotateCards);
+					mescartes [0].cards.transform.localPosition = Vector3.Lerp (mescartes [0].cards.transform.localPosition, new Vector3 (-460, 0, 0), Time.deltaTime * speedMoveCards);
+					mescartes [0].cards.transform.localRotation = Quaternion.RotateTowards (mescartes [0].cards.transform.rotation, Quaternion.Euler (0, 0, 0), Time.deltaTime * speedRotateCards);
 
 					//IF 07 CARDS IN DECK
 				} else if (NbrCard == 7) {
 
-					mescartes [6].cards.transform.localPosition = Vector3.Lerp (mescartes [6].cards.transform.localPosition, new Vector3 (180, 0, 0), Time.deltaTime * speedMoveCards);
-					mescartes [6].cards.transform.localRotation = Quaternion.RotateTowards (mescartes [6].cards.transform.rotation, Quaternion.Euler (0, 0, -15), Time.deltaTime * speedRotateCards);
+					mescartes [6].cards.transform.localPosition = Vector3.Lerp (mescartes [6].cards.transform.localPosition, new Vector3 (260, 0, 0), Time.deltaTime * speedMoveCards);
+					mescartes [6].cards.transform.localRotation = Quaternion.RotateTowards (mescartes [6].cards.transform.rotation, Quaternion.Euler (0, 0, 0), Time.deltaTime * speedRotateCards);
 
-					mescartes [5].cards.transform.localPosition = Vector3.Lerp (mescartes [5].cards.transform.localPosition, new Vector3 (120, 15, 0), Time.deltaTime * speedMoveCards);
-					mescartes [5].cards.transform.localRotation = Quaternion.RotateTowards (mescartes [5].cards.transform.rotation, Quaternion.Euler (0, 0, -10), Time.deltaTime * speedRotateCards);
+					mescartes [5].cards.transform.localPosition = Vector3.Lerp (mescartes [5].cards.transform.localPosition, new Vector3 (140, 0, 0), Time.deltaTime * speedMoveCards);
+					mescartes [5].cards.transform.localRotation = Quaternion.RotateTowards (mescartes [5].cards.transform.rotation, Quaternion.Euler (0, 0, 0), Time.deltaTime * speedRotateCards);
 
-					mescartes [4].cards.transform.localPosition = Vector3.Lerp (mescartes [4].cards.transform.localPosition, new Vector3 (60, 25, 0), Time.deltaTime * speedMoveCards);
-					mescartes [4].cards.transform.localRotation = Quaternion.RotateTowards (mescartes [4].cards.transform.rotation, Quaternion.Euler (0, 0, -5), Time.deltaTime * speedRotateCards);
+					mescartes [4].cards.transform.localPosition = Vector3.Lerp (mescartes [4].cards.transform.localPosition, new Vector3 (20, 0, 0), Time.deltaTime * speedMoveCards);
+					mescartes [4].cards.transform.localRotation = Quaternion.RotateTowards (mescartes [4].cards.transform.rotation, Quaternion.Euler (0, 0, 0), Time.deltaTime * speedRotateCards);
 
-					mescartes [3].cards.transform.localPosition = Vector3.Lerp (mescartes [3].cards.transform.localPosition, new Vector3 (0, 30, 0), Time.deltaTime * speedMoveCards);
+					mescartes [3].cards.transform.localPosition = Vector3.Lerp (mescartes [3].cards.transform.localPosition, new Vector3 (-100, 0, 0), Time.deltaTime * speedMoveCards);
 					mescartes [3].cards.transform.localRotation = Quaternion.RotateTowards (mescartes [3].cards.transform.rotation, Quaternion.Euler (0, 0, 0), Time.deltaTime * speedRotateCards);
 
-					mescartes [2].cards.transform.localPosition = Vector3.Lerp (mescartes [2].cards.transform.localPosition, new Vector3 (-60, 25, 0), Time.deltaTime * speedMoveCards);
-					mescartes [2].cards.transform.localRotation = Quaternion.RotateTowards (mescartes [2].cards.transform.rotation, Quaternion.Euler (0, 0, 5), Time.deltaTime * speedRotateCards);
+					mescartes [2].cards.transform.localPosition = Vector3.Lerp (mescartes [2].cards.transform.localPosition, new Vector3 (-220, 0, 0), Time.deltaTime * speedMoveCards);
+					mescartes [2].cards.transform.localRotation = Quaternion.RotateTowards (mescartes [2].cards.transform.rotation, Quaternion.Euler (0, 0, 0), Time.deltaTime * speedRotateCards);
 
-					mescartes [1].cards.transform.localPosition = Vector3.Lerp (mescartes [1].cards.transform.localPosition, new Vector3 (-120, 15, 0), Time.deltaTime * speedMoveCards);
-					mescartes [1].cards.transform.localRotation = Quaternion.RotateTowards (mescartes [1].cards.transform.rotation, Quaternion.Euler (0, 0, 10), Time.deltaTime * speedRotateCards);
+					mescartes [1].cards.transform.localPosition = Vector3.Lerp (mescartes [1].cards.transform.localPosition, new Vector3 (-340, 0, 0), Time.deltaTime * speedMoveCards);
+					mescartes [1].cards.transform.localRotation = Quaternion.RotateTowards (mescartes [1].cards.transform.rotation, Quaternion.Euler (0, 0, 0), Time.deltaTime * speedRotateCards);
 
-					mescartes [0].cards.transform.localPosition = Vector3.Lerp (mescartes [0].cards.transform.localPosition, new Vector3 (-180, 0, 0), Time.deltaTime * speedMoveCards);
-					mescartes [0].cards.transform.localRotation = Quaternion.RotateTowards (mescartes [0].cards.transform.rotation, Quaternion.Euler (0, 0, 15), Time.deltaTime * speedRotateCards);
+					mescartes [0].cards.transform.localPosition = Vector3.Lerp (mescartes [0].cards.transform.localPosition, new Vector3 (-460, 0, 0), Time.deltaTime * speedMoveCards);
+					mescartes [0].cards.transform.localRotation = Quaternion.RotateTowards (mescartes [0].cards.transform.rotation, Quaternion.Euler (0, 0, 0), Time.deltaTime * speedRotateCards);
 
 					//IF 06 CARDS IN DECK
 				} else if (NbrCard == 6) {
 				
-					mescartes [5].cards.transform.localPosition = Vector3.Lerp (mescartes [5].cards.transform.localPosition, new Vector3 (150, 5, 0), Time.deltaTime * speedMoveCards);
-					mescartes [5].cards.transform.localRotation = Quaternion.RotateTowards (mescartes [5].cards.transform.rotation, Quaternion.Euler (0, 0, -10), Time.deltaTime * speedRotateCards);
+					mescartes [5].cards.transform.localPosition = Vector3.Lerp (mescartes [5].cards.transform.localPosition, new Vector3 (260, 0, 0), Time.deltaTime * speedMoveCards);
+					mescartes [5].cards.transform.localRotation = Quaternion.RotateTowards (mescartes [5].cards.transform.rotation, Quaternion.Euler (0, 0, 0), Time.deltaTime * speedRotateCards);
 
-					mescartes [4].cards.transform.localPosition = Vector3.Lerp (mescartes [4].cards.transform.localPosition, new Vector3 (90, 15, 0), Time.deltaTime * speedMoveCards);
-					mescartes [4].cards.transform.localRotation = Quaternion.RotateTowards (mescartes [4].cards.transform.rotation, Quaternion.Euler (0, 0, -5), Time.deltaTime * speedRotateCards);
+					mescartes [4].cards.transform.localPosition = Vector3.Lerp (mescartes [4].cards.transform.localPosition, new Vector3 (140, 0, 0), Time.deltaTime * speedMoveCards);
+					mescartes [4].cards.transform.localRotation = Quaternion.RotateTowards (mescartes [4].cards.transform.rotation, Quaternion.Euler (0, 0, 0), Time.deltaTime * speedRotateCards);
 
-					mescartes [3].cards.transform.localPosition = Vector3.Lerp (mescartes [3].cards.transform.localPosition, new Vector3 (30, 20, 0), Time.deltaTime * speedMoveCards);
-					mescartes [3].cards.transform.localRotation = Quaternion.RotateTowards (mescartes [3].cards.transform.rotation, Quaternion.Euler (0, 0, -2), Time.deltaTime * speedRotateCards);
+					mescartes [3].cards.transform.localPosition = Vector3.Lerp (mescartes [3].cards.transform.localPosition, new Vector3 (20, 0, 0), Time.deltaTime * speedMoveCards);
+					mescartes [3].cards.transform.localRotation = Quaternion.RotateTowards (mescartes [3].cards.transform.rotation, Quaternion.Euler (0, 0, 0), Time.deltaTime * speedRotateCards);
 
-					mescartes [2].cards.transform.localPosition = Vector3.Lerp (mescartes [2].cards.transform.localPosition, new Vector3 (-30, 20, 0), Time.deltaTime * speedMoveCards);
-					mescartes [2].cards.transform.localRotation = Quaternion.RotateTowards (mescartes [2].cards.transform.rotation, Quaternion.Euler (0, 0, 2), Time.deltaTime * speedRotateCards);
+					mescartes [2].cards.transform.localPosition = Vector3.Lerp (mescartes [2].cards.transform.localPosition, new Vector3 (-100, 0, 0), Time.deltaTime * speedMoveCards);
+					mescartes [2].cards.transform.localRotation = Quaternion.RotateTowards (mescartes [2].cards.transform.rotation, Quaternion.Euler (0, 0, 0), Time.deltaTime * speedRotateCards);
 
-					mescartes [1].cards.transform.localPosition = Vector3.Lerp (mescartes [1].cards.transform.localPosition, new Vector3 (-90, 15, 0), Time.deltaTime * speedMoveCards);
-					mescartes [1].cards.transform.localRotation = Quaternion.RotateTowards (mescartes [1].cards.transform.rotation, Quaternion.Euler (0, 0, 5), Time.deltaTime * speedRotateCards);
+					mescartes [1].cards.transform.localPosition = Vector3.Lerp (mescartes [1].cards.transform.localPosition, new Vector3 (-220, 0, 0), Time.deltaTime * speedMoveCards);
+					mescartes [1].cards.transform.localRotation = Quaternion.RotateTowards (mescartes [1].cards.transform.rotation, Quaternion.Euler (0, 0, 0), Time.deltaTime * speedRotateCards);
 
-					mescartes [0].cards.transform.localPosition = Vector3.Lerp (mescartes [0].cards.transform.localPosition, new Vector3 (-150, 5, 0), Time.deltaTime * speedMoveCards);
-					mescartes [0].cards.transform.localRotation = Quaternion.RotateTowards (mescartes [0].cards.transform.rotation, Quaternion.Euler (0, 0, 10), Time.deltaTime * speedRotateCards);
+					mescartes [0].cards.transform.localPosition = Vector3.Lerp (mescartes [0].cards.transform.localPosition, new Vector3 (-340, 0, 0), Time.deltaTime * speedMoveCards);
+					mescartes [0].cards.transform.localRotation = Quaternion.RotateTowards (mescartes [0].cards.transform.rotation, Quaternion.Euler (0, 0, 0), Time.deltaTime * speedRotateCards);
 
 					//IF 05 CARDS IN DECK
 				} else if (NbrCard == 5) {
 
-					mescartes [4].cards.transform.localPosition = Vector3.Lerp (mescartes [4].cards.transform.localPosition, new Vector3 (140, 5, 0), Time.deltaTime * speedMoveCards);
-					mescartes [4].cards.transform.localRotation = Quaternion.RotateTowards (mescartes [4].cards.transform.rotation, Quaternion.Euler (0, 0, -15), Time.deltaTime * speedRotateCards);
+					mescartes [4].cards.transform.localPosition = Vector3.Lerp (mescartes [4].cards.transform.localPosition, new Vector3 (140, 0, 0), Time.deltaTime * speedMoveCards);
+					mescartes [4].cards.transform.localRotation = Quaternion.RotateTowards (mescartes [4].cards.transform.rotation, Quaternion.Euler (0, 0, 0), Time.deltaTime * speedRotateCards);
 
-					mescartes [3].cards.transform.localPosition = Vector3.Lerp (mescartes [3].cards.transform.localPosition, new Vector3 (70, 20, 0), Time.deltaTime * speedMoveCards);
-					mescartes [3].cards.transform.localRotation = Quaternion.RotateTowards (mescartes [3].cards.transform.rotation, Quaternion.Euler (0, 0, -5), Time.deltaTime * speedRotateCards);
+					mescartes [3].cards.transform.localPosition = Vector3.Lerp (mescartes [3].cards.transform.localPosition, new Vector3 (20, 0, 0), Time.deltaTime * speedMoveCards);
+					mescartes [3].cards.transform.localRotation = Quaternion.RotateTowards (mescartes [3].cards.transform.rotation, Quaternion.Euler (0, 0, 0), Time.deltaTime * speedRotateCards);
 
-					mescartes [2].cards.transform.localPosition = Vector3.Lerp (mescartes [2].cards.transform.localPosition, new Vector3 (0, 25, 0), Time.deltaTime * speedMoveCards);
+					mescartes [2].cards.transform.localPosition = Vector3.Lerp (mescartes [2].cards.transform.localPosition, new Vector3 (-100, 0, 0), Time.deltaTime * speedMoveCards);
 					mescartes [2].cards.transform.localRotation = Quaternion.RotateTowards (mescartes [2].cards.transform.rotation, Quaternion.Euler (0, 0, 0), Time.deltaTime * speedRotateCards);
 
-					mescartes [1].cards.transform.localPosition = Vector3.Lerp (mescartes [1].cards.transform.localPosition, new Vector3 (-70, 20, 0), Time.deltaTime * speedMoveCards);
-					mescartes [1].cards.transform.localRotation = Quaternion.RotateTowards (mescartes [1].cards.transform.rotation, Quaternion.Euler (0, 0, 5), Time.deltaTime * speedRotateCards);
+					mescartes [1].cards.transform.localPosition = Vector3.Lerp (mescartes [1].cards.transform.localPosition, new Vector3 (-220, 0, 0), Time.deltaTime * speedMoveCards);
+					mescartes [1].cards.transform.localRotation = Quaternion.RotateTowards (mescartes [1].cards.transform.rotation, Quaternion.Euler (0, 0, 0), Time.deltaTime * speedRotateCards);
 
-					mescartes [0].cards.transform.localPosition = Vector3.Lerp (mescartes [0].cards.transform.localPosition, new Vector3 (-140, 5, 0), Time.deltaTime * speedMoveCards);
-					mescartes [0].cards.transform.localRotation = Quaternion.RotateTowards (mescartes [0].cards.transform.rotation, Quaternion.Euler (0, 0, 15), Time.deltaTime * speedRotateCards);
+					mescartes [0].cards.transform.localPosition = Vector3.Lerp (mescartes [0].cards.transform.localPosition, new Vector3 (-340, 0, 0), Time.deltaTime * speedMoveCards);
+					mescartes [0].cards.transform.localRotation = Quaternion.RotateTowards (mescartes [0].cards.transform.rotation, Quaternion.Euler (0, 0, 0), Time.deltaTime * speedRotateCards);
 
 					//IF 04 CARDS IN DECK
 				} else if (NbrCard == 4) {
 				
-					mescartes [3].cards.transform.localPosition = Vector3.Lerp (mescartes [3].cards.transform.localPosition, new Vector3 (100, 10, 0), Time.deltaTime * speedMoveCards);
-					mescartes [3].cards.transform.localRotation = Quaternion.RotateTowards (mescartes [3].cards.transform.rotation, Quaternion.Euler (0, 0, -15), Time.deltaTime * speedRotateCards);
+					mescartes [3].cards.transform.localPosition = Vector3.Lerp (mescartes [3].cards.transform.localPosition, new Vector3 (140, 0, 0), Time.deltaTime * speedMoveCards);
+					mescartes [3].cards.transform.localRotation = Quaternion.RotateTowards (mescartes [3].cards.transform.rotation, Quaternion.Euler (0, 0, 0), Time.deltaTime * speedRotateCards);
 
-					mescartes [2].cards.transform.localPosition = Vector3.Lerp (mescartes [2].cards.transform.localPosition, new Vector3 (30, 25, 0), Time.deltaTime * speedMoveCards);
-					mescartes [2].cards.transform.localRotation = Quaternion.RotateTowards (mescartes [2].cards.transform.rotation, Quaternion.Euler (0, 0, -5), Time.deltaTime * speedRotateCards);
+					mescartes [2].cards.transform.localPosition = Vector3.Lerp (mescartes [2].cards.transform.localPosition, new Vector3 (20, 0, 0), Time.deltaTime * speedMoveCards);
+					mescartes [2].cards.transform.localRotation = Quaternion.RotateTowards (mescartes [2].cards.transform.rotation, Quaternion.Euler (0, 0, 0), Time.deltaTime * speedRotateCards);
 
-					mescartes [1].cards.transform.localPosition = Vector3.Lerp (mescartes [1].cards.transform.localPosition, new Vector3 (-30, 25, 0), Time.deltaTime * speedMoveCards);
-					mescartes [1].cards.transform.localRotation = Quaternion.RotateTowards (mescartes [1].cards.transform.rotation, Quaternion.Euler (0, 0, 5), Time.deltaTime * speedRotateCards);
+					mescartes [1].cards.transform.localPosition = Vector3.Lerp (mescartes [1].cards.transform.localPosition, new Vector3 (-100, 0, 0), Time.deltaTime * speedMoveCards);
+					mescartes [1].cards.transform.localRotation = Quaternion.RotateTowards (mescartes [1].cards.transform.rotation, Quaternion.Euler (0, 0, 0), Time.deltaTime * speedRotateCards);
 
-					mescartes [0].cards.transform.localPosition = Vector3.Lerp (mescartes [0].cards.transform.localPosition, new Vector3 (-100, 10, 0), Time.deltaTime * speedMoveCards);
-					mescartes [0].cards.transform.localRotation = Quaternion.RotateTowards (mescartes [0].cards.transform.rotation, Quaternion.Euler (0, 0, 15), Time.deltaTime * speedRotateCards);
+					mescartes [0].cards.transform.localPosition = Vector3.Lerp (mescartes [0].cards.transform.localPosition, new Vector3 (-220, 0, 0), Time.deltaTime * speedMoveCards);
+					mescartes [0].cards.transform.localRotation = Quaternion.RotateTowards (mescartes [0].cards.transform.rotation, Quaternion.Euler (0, 0, 0), Time.deltaTime * speedRotateCards);
 
 					//IF 03 CARDS IN DECK
 				} else if (NbrCard == 3) {
 				
-					mescartes [2].cards.transform.localPosition = Vector3.Lerp (mescartes [2].cards.transform.localPosition, new Vector3 (70, 20, 0), Time.deltaTime * speedMoveCards);
-					mescartes [2].cards.transform.localRotation = Quaternion.RotateTowards (mescartes [2].cards.transform.rotation, Quaternion.Euler (0, 0, -5), Time.deltaTime * speedRotateCards);
+					mescartes [2].cards.transform.localPosition = Vector3.Lerp (mescartes [2].cards.transform.localPosition, new Vector3 (20, 0, 0), Time.deltaTime * speedMoveCards);
+					mescartes [2].cards.transform.localRotation = Quaternion.RotateTowards (mescartes [2].cards.transform.rotation, Quaternion.Euler (0, 0, 0), Time.deltaTime * speedRotateCards);
 
-					mescartes [1].cards.transform.localPosition = Vector3.Lerp (mescartes [1].cards.transform.localPosition, new Vector3 (0, 25, 0), Time.deltaTime * speedMoveCards);
+					mescartes [1].cards.transform.localPosition = Vector3.Lerp (mescartes [1].cards.transform.localPosition, new Vector3 (-100, 0, 0), Time.deltaTime * speedMoveCards);
 					mescartes [1].cards.transform.localRotation = Quaternion.RotateTowards (mescartes [1].cards.transform.rotation, Quaternion.Euler (0, 0, 0), Time.deltaTime * speedRotateCards);
 
-					mescartes [0].cards.transform.localPosition = Vector3.Lerp (mescartes [0].cards.transform.localPosition, new Vector3 (-70, 20, 0), Time.deltaTime * speedMoveCards);
-					mescartes [0].cards.transform.localRotation = Quaternion.RotateTowards (mescartes [0].cards.transform.rotation, Quaternion.Euler (0, 0, 5), Time.deltaTime * speedRotateCards);
+					mescartes [0].cards.transform.localPosition = Vector3.Lerp (mescartes [0].cards.transform.localPosition, new Vector3 (-220, 0, 0), Time.deltaTime * speedMoveCards);
+					mescartes [0].cards.transform.localRotation = Quaternion.RotateTowards (mescartes [0].cards.transform.rotation, Quaternion.Euler (0, 0, 0), Time.deltaTime * speedRotateCards);
 
 					//IF 02 CARDS IN DECK
 				} else if (NbrCard == 2) {
 				
-					mescartes [1].cards.transform.localPosition = Vector3.Lerp (mescartes [1].cards.transform.localPosition, new Vector3 (30, 25, 0), Time.deltaTime * speedMoveCards);
-					mescartes [1].cards.transform.localRotation = Quaternion.RotateTowards (mescartes [1].cards.transform.rotation, Quaternion.Euler (0, 0, -5), Time.deltaTime * speedRotateCards);
+					mescartes [1].cards.transform.localPosition = Vector3.Lerp (mescartes [1].cards.transform.localPosition, new Vector3 (20, 0, 0), Time.deltaTime * speedMoveCards);
+					mescartes [1].cards.transform.localRotation = Quaternion.RotateTowards (mescartes [1].cards.transform.rotation, Quaternion.Euler (0, 0, 0), Time.deltaTime * speedRotateCards);
 
-					mescartes [0].cards.transform.localPosition = Vector3.Lerp (mescartes [0].cards.transform.localPosition, new Vector3 (-30, 25, 0), Time.deltaTime * speedMoveCards);
-					mescartes [0].cards.transform.localRotation = Quaternion.RotateTowards (mescartes [0].cards.transform.rotation, Quaternion.Euler (0, 0, 5), Time.deltaTime * speedRotateCards);
+					mescartes [0].cards.transform.localPosition = Vector3.Lerp (mescartes [0].cards.transform.localPosition, new Vector3 (-100, 0, 0), Time.deltaTime * speedMoveCards);
+					mescartes [0].cards.transform.localRotation = Quaternion.RotateTowards (mescartes [0].cards.transform.rotation, Quaternion.Euler (0, 0, 0), Time.deltaTime * speedRotateCards);
 
 					//IF 01 CARDS IN DECK
 				} else if (NbrCard == 1) {
 
-					mescartes [0].cards.transform.localPosition = Vector3.Lerp (mescartes [0].cards.transform.localPosition, new Vector3 (0, 25, 0), Time.deltaTime * speedMoveCards);
+					mescartes [0].cards.transform.localPosition = Vector3.Lerp (mescartes [0].cards.transform.localPosition, new Vector3 (0, 0, 0), Time.deltaTime * speedMoveCards);
 					mescartes [0].cards.transform.localRotation = Quaternion.RotateTowards (mescartes [0].cards.transform.rotation, Quaternion.Euler (0, 0, 0), Time.deltaTime * speedRotateCards);
 				}
 			}
