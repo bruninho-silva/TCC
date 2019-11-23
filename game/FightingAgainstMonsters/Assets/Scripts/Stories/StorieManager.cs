@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class StorieManager : MonoBehaviour
 {
+
+    public void mudar()
+    {
+        Debug.Log("Mudou");
+    }
+    
     // Start is called before the first frame update
     void Start()
     {
