@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class ApplyCardMiddle : MonoBehaviour {
 
-	public int price;
+   
+    public int price;
 	public int attack;
 	public int health;
 
@@ -12,6 +14,7 @@ public class ApplyCardMiddle : MonoBehaviour {
 	public GameObject objattack;
 	public GameObject objhealth;
 
+    
     public bool mePositionForDeadLeft = false;
     public bool mePositionForDeadRight = false;
     public AudioClip loss;
@@ -19,15 +22,22 @@ public class ApplyCardMiddle : MonoBehaviour {
 
     void Start() {
 
+        
+       
         objprice.GetComponent<Text>().text = price.ToString();
         objattack.GetComponent<Text>().text = attack.ToString();
         objhealth.GetComponent<Text>().text = health.ToString();
 
     }
 
+  
+
 	void FixedUpdate() {
 
-	}
+       
+      
+        
+    }
 
     public void damage(int dmg)
     {
