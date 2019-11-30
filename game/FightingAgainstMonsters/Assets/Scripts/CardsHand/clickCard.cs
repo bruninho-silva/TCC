@@ -6,9 +6,6 @@ using System.Collections.Generic;
 
 public class clickCard : MonoBehaviour , IPointerEnterHandler, IPointerExitHandler {
 
-    public static List<clickCard> thiscard = new List<clickCard>();
-    public int thisid;
-
     public GameObject deck;
 	public int NombreCarte;
     public int idCarte;
@@ -20,7 +17,6 @@ public class clickCard : MonoBehaviour , IPointerEnterHandler, IPointerExitHandl
 	public GameObject objattack;
 	public GameObject objhealth;
 
-    public Sprite rImage;
 
 
     /*public AudioSource audio;*/
@@ -30,9 +26,10 @@ public class clickCard : MonoBehaviour , IPointerEnterHandler, IPointerExitHandl
 	// Use this for initialization
 	void Start () {
 
-         
-        thiscard[0] = CardDataBase.cardList[thisid];
-        
+        objprice.GetComponent<Text>().text = price.ToString();
+        objattack.GetComponent<Text>().text = attack.ToString();
+        objhealth.GetComponent<Text>().text = health.ToString();
+     
 
     }
 	
@@ -40,25 +37,11 @@ public class clickCard : MonoBehaviour , IPointerEnterHandler, IPointerExitHandl
 	void Update () {
 
 		NombreCarte = deck.GetComponent<NbrCardsManager> ().NbrCard;
-        //objprice.GetComponent<Text>().text = price.ToString();
-        //objattack.GetComponent<Text>().text = attack.ToString();
-        //objhealth.GetComponent<Text>().text = health.ToString();
-    }
-
-    public clickCard()
-    {
+      
 
     }
 
-    public clickCard(int idCards, int goattack, int goprice, int gohealth, Sprite thisImage)
-    {
-        idCarte = idCards;
-        attack = goattack;
-        price = goprice;
-        health = gohealth;
-        rImage = thisImage;
-
-    }
+   
 
     public void OnPointerEnter(PointerEventData eventData)
 	{
