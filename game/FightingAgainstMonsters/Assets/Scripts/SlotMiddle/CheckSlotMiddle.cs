@@ -921,10 +921,11 @@ public class CheckSlotMiddle : MonoBehaviour
                         }
                     }
                 }
-                
+
             }
-            atkButton.SetActive(true);
+            
         }
         
     }
+    
 }
