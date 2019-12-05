@@ -23,12 +23,16 @@ public class clickCardsMiddle : MonoBehaviour
     public CardsStatExample monster;
     public CheckSlotMiddle qtaslotsactive;
     public CheckSlotMiddle[] qtaslotsactivee;
+    
 
     public GameObject sleepObj;
     public GameObject deck;
     public GameObject enemy;
     public GameObject Arrow;
     public GameObject[] slots;
+    public CheckSlotMiddle slot;
+  
+    
 
 
     public AudioClip loss;
@@ -42,7 +46,7 @@ public class clickCardsMiddle : MonoBehaviour
     //, IPointerClickHandler
     public void TaskOnClick()
     {
-        
+            
                 Carta[] cartas = new Carta[8];
                 Debug.Log(slots);
                 Debug.Log(middle % 2 == 0);
@@ -56,6 +60,8 @@ public class clickCardsMiddle : MonoBehaviour
 
                         if (slots[i].activeSelf)
                         {
+
+                            
                             var ataque = slots[i].GetComponent<ApplyCardMiddle>().attack;
                             var price = slots[i].GetComponent<ApplyCardMiddle>().price;
                             var health = slots[i].GetComponent<ApplyCardMiddle>().health;
@@ -63,13 +69,17 @@ public class clickCardsMiddle : MonoBehaviour
                             
                             Debug.Log(carta.MiAtributo1);
                             Debug.Log(carta.LambAtributo1);
-
-                            //Debug.Log("Ataque=" + ataque + "Price=" + price + "Health=" + health);
-                            slots[i].GetComponent<ApplyCardMiddle>().health -= deck.GetComponent<CardsStatExample>().Attack;
-                        }
+                  
+                    //Debug.Log("Ataque=" + ataque + "Price=" + price + "Health=" + health);
+                    slots[i].GetComponent<ApplyCardMiddle>().health -= deck.GetComponent<CardsStatExample>().Attack;
+                    
                     }
-                    deck.GetComponent<CardsStatExample>().damage(1000);
                 }
+                
+                 deck.GetComponent<CardsStatExample>().damage(1000);
+                    
+
+        }
                 else
                 {
                     Debug.Log("Acrescenta mais 1");

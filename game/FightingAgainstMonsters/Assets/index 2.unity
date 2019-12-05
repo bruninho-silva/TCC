@@ -5071,6 +5071,7 @@ MonoBehaviour:
   mePositionForDeadRight: 0
   loss: {fileID: 8300000, guid: aa7294e6350089149b21a454966cc747, type: 3}
   monsterHit: {fileID: 8300000, guid: 378c3b612ad8c5744a1c71cefbf6056f, type: 3}
+  stage: Credits
 --- !u!65 &645263036
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5082,8 +5083,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 200, y: 200, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 200, y: 319.7036, z: 1}
+  m_Center: {x: 0, y: -59.85189, z: 0}
 --- !u!114 &645263037
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5129,7 +5130,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2b29a4203205faf419f1d74cd66d6147, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9c1ed8cf6f8c97745a6811d33db8ea5c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -10998,7 +10999,6 @@ GameObject:
   - component: {fileID: 1478215495}
   - component: {fileID: 1478215494}
   - component: {fileID: 1478215493}
-  - component: {fileID: 1478215497}
   - component: {fileID: 1478215496}
   - component: {fileID: 1478215498}
   m_Layer: 0
@@ -11083,6 +11083,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2108965254}
+        m_MethodName: Play
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1478215494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11155,31 +11166,10 @@ MonoBehaviour:
   - {fileID: 1822354257}
   - {fileID: 528113002}
   - {fileID: 762083686}
+  slot: {fileID: 0}
   loss: {fileID: 0}
   Sweep: {fileID: 8300000, guid: 7cc2e727322c80b4bb44d7d62160293f, type: 3}
   startposition: {x: 0, y: 0}
---- !u!114 &1478215497
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1478215491}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef3b97f5d2bba9a47849f4e6ddb1ac4c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NbrCardMiddle: 0
-  slotmiddle: []
-  speedRangeCards: 5
-  PoseCard: {x: 0, y: 0, z: 0}
-  ApplyMiddleCards: 0
-  tagOverUI: 
-  enemyObj: {fileID: 0}
-  DeckManager: {fileID: 1743976140}
-  atkButton: {fileID: 1478215491}
-  pose: {fileID: 8300000, guid: 5f434213a255ead41b5afb22bd2e43eb, type: 3}
 --- !u!95 &1478215498
 Animator:
   serializedVersion: 3
@@ -14998,6 +14988,7 @@ GameObject:
   - component: {fileID: 2108965251}
   - component: {fileID: 2108965252}
   - component: {fileID: 2108965253}
+  - component: {fileID: 2108965254}
   m_Layer: 0
   m_Name: SlotMiddle
   m_TagString: Untagged
@@ -15068,7 +15059,7 @@ MonoBehaviour:
   tagOverUI: 
   enemyObj: {fileID: 0}
   DeckManager: {fileID: 1743976140}
-  atkButton: {fileID: 1478215491}
+  atkslot: {fileID: 0}
   pose: {fileID: 8300000, guid: 5f434213a255ead41b5afb22bd2e43eb, type: 3}
 --- !u!82 &2108965253
 AudioSource:
@@ -15166,6 +15157,25 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!95 &2108965254
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2108965249}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c3af8eb406cab8d468676fe5ec5897e1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2109328614
 GameObject:
   m_ObjectHideFlags: 0

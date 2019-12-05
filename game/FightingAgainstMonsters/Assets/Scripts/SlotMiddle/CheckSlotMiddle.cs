@@ -13,14 +13,16 @@ public class CheckSlotMiddle : MonoBehaviour
     public string tagOverUI;
     public GameObject enemyObj;
     public GameObject DeckManager;
-    public GameObject atkButton;
+    public GameObject atkslot;
     public AudioClip pose;
+
 
     // Use this for initialization
     void Start()
     {
 
     }
+    
 
     public void playsoundPose()
     {

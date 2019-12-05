@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class CardsStatExample : MonoBehaviour {
 	
@@ -18,6 +19,8 @@ public class CardsStatExample : MonoBehaviour {
 	public bool mePositionForDeadRight = false;
 	public AudioClip loss;
 	public AudioClip monsterHit;
+    public string stage;
+   
 
 	// Use this for initialization
 	void Start () {
@@ -49,7 +52,9 @@ public class CardsStatExample : MonoBehaviour {
 			GetComponent<AudioSource> ().PlayOneShot (loss);
 			(this.tag) = "Enemy";
             
-		} else {
+            Application.LoadLevel(stage);
+
+        } else {
 			objhealth.GetComponent<Text> ().text = health.ToString();
 			GetComponent<AudioSource> ().PlayOneShot (monsterHit);
 		}
