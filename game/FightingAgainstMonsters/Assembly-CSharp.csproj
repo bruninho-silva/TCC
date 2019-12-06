@@ -62,25 +62,25 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Arrow\mouseposition.cs" />
-    <Compile Include="Assets\Scripts\Boss\CardsStatExample.cs" />
-    <Compile Include="Assets\Scripts\Boss\overMouse.cs" />
-    <Compile Include="Assets\Scripts\CardsHand\ApplyCardMiddle.cs" />
-    <Compile Include="Assets\Scripts\CardsHand\clickCard.cs" />
-    <Compile Include="Assets\Scripts\CardsHand\DragHandeler.cs" />
-    <Compile Include="Assets\Scripts\Manager\NbrCardsManager.cs" />
-    <Compile Include="Assets\Scripts\SlotMiddle\BoxRaycasting.cs" />
-    <Compile Include="Assets\Scripts\SlotMiddle\CheckSlotMiddle.cs" />
-    <Compile Include="Assets\Scripts\SlotMiddle\clickCardsMiddle.cs" />
-    <Compile Include="Assets\Scripts\SlotMiddle\floatingDmg.cs" />
-    <Compile Include="Assets\Scripts\SlotMiddle\Slot.cs" />
-    <Compile Include="Assets\Scripts\UIMenu\ChangeScene.cs" />
-    <Compile Include="Assets\Scripts\UIMenu\clickMenu.cs" />
-    <Compile Include="Assets\Scripts\UIMenu\clickStart.cs" />
-    <Compile Include="Assets\Scripts\UIMenu\ExitGame.cs" />
-    <Compile Include="Assets\Scripts\UIMenu\Monnaies.cs" />
-    <Compile Include="Assets\Scripts\UIMenu\OutlineCardsMiddle.cs" />
-    <None Include="Assets\README.txt" />
+    <Compile Include="Assets\Fighting Against Monsters\Scripts\Arrow\mouseposition.cs" />
+    <Compile Include="Assets\Fighting Against Monsters\Scripts\Boss\CardsStatExample.cs" />
+    <Compile Include="Assets\Fighting Against Monsters\Scripts\Boss\overMouse.cs" />
+    <Compile Include="Assets\Fighting Against Monsters\Scripts\CardsHand\ApplyCardMiddle.cs" />
+    <Compile Include="Assets\Fighting Against Monsters\Scripts\CardsHand\clickCard.cs" />
+    <Compile Include="Assets\Fighting Against Monsters\Scripts\CardsHand\DragHandeler.cs" />
+    <Compile Include="Assets\Fighting Against Monsters\Scripts\Manager\NbrCardsManager.cs" />
+    <Compile Include="Assets\Fighting Against Monsters\Scripts\SlotMiddle\BoxRaycasting.cs" />
+    <Compile Include="Assets\Fighting Against Monsters\Scripts\SlotMiddle\CheckSlotMiddle.cs" />
+    <Compile Include="Assets\Fighting Against Monsters\Scripts\SlotMiddle\clickCardsMiddle.cs" />
+    <Compile Include="Assets\Fighting Against Monsters\Scripts\SlotMiddle\floatingDmg.cs" />
+    <Compile Include="Assets\Fighting Against Monsters\Scripts\SlotMiddle\Slot.cs" />
+    <Compile Include="Assets\Fighting Against Monsters\Scripts\UIMenu\ChangeScene.cs" />
+    <Compile Include="Assets\Fighting Against Monsters\Scripts\UIMenu\clickMenu.cs" />
+    <Compile Include="Assets\Fighting Against Monsters\Scripts\UIMenu\clickStart.cs" />
+    <Compile Include="Assets\Fighting Against Monsters\Scripts\UIMenu\ExitGame.cs" />
+    <Compile Include="Assets\Fighting Against Monsters\Scripts\UIMenu\Monnaies.cs" />
+    <Compile Include="Assets\Fighting Against Monsters\Scripts\UIMenu\OutlineCardsMiddle.cs" />
+    <None Include="Assets\Fighting Against Monsters\README.txt" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>E:/Trabalhos/TCC/game/FightingAgainstMonsters/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
@@ -280,7 +280,7 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.13f1/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
     </Reference>
     <Reference Include="DecisionMakerLib">
-      <HintPath>E:/Trabalhos/TCC/game/FightingAgainstMonsters/Assets/Libary/DecisionMakerLib.dll</HintPath>
+      <HintPath>E:/Trabalhos/TCC/game/FightingAgainstMonsters/Assets/Fighting Against Monsters/Library/DecisionMakerLib.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.13f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
