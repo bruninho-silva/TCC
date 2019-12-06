@@ -74,6 +74,7 @@
     <Compile Include="Assets\Fighting Against Monsters\Scripts\SlotMiddle\clickCardsMiddle.cs" />
     <Compile Include="Assets\Fighting Against Monsters\Scripts\SlotMiddle\floatingDmg.cs" />
     <Compile Include="Assets\Fighting Against Monsters\Scripts\SlotMiddle\Slot.cs" />
+    <Compile Include="Assets\Fighting Against Monsters\Scripts\test.cs" />
     <Compile Include="Assets\Fighting Against Monsters\Scripts\UIMenu\ChangeScene.cs" />
     <Compile Include="Assets\Fighting Against Monsters\Scripts\UIMenu\clickMenu.cs" />
     <Compile Include="Assets\Fighting Against Monsters\Scripts\UIMenu\clickStart.cs" />

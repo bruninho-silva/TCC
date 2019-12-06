@@ -269,6 +269,9 @@ public class NbrCardsManager : MonoBehaviour {
 		cardView = true;
 		StopCoroutine ("viewcard");
 	}
+
+
+       
 }
 
 //ARRAY CARDS GAMES
@@ -278,3 +281,8 @@ public class Cartes {
 	public int cardId;
 	public bool active = false;
 }
+
+
+
+
+    
