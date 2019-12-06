@@ -5,8 +5,9 @@ using UnityEngine.EventSystems;
 
 public class clickStart : MonoBehaviour , IPointerClickHandler {
 
+    
 
-
+ 
 	// Use this for initialization
 	void Start () {
 

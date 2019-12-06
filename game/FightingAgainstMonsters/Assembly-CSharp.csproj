@@ -74,6 +74,7 @@
     <Compile Include="Assets\Scripts\SlotMiddle\clickCardsMiddle.cs" />
     <Compile Include="Assets\Scripts\SlotMiddle\floatingDmg.cs" />
     <Compile Include="Assets\Scripts\SlotMiddle\Slot.cs" />
+    <Compile Include="Assets\Scripts\UIMenu\ChangeScene.cs" />
     <Compile Include="Assets\Scripts\UIMenu\clickMenu.cs" />
     <Compile Include="Assets\Scripts\UIMenu\clickStart.cs" />
     <Compile Include="Assets\Scripts\UIMenu\ExitGame.cs" />

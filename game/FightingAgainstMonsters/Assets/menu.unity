@@ -1069,6 +1069,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fcada2dd22ec6047a1f98463dd79123, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  change: 'index '
 --- !u!1 &2001120172
 GameObject:
   m_ObjectHideFlags: 0
