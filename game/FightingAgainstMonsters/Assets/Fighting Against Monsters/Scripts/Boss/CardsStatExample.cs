@@ -22,6 +22,7 @@ public class CardsStatExample : MonoBehaviour {
     public string stage;
     public GameObject panel;
     public GameObject disch;
+    public GameObject suc;
     public GameObject discp;
 
 
@@ -44,6 +45,7 @@ public class CardsStatExample : MonoBehaviour {
 
         if (health <= 0) {
 
+            suc.SetActive(true);
             discp.SetActive(false);
             disch.SetActive(false);
             StartCoroutine("panelMode", (3f));
