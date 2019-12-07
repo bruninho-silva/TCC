@@ -18,6 +18,7 @@ public class NbrCardsManager : MonoBehaviour {
 	public bool StartDraw = false;
 	public bool StartDrag = false;
 	public GameObject StartDistrib;
+    
 
 	public GameObject[] slot;
 
@@ -191,6 +192,7 @@ public class NbrCardsManager : MonoBehaviour {
 					mescartes [0].cards.transform.localPosition = Vector3.Lerp (mescartes [0].cards.transform.localPosition, new Vector3 (-220, 0, 0), Time.deltaTime * speedMoveCards);
 					mescartes [0].cards.transform.localRotation = Quaternion.RotateTowards (mescartes [0].cards.transform.rotation, Quaternion.Euler (0, 0, 0), Time.deltaTime * speedRotateCards);
 
+                    
 					//IF 03 CARDS IN DECK
 				} else if (NbrCard == 3) {
 				

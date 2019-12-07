@@ -9,7 +9,7 @@ using System;
 
 public class clickCardsMiddle : MonoBehaviour
 {
-
+        
     public bool sleep = false;
     public bool chooseForAttack = false;
     public bool Attack = false;
@@ -50,7 +50,7 @@ public class clickCardsMiddle : MonoBehaviour
                 Carta[] cartas = new Carta[8];
                 Debug.Log(slots);
                 Debug.Log(middle % 2 == 0);
-                if (middle % 2 == 0 && middle != 6)
+                if (middle == 4)
                 {
                     Debug.Log("DEU BOM = " + middle);
                     for (int i = 0; i < slots.Length; i++)
@@ -62,10 +62,20 @@ public class clickCardsMiddle : MonoBehaviour
                         {
 
                             
-                            var ataque = slots[i].GetComponent<ApplyCardMiddle>().attack;
                             var price = slots[i].GetComponent<ApplyCardMiddle>().price;
                             var health = slots[i].GetComponent<ApplyCardMiddle>().health;
-                            Carta carta = new Carta(10, 30, 14, 53, 64, 43, 67, 89);
+
+                            var attack = slots[i].GetComponent<ApplyCardMiddle>().attack;
+                            var velocidade = slots[i].GetComponent<ApplyCardMiddle>().velocidade;
+                            var agilidade = slots[i].GetComponent<ApplyCardMiddle>().agilidade;
+                            var inteligencia  = slots[i].GetComponent<ApplyCardMiddle>().inteligencia;
+
+                            var attackdes = slots[i].GetComponent<ApplyCardMiddle>().attackdes;
+                            var velocidadedes = slots[i].GetComponent<ApplyCardMiddle>().velocidadedes;
+                            var agilidadedes = slots[i].GetComponent<ApplyCardMiddle>().agilidadedes;
+                            var inteligenciades = slots[i].GetComponent<ApplyCardMiddle>().inteligenciades;
+
+                            Carta carta = new Carta(attack, attackdes, velocidade, velocidadedes, agilidade, agilidadedes, inteligencia, inteligenciades);
                             
                             Debug.Log(carta.MiAtributo1);
                             Debug.Log(carta.LambAtributo1);

@@ -21,6 +21,8 @@ public class CardsStatExample : MonoBehaviour {
     public AudioClip monsterHit;
     public string stage;
     public GameObject panel;
+    public GameObject disch;
+    public GameObject discp;
 
 
     // Use this for initialization
@@ -42,6 +44,8 @@ public class CardsStatExample : MonoBehaviour {
 
         if (health <= 0) {
 
+            discp.SetActive(false);
+            disch.SetActive(false);
             StartCoroutine("panelMode", (3f));
             StartCoroutine("bossDeath",(6f));
             objhealth.GetComponent<Text>().text = health.ToString();
@@ -55,9 +59,10 @@ public class CardsStatExample : MonoBehaviour {
             GetComponent<BoxCollider>().enabled = false;
             GetComponent<AudioSource>().PlayOneShot(loss);
             (this.tag) = "Enemy";
+            disch.SetActive(false);
 
-           
-            
+
+
 
         } else {
             objhealth.GetComponent<Text>().text = health.ToString();
@@ -75,6 +80,7 @@ public class CardsStatExample : MonoBehaviour {
     {
         yield return new WaitForSeconds(3f);
         panel.SetActive(true);
+        
     }
 
 }
