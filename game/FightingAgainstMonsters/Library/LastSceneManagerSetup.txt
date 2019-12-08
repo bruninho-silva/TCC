@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/index.unity
+- path: Assets/Fighting Against Monsters/index.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
