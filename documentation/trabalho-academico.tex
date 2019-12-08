@@ -25,7 +25,7 @@
 \usepackage{multirow}			% Para mesclar linhas
 \usepackage{amsmath}			% Módulo matemático
 \usepackage{csquotes}			% Aspas
-
+\usepackage{pdfpages}
 % Pacotes de citações
 \usepackage[brazilian,hyperpageref]{backref}	% Paginas com as citações na bibl
 \usepackage[alf]{abntex2cite}					% Citações padrão ABNT
@@ -166,6 +166,8 @@
 
 \include{textual/materiais}
 
+\include{textual/desenvolvimento}
+
 \phantompart
 
 % ----------------------------------------------------------
@@ -178,15 +180,32 @@
 \bibliography{references} % Referências bibliográficas
 
 % Inicia os apêndices
-% \begin{apendicesenv}
+\begin{apendicesenv}
 
-% \partapendices % Imprime uma página indicando o início dos apêndices
+\partapendices % Imprime uma página indicando o início dos apêndices
 
-% \chapter{rup}
+\chapter{Visão de Negócio}
+	\includepdf[pages=-]{pos-textual/1vn.pdf}
+\chapter{Avaliação da Organização}
+	\includepdf[pages=-]{pos-textual/2ao.pdf}
+\chapter{Documento de Arquitetura de Negócios}
+	\includepdf[pages=-]{pos-textual/3dqn.pdf}
+\chapter{Plano de Gerenciamento de Requisitos}
+	\includepdf[pages=-]{pos-textual/4pgr.pdf}
+\chapter{Visão}
+\includepdf[pages=-]{pos-textual/5v.pdf}
+\chapter{Especificação de Caso de Uso}
+\includepdf[pages=-]{pos-textual/6uc.pdf}
+\chapter{Arquitetura de Software}
+\includepdf[pages=-]{pos-textual/7as.pdf}
 
-% \chapter{documentação Biblioteca}
 
-% \end{apendicesenv}
+\chapter{Documentação da Biblioteca}
+\includepdf[pages=-]{pos-textual/DecisionMakerLPA.pdf}
+\chapter{Documentação do Game Design}
+\includepdf[pages=-]{pos-textual/game-design.pdf}
+
+\end{apendicesenv}
 
 
 % INDICE REMISSIVO

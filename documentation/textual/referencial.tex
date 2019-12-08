@@ -14,17 +14,20 @@ contraditórias na sua estrutura teórica.
 
 \section{Teoria dos jogos}
 
+A Teoria dos Jogos segundo \citeonline{sartini-tj-2004}, pode ser definida como a teoria dos modelos matemáticos que estuda a escolha de decisões ótimas sob condições de conflito.
+E os elementos básicos dessa Teoria, segundo o mesmo, quando cada jogador escolhe sua estratégia, temos então uma situação ou perfil no espaço de todas as situações (perfis) possíveis. Cada jogador tem interesse ou preferências para cada situação no jogo.
+
+As definições que constituem esta Teoria de acordo com \citeonline{cardoso-tj-2018}, visa compreender a racionalidade das decisões tomadas pelos jogadores, sempre com base na ideia de que impera a racionalidade na busca da melhor estratégia, ou seja, daquela que dará ao jogador a maior vantagem, seja na forma de mais lucro ou de mais satisfação.
+
 \section{Biblioteca}
 
-A \textit{Library} ou Biblioteca que faz uso da Lógica Paraconsistente será criada, com intuito de ajudar ou facilitar a criação de jogos de carta mais especificamente para jogos TCG, a \textit{Library} vem com o objetivo de entregar funções já desenvolvida sem ter a necessidade de ter elaborar as funcionalidades do zero.
-Com relação \textit{Application Programming Interface} (Interface de programação de aplicações - API) e um \textit{Framework} a uma \textit{Library}, elas podem ter uma
-certa similaridade, mas tem conceitos distintos.
+A Biblioteca fará o uso da LPA , com intuito de ajudar ou facilitar a criação de jogos de carta mais especificamente para jogos TCG, a \textit{Library} vem com o objetivo de entregar funções já desenvolvida sem ter a necessidade de ter que elaborar as funcionalidades do zero. Com relação a \textit{Application Programming Interface} (Interface de programação de aplicações - API) e um \textit{Framework} a uma \textit{Library} pode ter uma certa similaridade, mas tem conceitos distintos.
 
 Biblioteca é uma conjunto de implementações de ações escritos em uma linguagem e importadas no seu código. Nesse caso, há uma interface bem definida para cada comportamento invocado.
 
-A API tem um conceito diferente da Biblioteca, que basicamente contém um conjunto de instruções, rotina e padrões do código que contem acesso de um aplicativo especifico via conexão. Com tudo ele vem pra interpretar os dados e integra-los com outras plataformas e softwares, gerando instruções recém-lançadas que vem com intuito de executar por esses softwares \cite{api-2016}.
+A API tem um conceito diferente da Biblioteca, que basicamente contém um conjunto de instruções, rotina e padrões do código que Contém acesso de um aplicativo especifico via conexão. Com tudo ele vem pra interpretar os dados e integra-los com outras plataformas e softwares. \cite{api-2016}.
 
-O \textit{Framework} é a base sólida e padronizada de uma aplicação resumidamente é a unificação de Bibliotecas e API’s de forma a oferecer uma estrutura ideal para desenvolver um aplicativo mobile \cite{abf-2016}.
+O \textit{Framework} é a base sólida e padronizada de uma aplicação resumidamente é a unificação de Bibliotecas e API’s de forma a oferecer uma estrutura ideal para desenvolver um software \cite{abf-2016}.
 
 
 \section{Engenharia de Software}
@@ -33,6 +36,14 @@ Visando melhorar a qualidade dos produtos de software e aumentar a produtividade
 
 \subsection{Metodologia}
 
+Metodologia é um conjunto de passos para alcançar um determinado objetivo. Em engenharia de software é conjunto de práticas que abrange todo o ciclo de vida do software que pode ser divida em três partes \cite{almeida-2017}:
+
+\begin{itemize}
+	\item Definição é etapa que feito o levantamento de informações, das funcionalidades desejadas, restrições e validação do projeto.
+	\item Desenvolvimento é etapa de estruturação dos dados e planejamento de como fazer o software.
+	\item Manutenção é etapa focada em correções de erros e melhorias no software.
+\end{itemize}
+
 \subsection{UML}
 
 Particularmente no tocante à Engenharia de Software, a \textit{Unified Modeling Language} (Linguagem de Modelagem Unificada - UML) pode ser utilizada para modelar todas as etapas do processo de desenvolvimento de software, bem como produzir todos os artefatos de Software necessários à documentação dessas etapas \cite[p. 12]{eng-2015}.
@@ -40,3 +51,21 @@ Particularmente no tocante à Engenharia de Software, a \textit{Unified Modeling
 Segundo o mesmo autor (\citeyear{eng-2015}), a linguagem UML, por meio de seus diagramas, permite a definição e design de \textit{threads} (tarefas) e processos, que permitem o desenvolvimento de sistemas distribuídos ou de programação concorrente. Da mesma maneira, permite a utilização dos chamados \textit{patterns} são, a grosso modo, soluções de programação utilizadas devido ao seu bom desempenho e a descrição de colaborações esquemas de interação entre objetos que resultam em um comportamento do sistema.
 
 \subsection{RUP}
+
+O Modelo \textit{rational unified process} ( Processo Unificado da Rational - RUP) foi criado pela \textit{Rational Software corporation} adquirida posteriormente pela \textit{International Business Machines} (IBM), que pode ser customizado de acordo com as necessidades do projeto, deixando assim, RUP mais leve (ágil) ou mais pesado (tradicional).
+
+Conforme \citeonline{piske-2003} “[...] RUP é mais do que um softwares para auxiliar no desenvolvimento é uma metodologia de desenvolvimento, com uma estrutura formal e bem definida.”
+
+Os ciclos de desenvolvimento são divididos em 4 etapas:
+
+
+\begin{enumerate}
+	\item Iniciação - levantamento de requisitos, funções desejáveis e criação do escopo do projeto.
+	\item Elaboração -  analisar o escopo do projeto, estabelecer arquitetura, coletar os requisitos, desenvolver um plano para o projeto e mitigar os riscos do projeto.
+	\item Construção - desenvolvimento e testes do software.
+	\item Transição - validação e entrega do projeto.
+\end{enumerate}
+
+Além disso, o RUP possui nove disciplinas que contém \textit{templates} (modelos) que abrange todo o ciclo de vida de software, esses \textit{templates} ajudaram no planejamento do projeto, alguns modelos continham algumas perguntas que não se enquadraram no tamanho do projeto, porém o RUP é adaptável a diversos tipos de projetos tanto grandes quanto pequenos.  Além de após efetuar o preenchimento dos \textit{templates}, foi descoberto várias situações não previstas antes do preenchimento do RUP que puderam ser planejadas. Na seção de apêndices será apresentado alguns \textit{templates} do RUP preenchidos com base no projeto desenvolvido pelo grupo para conclusão de curso. 
+
+Exposto as Referencial teórico do trabalho, segue para o capítulo \textit{3 - Materiais e métodos.}
