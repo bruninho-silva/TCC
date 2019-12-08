@@ -12,8 +12,23 @@ EditorBuildSettings:
     path: Assets/Fighting Against Monsters/index.unity
     guid: 6309ddc1b5febbb459f6e4373a13edc4
   - enabled: 1
+    path: Assets/Fighting Against Monsters/index 1.unity
+    guid: d2ef2f941df724c42b812fb1fe9a457a
+  - enabled: 1
     path: Assets/Fighting Against Monsters/index 2.unity
-    guid: 2849f13ebe6d88143a2a158441ad6c09
+    guid: 6b5c712ab1ae2cc4fa8ef1bd4ddde046
+  - enabled: 1
+    path: Assets/Fighting Against Monsters/index 3.unity
+    guid: aefb307018b79e745908ac1c59bf19ef
+  - enabled: 1
+    path: Assets/Fighting Against Monsters/index 4.unity
+    guid: 5414d69d9087d5448bb7731479476acf
+  - enabled: 1
+    path: Assets/Fighting Against Monsters/index 5.unity
+    guid: 5a2de91f47471614d9511fdb8a71fcdf
+  - enabled: 1
+    path: Assets/Fighting Against Monsters/index 6.unity
+    guid: f23f0bc68f8c37d49b76a9d0ad5b257d
   - enabled: 1
     path: Assets/Fighting Against Monsters/Credits.unity
     guid: f7cf1d578bfec6c4daee52b8a93553e2

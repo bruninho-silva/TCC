@@ -9,7 +9,7 @@ using System;
 
 public class clickCardsMiddle : MonoBehaviour
 {
-
+        
     public bool sleep = false;
     public bool chooseForAttack = false;
     public bool Attack = false;
@@ -46,38 +46,42 @@ public class clickCardsMiddle : MonoBehaviour
     //, IPointerClickHandler
     public void TaskOnClick()
     {
-            
-                Carta[] cartas = new Carta[8];
-                Debug.Log(slots);
-                Debug.Log(middle % 2 == 0);
-                if (middle % 2 == 0 && middle != 6)
+           
+        List<Carta> cartas = new List<Carta>();
+        LogicaParaconsistente paraconsistente = new LogicaParaconsistente();
+
+
+        if (middle == 4)
                 {
-                    Debug.Log("DEU BOM = " + middle);
                     for (int i = 0; i < slots.Length; i++)
                     {
-                         Debug.Log(slots[i]);
-                         Debug.Log(slots[i].activeSelf);
-
                         if (slots[i].activeSelf)
-                        {
-
-                            
-                            var ataque = slots[i].GetComponent<ApplyCardMiddle>().attack;
+                        {    
                             var price = slots[i].GetComponent<ApplyCardMiddle>().price;
                             var health = slots[i].GetComponent<ApplyCardMiddle>().health;
-                            Carta carta = new Carta(10, 30, 14, 53, 64, 43, 67, 89);
-                            
-                            Debug.Log(carta.MiAtributo1);
-                            Debug.Log(carta.LambAtributo1);
-                  
+
+                            var attack = slots[i].GetComponent<ApplyCardMiddle>().attack;
+                            var velocidade = slots[i].GetComponent<ApplyCardMiddle>().velocidade;
+                            var agilidade = slots[i].GetComponent<ApplyCardMiddle>().agilidade;
+                            var inteligencia  = slots[i].GetComponent<ApplyCardMiddle>().inteligencia;
+
+                            var attackdes = slots[i].GetComponent<ApplyCardMiddle>().attackdes;
+                            var velocidadedes = slots[i].GetComponent<ApplyCardMiddle>().velocidadedes;
+                            var agilidadedes = slots[i].GetComponent<ApplyCardMiddle>().agilidadedes;
+                            var inteligenciades = slots[i].GetComponent<ApplyCardMiddle>().inteligenciades;
+
+                            cartas.Add(new Carta(attack, attackdes, velocidade, velocidadedes, agilidade, agilidadedes, inteligencia, inteligenciades));
+
+
                     //Debug.Log("Ataque=" + ataque + "Price=" + price + "Health=" + health);
-                    slots[i].GetComponent<ApplyCardMiddle>().health -= deck.GetComponent<CardsStatExample>().Attack;
+                        slots[i].GetComponent<ApplyCardMiddle>().health -= deck.GetComponent<CardsStatExample>().Attack;
                     
                     }
-                }
-                
-                 deck.GetComponent<CardsStatExample>().damage(1000);
-                    
+             
+            }
+            var result = paraconsistente.ObtemPorcentagemDeDano(cartas);
+            deck.GetComponent<CardsStatExample>().damage(result);
+            //Carta cartaa = new Carta(myAL[0], myAL[1], myAL[2], myAL[3], myAL[4], myAL[5], myAL[6], myAL[7]);
 
         }
                 else

@@ -15,14 +15,24 @@ public class CheckSlotMiddle : MonoBehaviour
     public GameObject DeckManager;
     public AudioClip pose;
     public GameObject btatk;
+    public GameObject handdes;
+    public GameObject btm;
+    public GameObject btc;
+    public GameObject txt;
 
 
     // Use this for initialization
     void Start()
     {
-
+        
     }
     
+    public IEnumerator battleMode()
+    {
+        yield return new WaitForSeconds(4f);
+        btatk.SetActive(true);
+
+    }
 
     public void playsoundPose()
     {
@@ -40,6 +50,7 @@ public class CheckSlotMiddle : MonoBehaviour
                 slotmiddle[0].SetActive(true);
                 slotmiddle[0].transform.localPosition = new Vector3(0, 0, 0);
                 ApplyMiddleCards = true;
+                btc.SetActive(false);
 
             }
             else if (NbrCardMiddle == 2)
@@ -79,6 +90,7 @@ public class CheckSlotMiddle : MonoBehaviour
                         if (slotmiddle[2].GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.transform.localPosition.x == 130)
                         {
                             ApplyMiddleCards = true;
+                            
                         }
                     }
                 }
@@ -95,6 +107,7 @@ public class CheckSlotMiddle : MonoBehaviour
                         if (slotmiddle[2].GetComponent<BoxRaycasting>().Rightobj.transform.localPosition.x == 130)
                         {
                             ApplyMiddleCards = true;
+                            
                         }
                     }
                 }
@@ -108,6 +121,7 @@ public class CheckSlotMiddle : MonoBehaviour
                         if (slotmiddle[2].GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.transform.localPosition.x == -130)
                         {
                             ApplyMiddleCards = true;
+                            
                         }
                     }
                 }
@@ -127,6 +141,10 @@ public class CheckSlotMiddle : MonoBehaviour
                         if (slotmiddle[3].GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.transform.localPosition.x == 195)
                         {
                             ApplyMiddleCards = true;
+                            GameObject.Destroy(handdes);
+                            StartCoroutine("battleMode", (3f));
+                            btm.SetActive(true);
+                            txt.SetActive(false);
                         }
                     }
                 }
@@ -143,9 +161,16 @@ public class CheckSlotMiddle : MonoBehaviour
                         slotmiddle[3].GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.transform.localPosition = new Vector3(195, 0, 0);
                         if (slotmiddle[3].GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.transform.localPosition.x == 195)
                         {
+
                             ApplyMiddleCards = true;
+                            GameObject.Destroy(handdes);
+                            StartCoroutine("battleMode", (3f));
+                            btm.SetActive(true);
+                            txt.SetActive(false);
                         }
+                        
                     }
+                    
                 }
                 else if (PoseCard.x >= -65f && PoseCard.x < 0f)
                 {
@@ -161,6 +186,10 @@ public class CheckSlotMiddle : MonoBehaviour
                         if (slotmiddle[3].GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().Rightobj.transform.localPosition.x == 195)
                         {
                             ApplyMiddleCards = true;
+                            GameObject.Destroy(handdes);
+                            StartCoroutine("battleMode", (3f));
+                            btm.SetActive(true);
+                            txt.SetActive(false);
                         }
                     }
                 }
@@ -178,6 +207,10 @@ public class CheckSlotMiddle : MonoBehaviour
                         if (slotmiddle[3].GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().transform.localPosition.x == 195)
                         {
                             ApplyMiddleCards = true;
+                            GameObject.Destroy(handdes);
+                            StartCoroutine("battleMode", (3f));
+                            btm.SetActive(true);
+                            txt.SetActive(false);
                         }
                     }
                 }
@@ -195,6 +228,10 @@ public class CheckSlotMiddle : MonoBehaviour
                         if (slotmiddle[3].GetComponent<BoxRaycasting>().Rightobj.GetComponent<BoxRaycasting>().transform.localPosition.x == 195)
                         {
                             ApplyMiddleCards = true;
+                            GameObject.Destroy(handdes);
+                            StartCoroutine("battleMode", (3f));
+                            btm.SetActive(true);
+                            txt.SetActive(false);
                         }
                     }
                 }
@@ -209,6 +246,11 @@ public class CheckSlotMiddle : MonoBehaviour
                         if (slotmiddle[3].GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.GetComponent<BoxRaycasting>().Leftobj.transform.localPosition.x == -195)
                         {
                             ApplyMiddleCards = true;
+                            GameObject.Destroy(handdes);
+                            StartCoroutine("battleMode", (3f));
+                            btm.SetActive(true);
+                            txt.SetActive(false);
+
                         }
                     }
                 }
@@ -925,7 +967,7 @@ public class CheckSlotMiddle : MonoBehaviour
                 }
                 
             }
-            btatk.SetActive(true);
+            
         }
         
     }

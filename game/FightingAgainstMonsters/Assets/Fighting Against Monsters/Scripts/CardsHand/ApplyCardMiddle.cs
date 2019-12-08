@@ -7,26 +7,51 @@ public class ApplyCardMiddle : MonoBehaviour {
 
    
     public int price;
-	public int attack;
 	public int health;
 
+    public int attack;
+    public int velocidade;
+    public int agilidade;
+    public int inteligencia;
+
+    public int attackdes;
+    public int velocidadedes;
+    public int agilidadedes;
+    public int inteligenciades;
+
     public GameObject objprice;
-	public GameObject objattack;
 	public GameObject objhealth;
 
-    
+    public GameObject objattack;
+    public GameObject objvelocidade;
+    public GameObject objagilidade;
+    public GameObject objinteligencia;
+
+    public GameObject objattackdes;
+    public GameObject objvelocidadedes;
+    public GameObject objagilidadedes;
+    public GameObject objinteligenciades;
+
+
     public bool mePositionForDeadLeft = false;
     public bool mePositionForDeadRight = false;
     public AudioClip loss;
 
 
-    void Start() {
+    void Start() {       
 
-        
-       
         objprice.GetComponent<Text>().text = price.ToString();
-        objattack.GetComponent<Text>().text = attack.ToString();
         objhealth.GetComponent<Text>().text = health.ToString();
+
+        objattack.GetComponent<Text>().text = attack.ToString();
+        objvelocidade.GetComponent<Text>().text = velocidade.ToString();
+        objagilidade.GetComponent<Text>().text = agilidade.ToString();
+        objinteligencia.GetComponent<Text>().text = inteligencia.ToString();
+
+        objattackdes.GetComponent<Text>().text = attackdes.ToString();
+        objvelocidadedes.GetComponent<Text>().text = velocidadedes.ToString();
+        objagilidadedes.GetComponent<Text>().text = agilidadedes.ToString();
+        objinteligenciades.GetComponent<Text>().text = inteligenciades.ToString();
 
     }
 

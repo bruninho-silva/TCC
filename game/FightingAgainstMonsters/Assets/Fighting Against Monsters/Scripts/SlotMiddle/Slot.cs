@@ -50,6 +50,28 @@ public class Slot : MonoBehaviour, IDropHandler {
 					SlotMiddle.GetComponent<CheckSlotMiddle> ().slotmiddle [SlotMiddle.GetComponent<CheckSlotMiddle> ().NbrCardMiddle].GetComponent<ApplyCardMiddle> ().health = DragHandeler.itemBeingDragged.gameObject.GetComponent<clickCard> ().health;
                     SlotMiddle.GetComponent<CheckSlotMiddle> ().slotmiddle [SlotMiddle.GetComponent<CheckSlotMiddle> ().NbrCardMiddle].GetComponent<ApplyCardMiddle> ().objhealth.GetComponent<Text> ().text = SlotMiddle.GetComponent<CheckSlotMiddle>().slotmiddle[SlotMiddle.GetComponent<CheckSlotMiddle>().NbrCardMiddle].GetComponent<ApplyCardMiddle> ().health.ToString();
 
+                    SlotMiddle.GetComponent<CheckSlotMiddle>().slotmiddle[SlotMiddle.GetComponent<CheckSlotMiddle>().NbrCardMiddle].GetComponent<ApplyCardMiddle>().attackdes = DragHandeler.itemBeingDragged.gameObject.GetComponent<clickCard>().attackdes;
+                    SlotMiddle.GetComponent<CheckSlotMiddle>().slotmiddle[SlotMiddle.GetComponent<CheckSlotMiddle>().NbrCardMiddle].GetComponent<ApplyCardMiddle>().objattack.GetComponent<Text>().text = SlotMiddle.GetComponent<CheckSlotMiddle>().slotmiddle[SlotMiddle.GetComponent<CheckSlotMiddle>().NbrCardMiddle].GetComponent<ApplyCardMiddle>().attackdes.ToString();
+
+                    SlotMiddle.GetComponent<CheckSlotMiddle>().slotmiddle[SlotMiddle.GetComponent<CheckSlotMiddle>().NbrCardMiddle].GetComponent<ApplyCardMiddle>().agilidade = DragHandeler.itemBeingDragged.gameObject.GetComponent<clickCard>().agilidade;
+                    SlotMiddle.GetComponent<CheckSlotMiddle>().slotmiddle[SlotMiddle.GetComponent<CheckSlotMiddle>().NbrCardMiddle].GetComponent<ApplyCardMiddle>().objagilidade.GetComponent<Text>().text = SlotMiddle.GetComponent<CheckSlotMiddle>().slotmiddle[SlotMiddle.GetComponent<CheckSlotMiddle>().NbrCardMiddle].GetComponent<ApplyCardMiddle>().agilidade.ToString();
+
+                    SlotMiddle.GetComponent<CheckSlotMiddle>().slotmiddle[SlotMiddle.GetComponent<CheckSlotMiddle>().NbrCardMiddle].GetComponent<ApplyCardMiddle>().agilidadedes = DragHandeler.itemBeingDragged.gameObject.GetComponent<clickCard>().agilidadedes;
+                    SlotMiddle.GetComponent<CheckSlotMiddle>().slotmiddle[SlotMiddle.GetComponent<CheckSlotMiddle>().NbrCardMiddle].GetComponent<ApplyCardMiddle>().objagilidadedes.GetComponent<Text>().text = SlotMiddle.GetComponent<CheckSlotMiddle>().slotmiddle[SlotMiddle.GetComponent<CheckSlotMiddle>().NbrCardMiddle].GetComponent<ApplyCardMiddle>().agilidadedes.ToString();
+
+                    SlotMiddle.GetComponent<CheckSlotMiddle>().slotmiddle[SlotMiddle.GetComponent<CheckSlotMiddle>().NbrCardMiddle].GetComponent<ApplyCardMiddle>().velocidade = DragHandeler.itemBeingDragged.gameObject.GetComponent<clickCard>().velocidade;
+                    SlotMiddle.GetComponent<CheckSlotMiddle>().slotmiddle[SlotMiddle.GetComponent<CheckSlotMiddle>().NbrCardMiddle].GetComponent<ApplyCardMiddle>().objvelocidade.GetComponent<Text>().text = SlotMiddle.GetComponent<CheckSlotMiddle>().slotmiddle[SlotMiddle.GetComponent<CheckSlotMiddle>().NbrCardMiddle].GetComponent<ApplyCardMiddle>().velocidade.ToString();
+
+                    SlotMiddle.GetComponent<CheckSlotMiddle>().slotmiddle[SlotMiddle.GetComponent<CheckSlotMiddle>().NbrCardMiddle].GetComponent<ApplyCardMiddle>().velocidadedes = DragHandeler.itemBeingDragged.gameObject.GetComponent<clickCard>().velocidadedes;
+                    SlotMiddle.GetComponent<CheckSlotMiddle>().slotmiddle[SlotMiddle.GetComponent<CheckSlotMiddle>().NbrCardMiddle].GetComponent<ApplyCardMiddle>().objvelocidadedes.GetComponent<Text>().text = SlotMiddle.GetComponent<CheckSlotMiddle>().slotmiddle[SlotMiddle.GetComponent<CheckSlotMiddle>().NbrCardMiddle].GetComponent<ApplyCardMiddle>().velocidadedes.ToString();
+
+                    SlotMiddle.GetComponent<CheckSlotMiddle>().slotmiddle[SlotMiddle.GetComponent<CheckSlotMiddle>().NbrCardMiddle].GetComponent<ApplyCardMiddle>().inteligencia = DragHandeler.itemBeingDragged.gameObject.GetComponent<clickCard>().inteligencia;
+                    SlotMiddle.GetComponent<CheckSlotMiddle>().slotmiddle[SlotMiddle.GetComponent<CheckSlotMiddle>().NbrCardMiddle].GetComponent<ApplyCardMiddle>().objinteligencia.GetComponent<Text>().text = SlotMiddle.GetComponent<CheckSlotMiddle>().slotmiddle[SlotMiddle.GetComponent<CheckSlotMiddle>().NbrCardMiddle].GetComponent<ApplyCardMiddle>().inteligencia.ToString();
+
+                    SlotMiddle.GetComponent<CheckSlotMiddle>().slotmiddle[SlotMiddle.GetComponent<CheckSlotMiddle>().NbrCardMiddle].GetComponent<ApplyCardMiddle>().inteligenciades = DragHandeler.itemBeingDragged.gameObject.GetComponent<clickCard>().inteligenciades;
+                    SlotMiddle.GetComponent<CheckSlotMiddle>().slotmiddle[SlotMiddle.GetComponent<CheckSlotMiddle>().NbrCardMiddle].GetComponent<ApplyCardMiddle>().objinteligenciades.GetComponent<Text>().text = SlotMiddle.GetComponent<CheckSlotMiddle>().slotmiddle[SlotMiddle.GetComponent<CheckSlotMiddle>().NbrCardMiddle].GetComponent<ApplyCardMiddle>().inteligenciades.ToString();
+
+
                     //ADD +1 TO GLOBAL NUMBER CARDS PLAYED TO MIDDLE
                     SlotMiddle.GetComponent<CheckSlotMiddle> ().NbrCardMiddle += 1;
 				} else {
