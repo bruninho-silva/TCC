@@ -1,27 +1,29 @@
-/// <summary>
-/// Classe estática que possui as constantes da biblioteca.
-/// </summary>
-public static class Constante
+
+namespace DecisionMakerLPA
 {
-    // TODO Tratar a situação de INDEFINIDO  Gc = 0.5 / Gi = 0.5
+    /// <summary>
+    /// Classe estática que possui as constantes da biblioteca.
+    /// </summary>
+    public static class Constante
+    {
+        public const double VCVE = 0.9; //Var de controle de Veracidade
+        public const double VCFA = -0.5; //Var de controle de Falsidade
 
-    public const double VCVE = 0.9; //Var de controle de Veracidade
-    public const double VCFA = -0.5; //Var de controle de Falsidade
+        public const double VCIC = 0.5; //var de conttole de Inconsistencia
+        public const double VCPA = -0.5; //var de controle de Paracompleto
 
-    public const double VCIC = 0.5; //var de conttole de Inconsistencia
-    public const double VCPA = -0.5; //var de controle de Paracompleto
-
-    public const string VERDADE = "VERDADE";
-    public const string FALSO = "FALSO";
-    public const string INCONSISTENTE = "INCONSISTENTE";
-    public const string PARACOMPLETO = "PARACOMPLETO";
-    public const string QUASE_V_I = "QUASE_VERDADE_TENDENDO_A_INCONSISTENTE";
-    public const string INCONSISTENTE_T_VERDADE = "INCONSISTENTE_TENDENDO_A_VERDADE";
-    public const string QUASE_V_P = "QUASE_VERDADE_TENDENDO_A_PARACOMPLETO";
-    public const string PARACOMPLETO_T_VERDADE = "PARACOMPLETO_TENDENTO_A_VERADADE";
-    public const string QUASE_F_P = "QUASE_FALSO_TENDENDO_PARACOMPLETO";
-    public const string PARACOMPLETO_T_FALSO = "PARACOMPLETO_TENDENDO_A_FALSO";
-    public const string QUASE_F_I = "QUASE_FALSO_TEDENDO_A_INCONSISTENTE";
-    public const string INCONSISTENTE_T_FALSO = "INCONSISTENTE_TENDENDO_A_FALSO";
-
+        public const string verdade = "VERDADE";
+        public const string falso = "FALSO";
+        public const string inconsistente = "INCONSISTENTE";
+        public const string paracompleto = "PARACOMPLETO";
+        public const string quaseVerdadeInconsistente = "QUASE_VERDADE_TENDENDO_A_INCONSISTENTE";
+        public const string inconsistenteVerdade = "INCONSISTENTE_TENDENDO_A_VERDADE";
+        public const string quaseVerdadeParacompleto = "QUASE_VERDADE_TENDENDO_A_PARACOMPLETO";
+        public const string paracompletoVerdade = "PARACOMPLETO_TENDENTO_A_VERADADE";
+        public const string quaseFalsoParacompleto = "QUASE_FALSO_TENDENDO_PARACOMPLETO";
+        public const string paracompletoFalso = "PARACOMPLETO_TENDENDO_A_FALSO";
+        public const string quaseFalsoInconsistente = "QUASE_FALSO_TEDENDO_A_INCONSISTENTE";
+        public const string inconsistenteFalso = "INCONSISTENTE_TENDENDO_A_FALSO";
+        public const string indefinido = "INDEFINIDO";
+    }
 }

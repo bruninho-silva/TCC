@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<DynamicHelp xmlns="http://msdn.microsoft.com/vsdata/xsd/vsdh.xsd" xmlns:xsi="http://www.w3.org/2000/10/XMLSchema-instance" xsi:schemaLocation="http://msdn.microsoft.com/vsdata/xsd/vsdh.xsd">	
+   <LINKGROUP ID="DecisionMakerLPA" Title="SOLUTION-WIDE PROPERTIES Reference Help" Priority="2100">
+      <GLYPH Expanded="vs:/ctxhelp_show.gif" Collapsed="vs:/ctxhelp_hide.gif"/>
+   </LINKGROUP>
+
+
+   <Context>
+      <Keywords>
+         <KItem Name="" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DecisionMakerLPA.chm::/topic_000000000000002B.html" LinkGroup="DecisionMakerLPA"><default> Namespace</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Baricentro" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DecisionMakerLPA.chm::/topic_0000000000000000.html" LinkGroup="DecisionMakerLPA">Baricentro Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Baricentro.Baricentro" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DecisionMakerLPA.chm::/topic_0000000000000001.html" LinkGroup="DecisionMakerLPA">Baricentro Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Baricentro.CalculaGrauDeCerteza" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DecisionMakerLPA.chm::/topic_0000000000000005.html" LinkGroup="DecisionMakerLPA">CalculaGrauDeCerteza Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Baricentro.CalculaGrauDeIncerteza" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DecisionMakerLPA.chm::/topic_0000000000000006.html" LinkGroup="DecisionMakerLPA">CalculaGrauDeIncerteza Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Carta" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DecisionMakerLPA.chm::/topic_0000000000000007.html" LinkGroup="DecisionMakerLPA">Carta Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Carta.Carta" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DecisionMakerLPA.chm::/topic_0000000000000008.html" LinkGroup="DecisionMakerLPA">Carta Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Constante" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DecisionMakerLPA.chm::/topic_0000000000000013.html" LinkGroup="DecisionMakerLPA">Constante Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="EstadoLogico.DescobreEstadoLogico" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DecisionMakerLPA.chm::/topic_0000000000000025.html" LinkGroup="DecisionMakerLPA">DescobreEstadoLogico Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="EstadoLogico" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DecisionMakerLPA.chm::/topic_0000000000000024.html" LinkGroup="DecisionMakerLPA">EstadoLogico Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Constante.FALSO" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DecisionMakerLPA.chm::/topic_0000000000000019.html" LinkGroup="DecisionMakerLPA">FALSO Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Carta.GetAtributoLamb" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DecisionMakerLPA.chm::/topic_000000000000000A.html" LinkGroup="DecisionMakerLPA">GetAtributoLamb Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Carta.GetAtributoMi" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DecisionMakerLPA.chm::/topic_0000000000000009.html" LinkGroup="DecisionMakerLPA">GetAtributoMi Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Constante.INCONSISTENTE" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DecisionMakerLPA.chm::/topic_000000000000001A.html" LinkGroup="DecisionMakerLPA">INCONSISTENTE Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Constante.INCONSISTENTE_T_FALSO" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DecisionMakerLPA.chm::/topic_0000000000000023.html" LinkGroup="DecisionMakerLPA">INCONSISTENTE_T_FALSO Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Constante.INCONSISTENTE_T_VERDADE" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DecisionMakerLPA.chm::/topic_000000000000001D.html" LinkGroup="DecisionMakerLPA">INCONSISTENTE_T_VERDADE Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Carta.LambAtributo1" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DecisionMakerLPA.chm::/topic_000000000000000F.html" LinkGroup="DecisionMakerLPA">LambAtributo1 Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Carta.LambAtributo2" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DecisionMakerLPA.chm::/topic_0000000000000010.html" LinkGroup="DecisionMakerLPA">LambAtributo2 Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Carta.LambAtributo3" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DecisionMakerLPA.chm::/topic_0000000000000011.html" LinkGroup="DecisionMakerLPA">LambAtributo3 Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Carta.LambAtributo4" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DecisionMakerLPA.chm::/topic_0000000000000012.html" LinkGroup="DecisionMakerLPA">LambAtributo4 Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Baricentro.Lambda" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DecisionMakerLPA.chm::/topic_0000000000000003.html" LinkGroup="DecisionMakerLPA">Lambda Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="LogicaParaconsistente" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DecisionMakerLPA.chm::/topic_0000000000000027.html" LinkGroup="DecisionMakerLPA">LogicaParaconsistente Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Baricentro.Mi" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DecisionMakerLPA.chm::/topic_0000000000000002.html" LinkGroup="DecisionMakerLPA">Mi Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Carta.MiAtributo1" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DecisionMakerLPA.chm::/topic_000000000000000B.html" LinkGroup="DecisionMakerLPA">MiAtributo1 Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Carta.MiAtributo2" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DecisionMakerLPA.chm::/topic_000000000000000C.html" LinkGroup="DecisionMakerLPA">MiAtributo2 Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Carta.MiAtributo3" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DecisionMakerLPA.chm::/topic_000000000000000D.html" LinkGroup="DecisionMakerLPA">MiAtributo3 Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Carta.MiAtributo4" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DecisionMakerLPA.chm::/topic_000000000000000E.html" LinkGroup="DecisionMakerLPA">MiAtributo4 Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Baricentro.Normalizar" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DecisionMakerLPA.chm::/topic_0000000000000004.html" LinkGroup="DecisionMakerLPA">Normalizar Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="LogicaParaconsistente.ObtemBaricentro" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DecisionMakerLPA.chm::/topic_0000000000000029.html" LinkGroup="DecisionMakerLPA">ObtemBaricentro Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="LogicaParaconsistente.ObtemPorcentagemDeDano" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DecisionMakerLPA.chm::/topic_0000000000000028.html" LinkGroup="DecisionMakerLPA">ObtemPorcentagemDeDano Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Constante.PARACOMPLETO" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DecisionMakerLPA.chm::/topic_000000000000001B.html" LinkGroup="DecisionMakerLPA">PARACOMPLETO Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Constante.PARACOMPLETO_T_FALSO" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DecisionMakerLPA.chm::/topic_0000000000000021.html" LinkGroup="DecisionMakerLPA">PARACOMPLETO_T_FALSO Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Constante.PARACOMPLETO_T_VERDADE" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DecisionMakerLPA.chm::/topic_000000000000001F.html" LinkGroup="DecisionMakerLPA">PARACOMPLETO_T_VERDADE Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Constante.QUASE_F_I" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DecisionMakerLPA.chm::/topic_0000000000000022.html" LinkGroup="DecisionMakerLPA">QUASE_F_I Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Constante.QUASE_F_P" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DecisionMakerLPA.chm::/topic_0000000000000020.html" LinkGroup="DecisionMakerLPA">QUASE_F_P Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Constante.QUASE_V_I" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DecisionMakerLPA.chm::/topic_000000000000001C.html" LinkGroup="DecisionMakerLPA">QUASE_V_I Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Constante.QUASE_V_P" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DecisionMakerLPA.chm::/topic_000000000000001E.html" LinkGroup="DecisionMakerLPA">QUASE_V_P Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SOLUTION-WIDE PROPERTIES Reference" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DecisionMakerLPA.chm::/topic_000000000000002A.html" LinkGroup="DecisionMakerLPA">SOLUTION-WIDE PROPERTIES Reference</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="EstadoLogico.TransformaEstadoLogicoEmPorcentagem" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DecisionMakerLPA.chm::/topic_0000000000000026.html" LinkGroup="DecisionMakerLPA">TransformaEstadoLogicoEmPorcentagem Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Constante.VCFA" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DecisionMakerLPA.chm::/topic_0000000000000015.html" LinkGroup="DecisionMakerLPA">VCFA Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Constante.VCIC" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DecisionMakerLPA.chm::/topic_0000000000000016.html" LinkGroup="DecisionMakerLPA">VCIC Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Constante.VCPA" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DecisionMakerLPA.chm::/topic_0000000000000017.html" LinkGroup="DecisionMakerLPA">VCPA Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Constante.VCVE" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DecisionMakerLPA.chm::/topic_0000000000000014.html" LinkGroup="DecisionMakerLPA">VCVE Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Constante.VERDADE" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DecisionMakerLPA.chm::/topic_0000000000000018.html" LinkGroup="DecisionMakerLPA">VERDADE Field</LItem>
+      </Links>
+   </Context>
+   
+
+</DynamicHelp>
+
