@@ -545,7 +545,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 354372063}
-        m_MethodName: OpenLink
+        m_MethodName: uniprurl
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -603,7 +603,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff4f09827858b9e4cbe27e42938facb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  urloption: urlunip
 --- !u!1 &575333598
 GameObject:
   m_ObjectHideFlags: 0
@@ -1272,7 +1271,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1008291148}
-        m_MethodName: OpenLink
+        m_MethodName: devdoourl
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1330,7 +1329,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff4f09827858b9e4cbe27e42938facb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  urloption: urldevdoo
 --- !u!1 &1042323689
 GameObject:
   m_ObjectHideFlags: 0
@@ -1649,7 +1647,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1739577575}
-        m_MethodName: OpenLink
+        m_MethodName: moodleurl
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1707,7 +1705,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff4f09827858b9e4cbe27e42938facb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  urloption: urlmoodle
 --- !u!1 &1748095892
 GameObject:
   m_ObjectHideFlags: 0
