@@ -17,6 +17,7 @@ public class CheckSlotMiddle : MonoBehaviour
     public GameObject btatk;
     public GameObject handdes;
     public GameObject btm;
+    public GameObject btc;
     public GameObject txt;
 
 
@@ -49,6 +50,7 @@ public class CheckSlotMiddle : MonoBehaviour
                 slotmiddle[0].SetActive(true);
                 slotmiddle[0].transform.localPosition = new Vector3(0, 0, 0);
                 ApplyMiddleCards = true;
+                btc.SetActive(false);
 
             }
             else if (NbrCardMiddle == 2)

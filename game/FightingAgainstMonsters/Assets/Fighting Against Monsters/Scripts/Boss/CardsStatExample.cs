@@ -22,6 +22,7 @@ public class CardsStatExample : MonoBehaviour {
     public string stage;
     public GameObject panel;
     public GameObject disch;
+    public GameObject gameOver;
     public GameObject suc;
     public GameObject discp;
 
@@ -69,6 +70,7 @@ public class CardsStatExample : MonoBehaviour {
         } else {
             objhealth.GetComponent<Text>().text = health.ToString();
             GetComponent<AudioSource>().PlayOneShot(monsterHit);
+            gameOver.SetActive(true);
         }
          
     }
