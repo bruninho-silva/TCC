@@ -31,6 +31,7 @@ public class clickCardsMiddle : MonoBehaviour
     public GameObject Arrow;
     public GameObject[] slots;
     public CheckSlotMiddle slot;
+    public GameObject atkd;
   
     
 
@@ -49,7 +50,7 @@ public class clickCardsMiddle : MonoBehaviour
            
         List<Carta> cartas = new List<Carta>();
         LogicaParaconsistente paraconsistente = new LogicaParaconsistente();
-
+        atkd.SetActive(false);
 
         if (middle == 4)
                 {

@@ -25,6 +25,8 @@ public class CardsStatExample : MonoBehaviour {
     public GameObject gameOver;
     public GameObject suc;
     public GameObject discp;
+    public GameObject flm;
+   
 
 
     // Use this for initialization
@@ -70,9 +72,10 @@ public class CardsStatExample : MonoBehaviour {
         } else {
             objhealth.GetComponent<Text>().text = health.ToString();
             GetComponent<AudioSource>().PlayOneShot(monsterHit);
-            gameOver.SetActive(true);
+           
+            StartCoroutine("failmode", 2f);
         }
-         
+        StartCoroutine("overgame", 5f);
     }
     public IEnumerator bossDeath()
     {
@@ -86,6 +89,21 @@ public class CardsStatExample : MonoBehaviour {
         panel.SetActive(true);
         
     }
+
+    public IEnumerator failmode()
+    {
+        yield return new WaitForSeconds(2f);
+        flm.SetActive(true);
+
+    }
+
+    public IEnumerator overgame()
+    {
+        yield return new WaitForSeconds(5f);
+        gameOver.SetActive(true);
+
+    }
+
 
 }
 
