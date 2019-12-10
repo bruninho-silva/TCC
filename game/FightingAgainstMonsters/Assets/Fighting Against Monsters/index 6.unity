@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4672,14 +4672,14 @@ MonoBehaviour:
   idCarte: 4
   price: 5
   health: 7
-  attack: 30
+  attack: 70
   velocidade: 60
-  agilidade: 60
-  inteligencia: 20
-  attackdes: 10
-  velocidadedes: 10
-  agilidadedes: 90
-  inteligenciades: 40
+  agilidade: 20
+  inteligencia: 10
+  attackdes: 90
+  velocidadedes: 80
+  agilidadedes: 40
+  inteligenciades: 30
   objprice: {fileID: 1426966678}
   objhealth: {fileID: 965007330}
   objattack: {fileID: 983719310}
@@ -4780,7 +4780,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 10e390628497e3f4e994f7255b25a581, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 65d5f5be8cc013045bb5e426eaf1a07b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5993,14 +5993,14 @@ MonoBehaviour:
   idCarte: 3
   price: 4
   health: 1
-  attack: 60
-  velocidade: 10
+  attack: 70
+  velocidade: 50
   agilidade: 30
-  inteligencia: 10
-  attackdes: 80
-  velocidadedes: 20
-  agilidadedes: 90
-  inteligenciades: 10
+  inteligencia: 80
+  attackdes: 30
+  velocidadedes: 50
+  agilidadedes: 40
+  inteligenciades: 60
   objprice: {fileID: 422750795}
   objhealth: {fileID: 178715914}
   objattack: {fileID: 583049213}
@@ -6101,7 +6101,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2cddd3578e3f3ae4eb51aa983e985fb5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c947b1c156bb3c142acce61445213281, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8258,7 +8258,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   price: 0
   Attack: 0
-  health: 70
+  health: 80
   cards: {fileID: 0}
   objprice: {fileID: 0}
   objattack: {fileID: 1452204649}
@@ -9188,15 +9188,15 @@ MonoBehaviour:
   NombreCarte: 0
   idCarte: 7
   price: 8
-  health: 45
-  attack: 40
-  velocidade: 70
-  agilidade: 60
+  health: 60
+  attack: 30
+  velocidade: 50
+  agilidade: 90
   inteligencia: 20
-  attackdes: 10
-  velocidadedes: 40
-  agilidadedes: 20
-  inteligenciades: 70
+  attackdes: 80
+  velocidadedes: 60
+  agilidadedes: 40
+  inteligenciades: 20
   objprice: {fileID: 132645007}
   objhealth: {fileID: 334322497}
   objattack: {fileID: 1635086632}
@@ -10782,14 +10782,14 @@ MonoBehaviour:
   idCarte: 5
   price: 6
   health: 65
-  attack: 60
-  velocidade: 80
-  agilidade: 90
-  inteligencia: 10
-  attackdes: 30
-  velocidadedes: 50
-  agilidadedes: 80
-  inteligenciades: 90
+  attack: 90
+  velocidade: 40
+  agilidade: 30
+  inteligencia: 50
+  attackdes: 20
+  velocidadedes: 10
+  agilidadedes: 90
+  inteligenciades: 20
   objprice: {fileID: 1314136734}
   objhealth: {fileID: 1440464174}
   objattack: {fileID: 862328932}
@@ -13503,14 +13503,14 @@ MonoBehaviour:
   idCarte: 1
   price: 2
   health: 8
-  attack: 10
-  velocidade: 20
-  agilidade: 80
-  inteligencia: 90
-  attackdes: 20
-  velocidadedes: 10
-  agilidadedes: 30
-  inteligenciades: 80
+  attack: 30
+  velocidade: 40
+  agilidade: 20
+  inteligencia: 10
+  attackdes: 50
+  velocidadedes: 30
+  agilidadedes: 60
+  inteligenciades: 70
   objprice: {fileID: 1097407754}
   objhealth: {fileID: 704641610}
   objattack: {fileID: 832838863}
@@ -13611,7 +13611,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 18c746b645eb37b40a3e6e8ded447caf, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fadbfe3dad47c7847900eb3f5a9d2d8f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -16329,7 +16329,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ffc569929468da145b0266e0391a3663, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f56a5912989943b4aba71d4bfce2cc54, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -16531,13 +16531,13 @@ MonoBehaviour:
   idCarte: 0
   price: 1
   health: 40
-  attack: 50
-  velocidade: 10
-  agilidade: 20
-  inteligencia: 40
-  attackdes: 80
-  velocidadedes: 60
-  agilidadedes: 25
+  attack: 60
+  velocidade: 30
+  agilidade: 70
+  inteligencia: 20
+  attackdes: 90
+  velocidadedes: 30
+  agilidadedes: 20
   inteligenciades: 10
   objprice: {fileID: 1950910102}
   objhealth: {fileID: 1796195960}
@@ -17147,14 +17147,14 @@ MonoBehaviour:
   NombreCarte: 0
   idCarte: 6
   price: 7
-  health: 58
-  attack: 30
-  velocidade: 20
-  agilidade: 40
-  inteligencia: 80
-  attackdes: 10
-  velocidadedes: 40
-  agilidadedes: 90
+  health: 60
+  attack: 20
+  velocidade: 30
+  agilidade: 50
+  inteligencia: 40
+  attackdes: 90
+  velocidadedes: 80
+  agilidadedes: 20
   inteligenciades: 20
   objprice: {fileID: 1603554165}
   objhealth: {fileID: 1376328653}
@@ -17256,7 +17256,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: aea228450fd2f104196822d4043020e2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 10e390628497e3f4e994f7255b25a581, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -20761,14 +20761,14 @@ MonoBehaviour:
   idCarte: 2
   price: 3
   health: 5
-  attack: 40
-  velocidade: 20
-  agilidade: 30
-  inteligencia: 40
-  attackdes: 80
-  velocidadedes: 70
-  agilidadedes: 10
-  inteligenciades: 10
+  attack: 50
+  velocidade: 10
+  agilidade: 80
+  inteligencia: 20
+  attackdes: 40
+  velocidadedes: 30
+  agilidadedes: 20
+  inteligenciades: 60
   objprice: {fileID: 187658843}
   objhealth: {fileID: 559590571}
   objattack: {fileID: 121888778}
@@ -20869,7 +20869,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7241bd20b1f42c543844d5cdc171c8ec, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5c8dc6c2cacf38a4faf60b146be752c1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

@@ -85,31 +85,31 @@
     <Compile Include="Assets\Fighting Against Monsters\Scripts\UIMenu\StartOverUI.cs" />
     <None Include="Assets\Fighting Against Monsters\README.txt" />
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>C:/Users/TRON 2099/projetos/TCC/game/FightingAgainstMonsters/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>E:/Trabalhos/TCC/game/FightingAgainstMonsters/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>C:/Users/TRON 2099/projetos/TCC/game/FightingAgainstMonsters/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>E:/Trabalhos/TCC/game/FightingAgainstMonsters/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/TRON 2099/projetos/TCC/game/FightingAgainstMonsters/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>E:/Trabalhos/TCC/game/FightingAgainstMonsters/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>C:/Users/TRON 2099/projetos/TCC/game/FightingAgainstMonsters/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>E:/Trabalhos/TCC/game/FightingAgainstMonsters/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>C:/Users/TRON 2099/projetos/TCC/game/FightingAgainstMonsters/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>E:/Trabalhos/TCC/game/FightingAgainstMonsters/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Users/TRON 2099/projetos/TCC/game/FightingAgainstMonsters/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>E:/Trabalhos/TCC/game/FightingAgainstMonsters/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>C:/Users/TRON 2099/projetos/TCC/game/FightingAgainstMonsters/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>E:/Trabalhos/TCC/game/FightingAgainstMonsters/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/TRON 2099/projetos/TCC/game/FightingAgainstMonsters/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>E:/Trabalhos/TCC/game/FightingAgainstMonsters/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>C:/Users/TRON 2099/projetos/TCC/game/FightingAgainstMonsters/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>E:/Trabalhos/TCC/game/FightingAgainstMonsters/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.15f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -283,7 +283,7 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.15f1/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
     </Reference>
     <Reference Include="DecisionMakerLib">
-      <HintPath>C:/Users/TRON 2099/projetos/TCC/game/FightingAgainstMonsters/Assets/Fighting Against Monsters/Library/DecisionMakerLib.dll</HintPath>
+      <HintPath>E:/Trabalhos/TCC/game/FightingAgainstMonsters/Assets/Fighting Against Monsters/Library/DecisionMakerLib.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.15f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
